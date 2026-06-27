@@ -1,0 +1,18 @@
+# Viral Reel Finder – Python-Abhängigkeiten
+# Installation:  pip install -r requirements.txt
+
+# Anthropic-SDK für die Skript-Generierung mit Claude
+anthropic>=0.40.0
+
+# TikTok-Scraping (robuster als reines HTML-Parsing)
+yt-dlp>=2024.1.0
+
+# Instagram-Scraping öffentlicher Hashtag-Reels
+instaloader>=4.11
+
+# Konfiguration & Umgebungsvariablen
+PyYAML>=6.0
+python-dotenv>=1.0.0
+
+# HTTP-Requests (Telegram-Bot + ggf. eigene Scraper-Aufrufe)
+requests>=2.31.0

@@ -1,0 +1,50 @@
+# =============================================================================
+# Viral Reel Finder – Konfiguration
+# =============================================================================
+# Hier trägst DU deine Einstellungen ein. Keine Passwörter/API-Keys hier rein!
+# Geheime Schlüssel (Anthropic, Telegram) gehören in die Datei .env
+# -----------------------------------------------------------------------------
+
+# Nischen-Keywords / Hashtags, nach denen gesucht wird.
+# Ohne führendes '#'  –  das wird automatisch ergänzt, wo nötig.
+hashtags:
+  - facelesscontent
+  - onlinebusiness
+  - nebeneinkommen
+  - digitaleprodukte
+  - passiveseinkommen
+  - sidehustle
+
+# Plattform: "tiktok", "instagram" oder "beide"
+platform: beide
+
+# Nur Videos berücksichtigen, die MINDESTENS so viele Views haben.
+min_views: 50000
+
+# Wie viele Top-Videos am Ende ausgegeben/verarbeitet werden sollen.
+top_n: 20
+
+# Obergrenze, wie viele Videos pro Hashtag/Quelle gescrapt werden.
+# Niedrig halten = höflicher gegenüber den Plattformen + weniger Block-Risiko.
+max_videos_per_source: 40
+
+# Höfliche Pause zwischen einzelnen Requests (Sekunden, zufällig im Bereich).
+request_delay_seconds:
+  min: 2.0
+  max: 5.0
+
+# Wie oft ein fehlgeschlagener Request wiederholt wird (exponentielles Backoff).
+max_retries: 3
+
+# -----------------------------------------------------------------------------
+# Claude / Anthropic – Skript-Generierung
+# -----------------------------------------------------------------------------
+claude_model: claude-sonnet-4-6
+claude_max_tokens: 4000
+
+# -----------------------------------------------------------------------------
+# Zeitplan-Hinweis (NUR Dokumentation!)
+# Der eigentliche Lauf wird vom Windows-Aufgabenplaner / Cron gestartet,
+# NICHT von diesem Tool selbst. Siehe README.md, Abschnitt b).
+# -----------------------------------------------------------------------------
+schedule_hint: "Täglich 07:00 Uhr über den Windows-Aufgabenplaner ausführen."
