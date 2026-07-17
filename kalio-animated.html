@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Skill-Animationen: Reduce-Motion-freundliche Einblendung früh markieren (verhindert Flackern) -->
-<script>try{if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("rm-on");}}catch(e){}</script>
+<!-- Skill-Animationen: Marker früh setzen (verhindert Flackern beim Scroll-Reveal) -->
+<script>(function(){var h=document.documentElement;h.classList.add("sa-ready");try{if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){h.classList.add("rm-on");}}catch(e){}})();</script>
 <title>Kalio – KI-Chatbots & Voice-Agents mit Terminbuchung | WhatsApp, Instagram & Website</title>
 <meta name="description" content="KI-Chatbots & Voice-Agents, die Anfragen sofort beantworten und Termine direkt in Ihren Kalender buchen – WhatsApp, Instagram & Website. DSGVO-konform. Kostenlose Demo.">
 
@@ -902,6 +902,16 @@ html.rm-on .cell.rm-in,html.rm-on .ledger-row.rm-in,html.rm-on .trust-item.rm-in
 html.rm-on .flow-col.rm-in,html.rm-on .step.rm-in{
   opacity:1 !important;
 }
+
+/* ------------------------------------------------------------
+   Sektionen tauchen beim Scrollen auf (Fade + sanftes Hochsteigen).
+   html.sa-ready wird vor dem ersten Paint gesetzt -> kein Flackern.
+   Unter "Bewegung reduzieren" (html.rm-on) nur Einfaden, ohne Bewegung.
+   ------------------------------------------------------------ */
+html.sa-ready main section>.container{opacity:0;transform:translateY(46px);transition:opacity .7s ease-out,transform .85s cubic-bezier(.22,.7,.3,1);will-change:opacity,transform}
+html.sa-ready main section>.container.sa-in{opacity:1;transform:none;will-change:auto}
+html.rm-on main section>.container{transform:none !important;transition:opacity .7s ease-out !important}
+@media(max-width:860px){html.sa-ready main section>.container{transform:translateY(30px)}}
 </style>
 
 <!-- Strukturierte Daten für Google (FAQ-Rich-Results + Local SEO) -->
@@ -2917,6 +2927,43 @@ document.documentElement.classList.add("js");
           if(e.classList.contains("rm-in"))return;
           var r=e.getBoundingClientRect();
           if(r.top<window.innerHeight&&r.bottom>0)e.classList.add("rm-in");
+        });
+      },140);
+    },{passive:true});
+    /* Fallback 2: nichts darf dauerhaft unsichtbar bleiben */
+    setTimeout(revealAll,4000);
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start();
+})();
+</script>
+
+<!-- ============================================================
+     SKILL-ANIMATIONEN (frontend-slides) — Sektionen auf Scroll
+     Jede Sektion taucht beim Heranscrollen auf (Fade + Rise).
+     Laeuft in jedem Modus; unter Reduce-Motion nur als Einfaden.
+     ============================================================ -->
+<script>
+(function(){
+  var html=document.documentElement;
+  if(!html.classList.contains("sa-ready"))return;
+  function start(){
+    var els=[].slice.call(document.querySelectorAll("main section > .container"));
+    if(!els.length)return;
+    function revealAll(){els.forEach(function(e){e.classList.add("sa-in");});}
+    if(!("IntersectionObserver" in window)){revealAll();return;}
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){
+        if(en.isIntersecting||en.intersectionRatio>0){en.target.classList.add("sa-in");io.unobserve(en.target);}
+      });
+    },{threshold:0,rootMargin:"0px 0px -12% 0px"});
+    els.forEach(function(e){io.observe(e);});
+    /* Fallback 1: schnelles Scrollen nachziehen */
+    var sweep;window.addEventListener("scroll",function(){
+      clearTimeout(sweep);sweep=setTimeout(function(){
+        els.forEach(function(e){
+          if(e.classList.contains("sa-in"))return;
+          var r=e.getBoundingClientRect();
+          if(r.top<window.innerHeight&&r.bottom>0)e.classList.add("sa-in");
         });
       },140);
     },{passive:true});
