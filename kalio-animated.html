@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Skill-Animationen: Reduce-Motion-freundliche Einblendung früh markieren (verhindert Flackern) -->
+<script>try{if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("rm-on");}}catch(e){}</script>
 <title>Kalio – KI-Chatbots & Voice-Agents mit Terminbuchung | WhatsApp, Instagram & Website</title>
 <meta name="description" content="KI-Chatbots & Voice-Agents, die Anfragen sofort beantworten und Termine direkt in Ihren Kalender buchen – WhatsApp, Instagram & Website. DSGVO-konform. Kostenlose Demo.">
 
@@ -878,6 +880,27 @@ html.js .tilt:hover::after{opacity:1}
 @media(max-width:860px){
   /* Grid-Overlay auf Mobile ausblenden (wirkt sonst unruhig) */
   .hero-grid-fx{display:none}
+}
+
+/* ------------------------------------------------------------
+   Reduce-Motion-freundliche Einblendung
+   Greift NUR, wenn das System "Bewegung reduzieren" meldet
+   (html.rm-on). Dann werden die sonst komplett abgeschalteten
+   Effekte durch ein sanftes Einfaden – ausschliesslich ueber die
+   Deckkraft, ohne vestibulaer kritische Bewegung – ersetzt.
+   ------------------------------------------------------------ */
+html.rm-on .reveal,html.rm-on .reveal-l,html.rm-on .reveal-r,
+html.rm-on .stagger>*,html.rm-on .stagger-solo>*,
+html.rm-on .cell,html.rm-on .ledger-row,html.rm-on .trust-item,
+html.rm-on .flow-col,html.rm-on .step{
+  opacity:0 !important;transform:none !important;
+  transition:opacity .7s ease-out !important;will-change:opacity;
+}
+html.rm-on .reveal.rm-in,html.rm-on .reveal-l.rm-in,html.rm-on .reveal-r.rm-in,
+html.rm-on .stagger>*.rm-in,html.rm-on .stagger-solo>*.rm-in,
+html.rm-on .cell.rm-in,html.rm-on .ledger-row.rm-in,html.rm-on .trust-item.rm-in,
+html.rm-on .flow-col.rm-in,html.rm-on .step.rm-in{
+  opacity:1 !important;
 }
 </style>
 
@@ -2857,6 +2880,50 @@ document.documentElement.classList.add("js");
       rect=null;el.classList.remove("tilting");el.style.transform="";
     });
   });
+})();
+</script>
+
+<!-- ============================================================
+     SKILL-ANIMATIONEN (frontend-slides) — Reduce-Motion-Fade
+     Fadet Inhalte beim Scrollen sanft ein, wenn "Bewegung
+     reduzieren" aktiv ist (dann sind die normalen Effekte aus).
+     Nur Deckkraft -> barrierefrei. Mit Fallbacks gegen haengende
+     unsichtbare Elemente.
+     ============================================================ -->
+<script>
+(function(){
+  var html=document.documentElement;
+  if(!html.classList.contains("rm-on"))return;   /* nur bei Reduce-Motion aktiv */
+  var sel=".reveal,.reveal-l,.reveal-r,.stagger>*,.stagger-solo>*,.cell,.ledger-row,.trust-item,.flow-col,.step";
+  function start(){
+    var els=[].slice.call(document.querySelectorAll(sel));
+    /* dezente Staffelung innerhalb eines Containers */
+    els.forEach(function(e){
+      var p=e.parentElement,i=p?[].indexOf.call(p.children,e):0;
+      e.style.transitionDelay=Math.min(i,6)*0.06+"s";
+    });
+    function revealAll(){els.forEach(function(e){e.classList.add("rm-in");});}
+    if(!("IntersectionObserver" in window)){revealAll();return;}
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){
+        if(en.isIntersecting||en.intersectionRatio>0){en.target.classList.add("rm-in");io.unobserve(en.target);}
+      });
+    },{threshold:0,rootMargin:"0px 0px -10% 0px"});
+    els.forEach(function(e){io.observe(e);});
+    /* Fallback 1: nach schnellem Scrollen nachziehen */
+    var sweep;window.addEventListener("scroll",function(){
+      clearTimeout(sweep);sweep=setTimeout(function(){
+        els.forEach(function(e){
+          if(e.classList.contains("rm-in"))return;
+          var r=e.getBoundingClientRect();
+          if(r.top<window.innerHeight&&r.bottom>0)e.classList.add("rm-in");
+        });
+      },140);
+    },{passive:true});
+    /* Fallback 2: nichts darf dauerhaft unsichtbar bleiben */
+    setTimeout(revealAll,4000);
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start();
 })();
 </script>
 
