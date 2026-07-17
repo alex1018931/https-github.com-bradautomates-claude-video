@@ -1,0 +1,18 @@
+# Geheime Schlüssel – NIEMALS einchecken
+.env
+
+# Erzeugte Ergebnisse und Logs
+output/*.md
+output/*.csv
+logs/*.log
+
+# Python-Artefakte
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Instaloader-Session-/Cache-Dateien
+.instaloader-*
+*.session
