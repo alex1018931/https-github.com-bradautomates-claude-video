@@ -3,17 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KI-Chatbot für Friseure, Kosmetik & Beauty | Kalio</title>
-<meta name="description" content="Terminanfragen aus Instagram-DMs automatisch in gebuchte Termine verwandeln – Preise nennen, Mitarbeiter zuordnen, Kalender füllen. DSGVO-konform. Testbot ausprobieren.">
-<link rel="canonical" href="https://[HIER-DOMAIN-EINTRAGEN].at/branche-beauty.html">
+<title>Website-Chat: Live-Chat mit KI für Ihre Website | Kalio</title>
+<meta name="description" content="Der Kalio Website-Chat beantwortet Besucherfragen sofort, bucht Termine direkt auf Ihrer Website und leitet Gespräche nahtlos auf WhatsApp weiter. DSGVO-konform.">
+
+<link rel="canonical" href="https://[HIER-DOMAIN-EINTRAGEN].at/website-chat">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_AT">
 <meta property="og:site_name" content="Kalio">
-<meta property="og:title" content="KI-Chatbot für Friseure, Kosmetik & Beauty | Kalio">
-<meta property="og:description" content="Terminanfragen aus Instagram-DMs automatisch in gebuchte Termine verwandeln – Preise nennen, Mitarbeiter zuordnen, Kalender füllen. DSGVO-konform. Testbot ausprobieren.">
-<meta property="og:url" content="https://[HIER-DOMAIN-EINTRAGEN].at/branche-beauty.html">
+<meta property="og:title" content="Website-Chat: Live-Chat mit KI für Ihre Website | Kalio">
+<meta property="og:description" content="Der Kalio Website-Chat beantwortet Besucherfragen sofort, bucht Termine direkt auf Ihrer Website und leitet Gespräche nahtlos auf WhatsApp weiter. DSGVO-konform.">
+<meta property="og:url" content="https://[HIER-DOMAIN-EINTRAGEN].at/website-chat">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Website-Chat: Live-Chat mit KI für Ihre Website | Kalio">
+<meta name="twitter:description" content="Der Kalio Website-Chat beantwortet Besucherfragen sofort, bucht Termine direkt auf Ihrer Website und leitet Gespräche nahtlos auf WhatsApp weiter. DSGVO-konform.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -1090,6 +1098,97 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
   .b-hero-cta svg,.hero-chan a i svg,.bx-cards .card{transition:none}
 }
 </style>
+
+<style id="p-style">
+/* ============================================================
+   PRODUKTSEITEN (Kanal-Unterseiten)
+   Heller Hero mit Mockup links, Feature-Zeilen im Wechsel,
+   Demo-Bot nur mit Antwort-Buttons.
+   ============================================================ */
+.p-hero{background:linear-gradient(180deg,#F6F7FA 0%,var(--paper) 100%);padding:48px 0 62px;border-bottom:1px solid var(--line)}
+.p-hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;max-width:1080px}
+.p-hero-copy h1{font-size:clamp(33px,4.2vw,52px);margin:12px 0 18px}
+.p-hero-copy h1 em{color:var(--accent-deep);font-style:normal}
+.p-hero .lead{margin-bottom:22px}
+.p-hero .b-crumb{color:var(--muted-2)}
+.p-hero .b-crumb a{color:var(--muted-2)}
+.p-hero .b-crumb a:hover{color:var(--ink)}
+.p-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.p-pills span{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink);border:1px solid var(--line-strong);border-radius:99px;padding:8px 16px;background:#fff}
+.p-pills svg{color:var(--accent)}
+.p-hero-mock{display:flex;justify-content:center}
+.p-hero-mock .mock{width:100%;max-width:400px}
+@media(max-width:860px){
+  .p-hero-grid{grid-template-columns:1fr;gap:34px}
+  .p-hero-mock{order:2}.p-hero-copy{order:1}
+}
+/* Feature-Zeilen: Text und Mockup im Wechsel */
+.feat .container{max-width:1060px}
+.feat-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.feat-grid.rev .feat-copy{order:2}
+.feat-grid.rev .feat-mock{order:1}
+.feat-copy h2{margin:10px 0 14px}
+.feat-copy p{color:var(--muted);line-height:1.7;margin-bottom:14px;font-size:16.5px}
+.feat-list{list-style:none;margin-top:8px}
+.feat-list li{display:flex;gap:11px;align-items:flex-start;padding:8px 0;font-size:15.5px;color:var(--ink);line-height:1.5}
+.feat-list svg{color:var(--accent);flex-shrink:0;margin-top:3px}
+.feat-mock{display:flex;justify-content:center}
+.feat-mock .mock{width:100%;max-width:400px}
+@media(max-width:860px){
+  .feat-grid{grid-template-columns:1fr;gap:30px}
+  .feat-grid.rev .feat-copy{order:1}.feat-grid.rev .feat-mock{order:2}
+}
+/* UI-Mockups (wie auf der Startseite) */
+.mbubble{max-width:86%;padding:9px 12px;border-radius:9px;font-size:13.5px;line-height:1.5;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.mbubble.bot{background:#fff;align-self:flex-start;border-top-left-radius:2px}
+.mbubble.user{background:var(--accent);color:#fff;align-self:flex-end;border-top-right-radius:2px}
+.mbubble.user.green{background:#D9FDD3;color:#111}
+.mbubble.user.pink{background:linear-gradient(135deg,var(--ig-b),var(--ig-a));color:#fff}
+.mquick{display:flex;gap:8px;flex-wrap:wrap;align-self:flex-start}
+.mquick span{font-size:12.5px;font-weight:600;color:var(--accent-deep);border:1px solid rgba(76,72,196,.4);border-radius:99px;padding:6px 12px;background:#fff}
+.mock-bar.wa2{background:#0E5C4A}
+.mock-bar.ig{background:linear-gradient(135deg,var(--ig-b),var(--ig-a))}
+.mock-bar.web{background:var(--accent)}
+.mock-bar.voice{background:var(--navy)}
+.mock-bar.cal{background:var(--accent-deep)}
+.mtime{align-self:center;font-family:var(--mono);font-size:11px;color:#59617A;letter-spacing:.08em}
+.voice-line{font-size:13.5px;color:#111;background:#fff;border-radius:9px;padding:9px 12px;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.voice-line b{color:var(--accent-deep)}
+.cal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:4px 0 8px}
+.cal-slot{font-size:12.5px;font-weight:600;text-align:center;padding:9px 4px;border-radius:7px;border:1px solid var(--line-strong);color:#111;background:#fff}
+.cal-slot.busy{color:#A0A6B4;background:#EDEEF3;text-decoration:line-through;font-weight:500}
+.cal-slot.pick{background:var(--accent);border-color:var(--accent);color:#fff;position:relative}
+.cal-confirm{display:flex;align-items:center;gap:10px;background:#fff;border-radius:9px;padding:10px 12px;font-size:13px;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.cal-confirm b{font-size:13px}
+.cal-note{font-size:12px;color:#3E465A;padding-top:6px}
+/* Demo-Bot: nur Antwort-Buttons, kein Freitext */
+.bot-input{display:none}
+/* Weitere Lösungen */
+.more .container{max-width:1000px}
+.bx-cards a.card{display:block;text-decoration:none;color:inherit}
+.bx-cards a.card .card-more{display:inline-flex;align-items:center;gap:6px;color:var(--accent-deep);font-weight:600;font-size:14px;margin-top:10px}
+</style>
+
+<!-- Strukturierte Daten: Service-Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Website-Chat mit KI und Terminbuchung",
+  "serviceType": "KI-Live-Chat für Websites",
+  "description": "Der Kalio Website-Chat beantwortet Besucherfragen sofort, bucht Termine direkt auf Ihrer Website und leitet Gespräche nahtlos auf WhatsApp weiter. DSGVO-konform.",
+  "url": "https://[HIER-DOMAIN-EINTRAGEN].at/website-chat",
+  "provider": {
+    "@type": "Organization",
+    "name": "Kalio",
+    "telephone": "+43 676 751 55 86"
+  },
+  "areaServed": [
+    "AT",
+    "DE"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1208,165 +1307,106 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
 
 <main id="main">
 
-<section class="b-hero">
-  <div class="container">
-    <p class="b-crumb"><a href="index.html">Kalio</a> · <a href="index.html#branchen">Branchen</a> · Beauty & Wellness</p>
-    <span class="b-eyebrow">Für Friseure, Kosmetik- & Nagelstudios, Spa</span>
-    <h1>Aus der DM um 21 Uhr wird <em>ein fixer Termin</em></h1>
-    <p class="lead">Die Anfragen kommen abends per Instagram, Stunden nachdem Sie zugesperrt haben. Der Bot nennt den Preis, sucht die richtige Mitarbeiterin und bucht in den Kalender.</p>
-    <div class="b-pills stagger">
-        <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg> Termine nach Behandlungsdauer</span>
-        <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg> Preise sofort nennen</span>
-        <span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg> No-Show-Erinnerung</span>
-    </div>
-    <a href="#testbot" class="b-hero-cta">Testbot ausprobieren
-      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
-  </div>
-</section>
-
-<section class="b-sec">
-  <div class="container">
-    <div class="sec-head reveal">
-      <div>
-        <span class="kicker">Typische Situation</span>
-        <h2>Kennen Sie das aus Ihrem Studio?</h2>
-      </div>
-    </div>
-    <div class="ledger stagger reveal" style="margin-top:8px">
-      <div class="cell reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <h3>Sie können nicht ans Handy</h3>
-        <p style="color:var(--muted);margin-top:8px;line-height:1.65">Sie stehen am Stuhl, die Hände in der Farbe. Genau dann kommen die Anfragen. Wer zu spät antwortet, hat die Kundin schon verloren.</p>
-      </div>
-      <div class="cell reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <h3>DMs stapeln sich am Abend</h3>
-        <p style="color:var(--muted);margin-top:8px;line-height:1.65">Was kostet der Ansatz, wann ist bei Nina was frei, geht das auch am Samstag. Jede Nachricht einzeln, abends auf der Couch.</p>
-      </div>
-      <div class="cell reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <h3>No-Shows reißen Löcher</h3>
-        <p style="color:var(--muted);margin-top:8px;line-height:1.65">Ein leerer Stuhl kostet bares Geld. Ohne Erinnerung kommt gut jede zehnte Kundin nicht.</p>
+<!-- ============ HERO ============ -->
+<header class="p-hero">
+  <div class="container p-hero-grid">
+    <div class="p-hero-mock hero-enter d2"><div class="mock"><div class="mock-bar web"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>zahnarzt-egger.at · Website-Chat</div><div class="mock-body"><div class="mbubble bot">Guten Tag! 👋 Wie kann ich Ihnen helfen?</div><div class="mbubble user">Ich hätte gern einen Termin zur Kontrolle.</div><div class="mbubble bot">Gerne – diese Woche ist noch <b>Do 09:15</b> oder <b>Fr 11:00 Uhr</b> frei.</div><div class="mquick"><span>Do 09:15</span><span>Fr 11:00</span></div></div></div></div>
+    <div class="p-hero-copy">
+      <p class="b-crumb"><a href="index.html">Kalio</a> · <a href="index.html#loesungen-detail">Lösungen</a> · Website-Chat</p>
+      <span class="kicker hero-enter">Lösung · Website-Chat</span>
+      <h1 class="hero-enter d1">Ihre Website antwortet. <em>In Sekunden.</em></h1>
+      <p class="lead hero-enter d2">Wer auf Ihrer Website landet, hat meist eine konkrete Frage – und wenig Geduld. Der Website-Chat beantwortet sie sofort, legt freie Termine gleich mit auf den Tisch und passt sich optisch an Ihre Seite an. Kein Formular, kein Warten auf eine E-Mail.</p>
+      <div class="p-pills hero-enter d3"><span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg> Antwort statt Kontaktformular</span><span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg> Termine direkt im Chat</span><span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg> Passt sich Ihrer Website an</span></div>
+      <div class="hero-ctas hero-enter d4">
+        <a class="btn btn-primary" href="#testbot">Demo ausprobieren</a>
+        <a class="btn btn-outline" href="index.html#demo-anfrage">Kostenloses Erstgespräch</a>
       </div>
     </div>
   </div>
-</section>
+</header>
 
-<section class="b-sec b-nutzen">
-  <div class="container">
-    <div class="sec-head reveal">
-      <div>
-        <span class="kicker">Was Kalio übernimmt</span>
-        <h2>Ihr Studio bucht weiter, während Sie am Stuhl stehen</h2>
-      </div>
+<section class="b-sec feat">
+  <div class="container feat-grid">
+    <div class="feat-copy reveal-l">
+      <span class="kicker">Sofort-Antworten</span>
+      <h2>Keine Frage bleibt liegen, kein Besucher springt ab</h2>
+      <p>Kassenleistung oder privat? Wie lange dauert eine Mundhygiene? Was kostet das? Solche Fragen entscheiden, ob jemand anruft oder weiterklickt. Der Chat beantwortet sie sofort – mit Ihren hinterlegten Inhalten. Bei medizinischen oder heiklen Fragen verweist er ehrlich ans Team, statt zu raten.</p>
+      <ul class="feat-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Antworten aus Ihren echten Inhalten</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Rund um die Uhr verfügbar, auch am Wochenende</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Heikle Fragen gehen ans Team, nicht ins Blaue</span></li></ul>
     </div>
-    <div class="b-nutzen-grid reveal">
-      <div class="b-nutzen-text">
-      <p>Bei Ihnen entscheidet das Tempo. Wer abends auf Instagram fragt und zwei Tage nichts hört, ist weg. Der Bot antwortet sofort, nennt Preis und Dauer und schlägt Zeiten vor, die zur richtigen Mitarbeiterin passen. Aus einer DM wird ein Eintrag im Kalender.</p>
-      <p>Er weiß, wie lange was dauert. Für eine Balayage blockt er drei Stunden, für einen Ansatz eine. Sagt jemand ab, besetzt er die Lücke nach. Und am Vortag geht die Erinnerung raus.</p>
-      <p>Fast alles läuft bei Ihnen über Instagram, also arbeitet der Bot dort. Er antwortet direkt in den DMs, in Ihrem Ton, auf Wunsch mit Ihren Emojis. Für die Kundin ist das eine schnelle Antwort vom Studio. Nur sitzt dafür abends keiner am Handy.</p>
-      </div>
-      <div>
-        <span class="b-nutzen-lbl">Das nimmt Ihnen der Bot ab</span>
-        <ul class="b-nutzen-list stagger">
-        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Termine passend zur Behandlungsdauer buchen</span></li>
-        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Preise und Leistungen sofort und korrekt nennen</span></li>
-        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Kundinnen der richtigen Mitarbeiterin zuordnen</span></li>
-        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Absagen automatisch nachbesetzen</span></li>
-        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Erinnerung am Vortag verschicken, gegen No-Shows</span></li>
-        <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Anfragen aus Instagram-DM, WhatsApp und Website an einem Ort</span></li>
-        </ul>
-      </div>
-    </div>
-    <p class="b-ablauf reveal">Eine Kundin schreibt um 20:30 Uhr: „Was kostet Balayage und geht das bei Nina am Samstag?“ Der Bot nennt Preis und Dauer, schaut in Ninas Kalender, schlägt einen Block vor und bucht ihn. Sie sperren in der Früh auf, der Termin steht schon.</p>
+    <div class="feat-mock reveal-r"><div class="mock"><div class="mock-bar web"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>zahnarzt-egger.at · Website-Chat</div><div class="mock-body"><div class="mbubble user">Ist die Mundhygiene eine Kassenleistung?</div><div class="mbubble bot">Die Mundhygiene ist eine <b>Privatleistung</b> und kostet bei uns <b>110 € (60 Min)</b>. Kontrolltermine übernimmt die Kasse – einfach e-card mitbringen.</div><div class="mquick"><span>Termin vereinbaren</span><span>Weitere Fragen</span></div></div></div></div>
   </div>
 </section>
 
+<section class="b-sec feat">
+  <div class="container feat-grid rev">
+    <div class="feat-copy reveal-r">
+      <span class="kicker">Terminbuchung</span>
+      <h2>Vom ersten Klick zum fixen Termin</h2>
+      <p>Der Chat sieht in Echtzeit in Ihren Kalender. Der Besucher wählt eine freie Zeit, der Termin wird eingetragen, Bestätigung und Erinnerung gehen automatisch raus. Aus einem anonymen Websitebesuch wird ein Eintrag im Kalender – ohne dass Ihr Empfang telefonieren muss.</p>
+      <ul class="feat-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Freie Slots direkt im Chat wählbar</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Automatische Bestätigung und Erinnerung</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Kein Doppeltermin möglich – der Kalender führt</span></li></ul>
+    </div>
+    <div class="feat-mock reveal-l"><div class="mock"><div class="mock-bar cal"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Donnerstag · Freie Termine</div><div class="mock-body"><div class="cal-grid"><span class="cal-slot busy">08:00</span><span class="cal-slot">09:15</span><span class="cal-slot busy">10:30</span><span class="cal-slot pick">11:45</span><span class="cal-slot">14:00</span><span class="cal-slot busy">15:15</span><span class="cal-slot">16:30</span><span class="cal-slot busy">17:45</span></div><div class="cal-confirm"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4C48C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><div><b>11:45 Uhr gebucht</b> · Bestätigung und Erinnerung gesendet</div></div></div></div></div>
+  </div>
+</section>
+
+<section class="b-sec feat">
+  <div class="container feat-grid">
+    <div class="feat-copy reveal-l">
+      <span class="kicker">WhatsApp-Übergabe</span>
+      <h2>Der Chat zieht mit aufs Handy um</h2>
+      <p>Websitebesuche enden oft abrupt: Tab zu, Gespräch weg. Der Chat bietet deshalb an, die Unterhaltung auf WhatsApp weiterzuführen. Der Besucher tippt einmal, und das Gespräch läuft am Handy weiter – mit allem Kontext. So geht kein angefangenes Gespräch mehr verloren.</p>
+      <ul class="feat-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Nahtlose Übergabe vom Website-Chat zu WhatsApp</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Gesprächsverlauf bleibt erhalten</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>Ideal für Besucher, die unterwegs sind</span></li></ul>
+    </div>
+    <div class="feat-mock reveal-r"><div class="mock"><div class="mock-bar web"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>zahnarzt-egger.at · Website-Chat</div><div class="mock-body"><div class="mbubble user">Ich muss gleich los, kann ich später weitermachen?</div><div class="mbubble bot">Klar! Ich schicke Ihnen den Chat aufs Handy – wir schreiben einfach auf WhatsApp weiter. 📲</div><div class="mquick"><span>Weiter auf WhatsApp</span><span>Hier bleiben</span></div></div></div></div>
+  </div>
+</section>
+
+<!-- ============ DEMO-BOT ============ -->
 <section class="b-sec b-demo" id="testbot">
   <div class="container">
-    <span class="kicker">Live-Test</span>
-    <h2>Probieren Sie den Bot selbst aus</h2>
-    <p class="demo-sub">Instagram-DM, 20:34 Uhr, das Studio ist zu. Fragen Sie ihn nach Preisen, einem Termin oder einer bestimmten Mitarbeiterin:</p>
+    <span class="kicker">So könnte Ihr Bot aussehen – Demo</span>
+    <h2>Probieren Sie den Website-Chat aus</h2>
+    <p class="demo-sub">So könnte Ihr Bot aussehen – Demo. Die Praxis ist erfunden, der Ablauf ist echt. Klicken Sie sich durch:</p>
 
     <div class="bot" id="demoBot">
       <div class="bot-head">
-        <span class="ba">L</span>
-        <div><b>Studio Lumea</b><small>Beispiel-Bot · fiktives Studio</small></div>
+        <span class="ba">DE</span>
+        <div><b>Zahnarztpraxis Dr. Egger</b><small>So könnte Ihr Bot aussehen · Demo</small></div>
         <button type="button" class="bot-reset" id="botReset">Neu starten</button>
       </div>
       <div class="bot-body" id="botBody" aria-live="polite"></div>
       <div class="bot-input">
-        <input type="text" id="botInput" placeholder="Nachricht schreiben …" aria-label="Nachricht an den Testbot" maxlength="200">
+        <input type="text" id="botInput" placeholder="Nachricht schreiben …" aria-label="Nachricht an den Demo-Bot" maxlength="200">
         <button type="button" id="botSend" aria-label="Senden"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
       </div>
     </div>
-    <p class="bot-note">Dieses Studio ist erfunden, samt Preisen und Mitarbeiterinnen. Ihr Bot arbeitet später mit Ihrer Preisliste, Ihren Behandlungsdauern und Ihrem Kalender.</p>
+    <p class="bot-note">Demo mit fiktiver Praxis und erfundenen Daten. Ihr Website-Chat wird mit Ihren echten Leistungen, Preisen und Zeiten eingerichtet.</p>
   </div>
 </section>
 
-<section class="bx" style="background:var(--paper-2)">
+<!-- ============ WEITERE LÖSUNGEN ============ -->
+<section class="b-sec more">
   <div class="container">
-    <span class="kicker">Der Unterschied</span>
-    <h2>Eine DM um 21 Uhr, zwei mögliche Enden</h2>
-    <p class="bx-lead">Dieselbe Anfrage, zwei Ausgänge:</p>
-    <div class="bx-split">
-      <div class="col bad">
-        <h3>Ohne Bot</h3>
-        <ul>
-          <li>Die DM bleibt bis morgen früh liegen.</li>
-          <li>Die Kundin hat längst woanders gebucht.</li>
-          <li>Preise und Verfügbarkeit müssen Sie abends selbst tippen.</li>
-          <li>Ein abgesagter Termin bleibt eine Lücke im Buch.</li>
-        </ul>
-      </div>
-      <div class="col good">
-        <h3>Mit Kalio-Bot</h3>
-        <ul>
-          <li>Antwort in Sekunden, auch um 21 Uhr.</li>
-          <li>Preis genannt, Termin bei der richtigen Mitarbeiterin gebucht.</li>
-          <li>Alles landet automatisch in Ihrem Kalender.</li>
-          <li>Frei gewordene Zeiten werden aktiv nachbesetzt.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="b-sec b-faq">
-  <div class="container">
-    <div class="sec-head">
+    <div class="sec-head reveal">
       <div>
-        <span class="kicker">Häufige Fragen aus der Branche</span>
-        <h2>Kurz und ehrlich beantwortet</h2>
+        <span class="kicker">Weitere Lösungen</span>
+        <h2>Was Kalio noch für Sie übernimmt</h2>
       </div>
     </div>
-    <div class="faq-list stagger">
-      <details class="faq-item">
-        <summary>Klingt der Bot nicht unpersönlich?<i>+</i></summary>
-        <p>Er schreibt so, wie Sie schreiben. Locker oder gepflegt, mit Emojis oder ohne. Was Ihre Kundinnen vor allem merken: Die Antwort kommt sofort.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Kann der Bot nach Mitarbeiterin buchen?<i>+</i></summary>
-        <p>Ja. Er kennt die Arbeitszeiten und weiß, wer bei Ihnen was macht. Die Kundin landet bei der richtigen Person im passenden Block.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Was ist mit Behandlungen, die Beratung brauchen?<i>+</i></summary>
-        <p>Bei allem, was ein Vorgespräch braucht, etwa eine große Farbveränderung oder einen Erstbesuch mit unklarem Wunsch, bucht er ein Beratungsgespräch statt der Behandlung. Oder er gibt gleich an Sie weiter.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Hilft das wirklich gegen No-Shows?<i>+</i></summary>
-        <p>Die Erinnerung am Vortag senkt No-Shows deutlich. Und sagt wer ab, besetzt der Bot die Zeit wieder nach.</p>
-      </details>
+    <div class="bx-cards stagger">
+      <a class="card" href="whatsapp-bot.html"><h3><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-5.5a8.5 8.5 0 0 1-1-4A8.38 8.38 0 0 1 11.5 2a8.5 8.5 0 0 1 8.5 8.5z"/></svg>WhatsApp-Bot</h3><p>Anfragen beantworten und Termine buchen, direkt im Chat.</p><span class="card-more">Mehr erfahren <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a><a class="card" href="instagram-bot.html"><h3><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>Instagram-Bot</h3><p>DMs, Story-Antworten und Kommentare automatisch beantworten.</p><span class="card-more">Mehr erfahren <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a><a class="card" href="voice-agent.html"><h3><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>Voice-Agent</h3><p>Anrufe annehmen und Termine am Telefon vergeben.</p><span class="card-more">Mehr erfahren <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a><a class="card" href="terminbuchung.html"><h3><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>Terminbuchung</h3><p>Echtzeit-Kalender, Bestätigung und Erinnerung automatisch.</p><span class="card-more">Mehr erfahren <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a><a class="card" href="index.html"><h3><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Alle Lösungen im Überblick</h3><p>Zurück zur Startseite mit allen Kanälen, dem Ablauf und dem Demo-Formular.</p><span class="card-more">Zur Startseite <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
     </div>
   </div>
 </section>
 
+<!-- ============ ABSCHLUSS-CTA ============ -->
 <section class="b-final">
   <div class="container">
-    <h2>Soll Ihr Studio das auch können?</h2>
-    <p>Wir bauen Ihnen eine kostenlose Demo mit Ihrer Preisliste und Ihren Behandlungen. Probieren Sie sie in Ruhe aus, Sie gehen damit nichts ein.</p>
-    <a href="index.html#demo-anfrage" class="b-hero-cta">Kostenlose Demo anfragen</a>
+    <h2>Kostenloses Erstgespräch</h2>
+    <p>Wir bauen Ihnen eine Demo mit Ihren echten Leistungen, Zeiten und Ihrem Ton – und sagen Ihnen ehrlich, was sich bei Ihnen automatisieren lässt und was nicht. Sie entscheiden erst, wenn Sie Ihren Bot gesehen haben.</p>
+    <a href="index.html#demo-anfrage" class="b-hero-cta">Kostenloses Erstgespräch anfragen
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
   </div>
 </section>
 
@@ -1410,8 +1450,8 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
 </footer>
 
 <script>
-window.__FLOWS__={"start": {"text": "Hallo! 👋 Ich bin der Beispiel-Bot vom <b>Studio Lumea</b> (fiktiv). Fragen Sie mich etwas oder wählen Sie:", "chips": [["Termin buchen", "b_beh"], ["Was kostet was?", "preise"], ["Geht das bei Nina?", "nina"], ["Do you speak English?", "english"]]}, "b_beh": {"text": "Sehr gerne! Um welche <b>Behandlung</b> geht es?", "chips": [["Damenschnitt", "b_person"], ["Balayage / Farbe", "b_person"], ["Maniküre", "b_person"]]}, "b_person": {"text": "Haben Sie eine <b>Wunsch-Mitarbeiterin</b>, oder darf ich die nächste freie nehmen?", "chips": [["Bei Nina", "b_tag"], ["Bei Lea", "b_tag"], ["Egal, Hauptsache bald", "b_tag"]]}, "b_tag": {"text": "Und wann würde es Ihnen passen?", "chips": [["Diese Woche", "b_slot_w"], ["Am Samstag", "b_slot_sa"], ["Nächste Woche", "b_slot_w"]]}, "b_slot_w": {"text": "Ich hätte <b>Do 14:30</b> oder <b>Fr 10:00</b> im passenden Zeitblock frei. Was möchten Sie?", "chips": [["Do 14:30", "b_conf"], ["Fr 10:00", "b_conf"]]}, "b_slot_sa": {"text": "Samstag ist begehrt – frei ist noch <b>09:00 Uhr</b> (3-Stunden-Block) oder <b>13:30 Uhr</b>. Welche Zeit passt?", "chips": [["Sa 09:00", "b_conf"], ["Sa 13:30", "b_conf"]]}, "b_conf": {"confirm": "✅ <b>Termin gebucht.</b><br>Sie bekommen eine Bestätigung und am Vortag eine Erinnerung. Bei Farbe bitte mit ungewaschenem Haar kommen.", "next": "fazit"}, "preise": {"text": "Gerne! <b>Balayage 160–210 €</b> (inkl. Schnitt & Föhnen, ca. 3 Std.), <b>Damenschnitt 55 €</b>, <b>Ansatzfarbe ab 70 €</b>, <b>Maniküre 35 €</b>. Soll ich einen Termin suchen?", "chips": [["Ja, Termin buchen", "b_beh"], ["Geht das bei Nina?", "nina"]]}, "nina": {"text": "Nina ist auf <b>Balayage und Blondierungen</b> spezialisiert. Sie hat <b>Sa 09:00 Uhr</b> einen 3-Stunden-Block frei, sonst wieder ab nächster Woche. Soll ich bei Nina reservieren?", "chips": [["Ja, Sa bei Nina", "b_conf"], ["Andere Zeiten?", "b_tag"], ["Preise ansehen", "preise"]]}, "english": {"text": "Of course! I reply in each client's language. Would you like to book an appointment?", "chips": [["Book appointment", "en_book"], ["Weiter auf Deutsch", "start"]]}, "en_book": {"text": "We have a 3-hour balayage slot on <b>Saturday 9:00 AM</b>, or a cut on <b>Thursday 2:30 PM</b>. Which works for you?", "chips": [["Saturday 9 AM", "en_conf"], ["Thursday 2:30 PM", "en_conf"]]}, "en_conf": {"confirm": "✅ <b>Booked.</b><br>You'll get a confirmation and a reminder the day before. For colour, please arrive with unwashed hair.", "next": "fazit"}, "fazit": {"text": "Genau so wird aus einer DM ein gebuchter Termin – auch nachts, ohne dass Sie tippen. Ihr eigener Bot arbeitet mit Ihren Preisen, Mitarbeitern und Öffnungszeiten.<br><br><a href=\"index.html#demo-anfrage\" style=\"color:#4C48C4;font-weight:600;text-decoration:underline\">Kostenlose Demo für Ihren Betrieb anfragen</a>", "chips": [["Neu starten", "restart"]]}, "fallback": {"text": "Als Beispiel-Bot kenne ich nur das fiktive Studio Lumea. Ihr eigener Bot würde das aus Ihren Inhalten beantworten. Versuchen Sie:", "chips": [["Preise", "preise"], ["Termin buchen", "b_beh"], ["Bei Nina?", "nina"]]}};
-window.__ROUTE__=[["preis|kost|€|euro|teuer|price|was.*kostet", "preise"], ["nina|lea|mitarbeit|bei wem|welche.*macht", "nina"], ["termin|buch|reservier|appoint|book|slot|frei", "b_beh"], ["english|englisch|speak", "english"], ["hallo|hi|servus|grüß|hey", "start"]];
+window.__FLOWS__={"start": {"text": "Guten Tag! 👋 Ich bin der Demo-Chat der <b>Zahnarztpraxis Dr. Egger</b>, einer fiktiven Ordination. So würde der Chat auf Ihrer Website arbeiten. Womit darf ich helfen?", "chips": [["Termin vereinbaren", "termin"], ["Was kostet eine Mundhygiene?", "preis"], ["Ordinationszeiten", "zeiten"]]}, "preis": {"text": "Die Mundhygiene kostet <b>110 € (60 Min)</b> und ist eine Privatleistung. Kontrollen übernimmt die Kasse, bitte e-card mitbringen. Soll ich einen Termin suchen?", "chips": [["Termin vereinbaren", "termin"], ["Ordinationszeiten", "zeiten"]]}, "zeiten": {"text": "Ordinationszeiten: <b>Mo, Di, Do 08–12 &amp; 14–18 Uhr</b>, <b>Mi &amp; Fr 08–12 Uhr</b>. Möchten Sie einen Termin?", "chips": [["Termin vereinbaren", "termin"], ["Preise", "preis"]]}, "termin": {"text": "Gerne. Worum geht es?", "chips": [["Kontrolle", "slots"], ["Mundhygiene", "slots"]]}, "slots": {"text": "Diese Woche ist noch <b>Do 09:15</b> oder <b>Fr 11:00 Uhr</b> frei. Was passt Ihnen?", "chips": [["Do 09:15", "buch"], ["Fr 11:00", "buch"], ["Lieber auf WhatsApp weitermachen", "wa"]]}, "wa": {"text": "Kein Problem! Im echten Betrieb bekommen Sie jetzt einen Link und der Chat läuft nahtlos auf WhatsApp weiter – praktisch, wenn Sie die Seite verlassen. Hier in der Demo machen wir einfach weiter: <b>Do 09:15</b> oder <b>Fr 11:00 Uhr</b>?", "chips": [["Do 09:15", "buch"], ["Fr 11:00", "buch"]]}, "buch": {"confirm": "✅ <b>Termin vereinbart.</b><br>Bestätigung und Erinnerung werden automatisch gesendet. Bitte e-card mitbringen.", "next": "fazit"}, "fazit": {"text": "Genau so verwandelt Ihr Website-Chat Besucher in Termine – mit Ihren Inhalten und Ihrem Kalender.<br><br><a href=\"index.html#demo-anfrage\" style=\"color:#4C48C4;font-weight:600;text-decoration:underline\">Kostenloses Erstgespräch anfragen</a>", "chips": [["Neu starten", "restart"]]}, "fallback": {"text": "Als Demo-Chat kenne ich nur die fiktive Praxis Dr. Egger. Versuchen Sie eine der Optionen:", "chips": [["Termin vereinbaren", "termin"], ["Preise", "preis"], ["Ordinationszeiten", "zeiten"]]}};
+window.__ROUTE__=[];
 </script>
 <script>
 document.documentElement.classList.add("js");
@@ -1610,6 +1650,27 @@ document.documentElement.classList.add("js");
       }
     });
   });
+})();
+</script>
+
+<!-- Sichtbarkeits-Netz: Nichts bleibt länger als 1 s unsichtbar im Viewport -->
+<script>
+(function(){
+  var t0=Date.now();
+  function inView(e){var r=e.getBoundingClientRect();return r.top<window.innerHeight&&r.bottom>0;}
+  var iv=setInterval(function(){
+    [].forEach.call(document.querySelectorAll(".reveal:not(.in),.reveal-l:not(.in),.reveal-r:not(.in),.stagger:not(.in)"),function(e){
+      if(inView(e))e.classList.add("in","is-visible");
+    });
+    [].forEach.call(document.querySelectorAll("main section > .container:not(.sa-in)"),function(e){
+      if(inView(e))e.classList.add("sa-in");
+    });
+    if(Date.now()-t0>12000){
+      [].forEach.call(document.querySelectorAll(".reveal,.reveal-l,.reveal-r,.stagger"),function(e){e.classList.add("in","is-visible");});
+      [].forEach.call(document.querySelectorAll("main section > .container"),function(e){e.classList.add("sa-in");});
+      clearInterval(iv);
+    }
+  },1000);
 })();
 </script>
 </body>

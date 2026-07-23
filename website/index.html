@@ -1341,7 +1341,7 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
     <p class="mm-more-note">Nur Beispiele. Wenn bei Ihnen Termine vergeben werden und immer dieselben Fragen kommen, passt es meistens.</p>
   </details>
   <span class="mm-group">Mehr</span>
-  <a href="#live-demo">Bot live testen</a>
+  <a href="whatsapp-bot.html#testbot">Bot live testen</a>
   <a href="#ablauf">Ablauf</a>
   <a href="#faq">FAQ</a>
   <a href="#ueber">Über Kalio</a>
@@ -1360,7 +1360,7 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
     <p class="lead hero-enter d2">Auf WhatsApp, auf Instagram, auf Ihrer Website und am Telefon. Auch dann, wenn bei Ihnen gerade keiner rangehen kann. Fragen sind in Sekunden beantwortet und der Termin steht im Kalender, noch bevor Sie davon erfahren.</p>
     <div class="hero-ctas hero-enter d3">
       <a class="btn btn-primary" href="#demo-anfrage">Kostenlose Demo anfragen</a>
-      <a class="btn btn-outline hero-livebtn" href="#live-demo"><span class="live-dot" aria-hidden="true"></span>Bot jetzt live ausprobieren</a>
+      <a class="btn btn-outline hero-livebtn" href="whatsapp-bot.html#testbot"><span class="live-dot" aria-hidden="true"></span>Bot jetzt live ausprobieren</a>
     </div>
 
     <!-- Kanal-Icon-Leiste (wie Superchat) -->
@@ -1574,9 +1574,6 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
       <button class="tab" role="tab" id="tab-termin" aria-selected="false" aria-controls="panel-termin" data-tab="termin">
         <span class="ti mi-indigo"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Terminbuchung
       </button>
-      <button class="tab tab-live" role="tab" id="tab-live" aria-selected="false" aria-controls="panel-live" data-tab="live">
-        <span class="ti mi-indigo"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg></span>Live testen
-      </button>
     </div>
 
     <!-- Panel: WhatsApp -->
@@ -1598,7 +1595,7 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
           <li>Verschieben und Stornieren direkt im Chat, ohne Anruf</li>
           <li>Frei gewordene Slots sofort wieder anbieten</li>
         </ul>
-        <a class="btn btn-primary" href="#demo-anfrage">Diesen Bot für mich einrichten lassen</a>
+        <a class="btn btn-primary" href="whatsapp-bot.html">Mehr erfahren</a>
       </div>
     </div>
 
@@ -1621,7 +1618,7 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
           <li>Quick-Reply-Buttons führen direkt zur Buchung</li>
           <li>Preis- und Leistungsfragen automatisch beantwortet</li>
         </ul>
-        <a class="btn btn-primary" href="#demo-anfrage">Kostenlose Demo anfragen</a>
+        <a class="btn btn-primary" href="instagram-bot.html">Mehr erfahren</a>
       </div>
     </div>
 
@@ -1644,7 +1641,7 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
           <li>Freie Slots direkt im Chat wählbar</li>
           <li>Passt sich optisch an Ihre Website an</li>
         </ul>
-        <a class="btn btn-primary" href="#demo-anfrage">Website-Chat kostenlos testen lassen</a>
+        <a class="btn btn-primary" href="website-chat.html">Mehr erfahren</a>
       </div>
     </div>
 
@@ -1672,7 +1669,7 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
           <li>Sagt von sich aus, dass er ein Assistent ist</li>
           <li>Jedes Gespräch später als Notiz nachlesbar</li>
         </ul>
-        <a class="btn btn-primary" href="#demo-anfrage">Kostenlose Demo anfragen</a>
+        <a class="btn btn-primary" href="voice-agent.html">Mehr erfahren</a>
       </div>
     </div>
 
@@ -1706,47 +1703,10 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
           <li>Automatische Bestätigung und Erinnerung gegen No-Shows</li>
           <li>Verschieben und Stornieren ohne Anruf</li>
         </ul>
-        <a class="btn btn-primary" href="#demo-anfrage">Terminbuchung live vorführen lassen</a>
+        <a class="btn btn-primary" href="terminbuchung.html">Mehr erfahren</a>
       </div>
     </div>
 
-    <!-- Panel: Live testen -->
-    <div class="panel" role="tabpanel" id="panel-live" aria-labelledby="tab-live" hidden>
-      <div>
-        <div class="bizpick-wrap">
-        <span class="bizpick-label">Branche wählen und ausprobieren</span>
-        <div class="bizpick" id="bizPick" role="tablist" aria-label="Branche für den Test wählen">
-          <button type="button" class="bizpick-btn is-on" data-biz="friseur" role="tab" aria-selected="true">Friseur</button>
-          <button type="button" class="bizpick-btn" data-biz="gastro" role="tab" aria-selected="false">Restaurant</button>
-          <button type="button" class="bizpick-btn" data-biz="praxis" role="tab" aria-selected="false">Arztpraxis</button>
-          <button type="button" class="bizpick-btn" data-biz="handwerk" role="tab" aria-selected="false">Handwerk</button>
-        </div>
-        </div>
-        <div class="bot" id="demoBot">
-          <div class="bot-head">
-            <span class="ba" id="botAv">SA</span>
-            <div><b id="botBiz">Salon Aurora</b><small>Beispiel-Bot · antwortet sofort</small></div>
-            <button type="button" class="bot-reset" id="botReset">Neu starten</button>
-          </div>
-          <div class="bot-body" id="botBody" aria-live="polite"></div>
-          <div class="bot-input">
-            <input type="text" id="botInput" placeholder="Nachricht schreiben …" aria-label="Nachricht an den Beispiel-Bot" maxlength="200">
-            <button type="button" id="botSend" aria-label="Senden"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
-          </div>
-        </div>
-        <p class="bot-note">Fiktiver Beispiel-Betrieb zu Demonstrationszwecken. Ihr Bot wird mit Ihren echten Leistungen, Preisen und Zeiten eingerichtet.</p>
-      </div>
-      <div>
-        <h3>Reden Sie nicht über den Bot. Reden Sie mit ihm.</h3>
-        <p>Das ist kein Screenshot. Diese Beispiel-Bots antworten wirklich. <b>Wählen Sie oben eine Branche</b> und probieren Sie es aus. Tippen Sie ruhig frei, Sie müssen nicht auf die Vorschläge klicken. Jeder dieser Bots kennt nur die Preise und Zeiten seines erfundenen Betriebs. Genau so arbeitet später auch Ihrer, nur eben mit Ihren Daten.</p>
-        <ul>
-          <li>Fragen Sie nach Preisen oder Öffnungszeiten. Antwort in Sekunden</li>
-          <li>Buchen Sie einen Testtermin bis zur Bestätigung durch</li>
-          <li>Schreiben Sie auf Englisch, der Bot wechselt automatisch die Sprache</li>
-        </ul>
-        <a class="btn btn-primary" href="#demo-anfrage">Jetzt meine eigene Demo anfragen</a>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -2048,7 +2008,7 @@ html.rm-on .form-msg.ok,html.rm-on .form-msg.err{animation:none}
       <div class="footer-col">
         <b>Navigation</b>
         <a href="#loesungen-detail">Lösungen</a>
-        <a href="#live-demo">Bot live testen</a>
+        <a href="whatsapp-bot.html#testbot">Bot live testen</a>
         <a href="#ablauf">Ablauf</a>
         <a href="#faq">FAQ</a>
         <a href="#demo-anfrage">Demo anfragen</a>
@@ -2254,213 +2214,6 @@ document.documentElement.classList.add("js");
   });
 })();
 
-/* ---------- Live-Demo-Bot (geskriptet, ohne Server) ---------- */
-(function(){
-  var body=document.getElementById("botBody");
-  if(!body)return;
-  var input=document.getElementById("botInput");
-  var send=document.getElementById("botSend");
-  var reset=document.getElementById("botReset");
-  var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var busy=false;
-
-  var CTA='<a href="#demo-anfrage" style="color:#4C48C4;font-weight:600;text-decoration:underline">Kostenlose Demo für Ihren Betrieb anfragen</a>';
-
-  /* Mehrere Branchen: jede mit Name, Avatar, eigenen FLOWS und Freitext-Routing */
-  var BRANCHES={
-    friseur:{biz:"Salon Aurora",av:"SA",
-      route:[[/absag|storn|verschieb|umbuch|anders/,"aendern"],[/park|anfahrt|adresse|wo seid|wo sind|wie komm/,"anfahrt"],[/mitarbeiter|kollegin|bei wem|wer macht|stylist/,"team"],[/balayage|färb|farbe|strähn|ansatz|blond/,"farbe"],[/gutschein|geschenk|voucher/,"gutschein"],[/termin|buch|reservier|appoint|book/,"termin"],[/preis|kost|€|euro|price|teuer/,"preise"],[/öffnung|offen|geöffnet|zeiten|wann|open|hour/,"zeiten"],[/english|englisch|speak/,"english"],[/hallo|hi |hi$|servus|grüß|hey|guten/,"start"]],
-      flows:{
-        start:{text:"Hallo! 👋 Ich bin der Beispiel-Bot von <b>Salon Aurora</b>, einem fiktiven Friseursalon. Fragen Sie mich etwas – oder tippen Sie auf einen Vorschlag:",chips:[["Termin buchen","termin"],["Was kostet ein Haarschnitt?","preise"],["Öffnungszeiten","zeiten"],["Do you speak English?","english"]]},
-        preise:{text:"Gerne! Herrenhaarschnitt <b>32 €</b>, Damen Schnitt &amp; Föhnen <b>ab 55 €</b>, Färben je nach Aufwand <b>ab 70 €</b>. Soll ich gleich einen Termin reservieren?",chips:[["Ja, Termin buchen","termin"],["Was kostet Balayage?","farbe"],["Öffnungszeiten","zeiten"]]},
-        farbe:{text:"Balayage kostet bei uns <b>ab 145 €</b> und dauert etwa <b>3 Stunden</b>. Ein reiner Ansatz ist <b>ab 58 €</b> und in einer Stunde erledigt. Beim ersten Mal empfehle ich ein kurzes Beratungsgespräch, damit die Farbe wirklich passt.",chips:[["Beratung buchen","beratung"],["Direkt Balayage buchen","termin"],["Wer macht das?","team"]]},
-        beratung:{text:"Sehr gerne. Die Beratung dauert 15 Minuten und ist kostenlos. Sie können sie direkt an einen Färbetermin hängen.",chips:[["Beratung + Termin","termin"],["Nur Beratung","termin"]]},
-        team:{text:"Bei uns arbeiten <b>Nina</b> (Farbe und Balayage), <b>Marek</b> (Herrenschnitte) und <b>Sofia</b> (Schnitt und Hochsteckfrisuren). Haben Sie jemanden im Kopf?",chips:[["Bei Nina","termin"],["Egal, Hauptsache bald","termin"]]},
-        aendern:{text:"Kein Problem. Nennen Sie mir Ihren Namen und den bestehenden Termin, dann suche ich ihn heraus.",chips:[["Berger, Do 10:30","aendern_r"]]},
-        aendern_r:{text:"Gefunden: <b>Donnerstag, 10:30 Uhr bei Sofia</b>. Möchten Sie verschieben oder absagen?",chips:[["Verschieben","termin"],["Absagen","aendern_c"]]},
-        aendern_c:{confirm:"✅ <b>Termin storniert.</b><br>Der Platz ist wieder frei und wird automatisch anderen Kundinnen angeboten.",next:"fazit"},
-        anfahrt:{text:"Wir sind in der <b>Hauptstraße 14</b>, direkt neben der Apotheke. Vor dem Haus gibt es Kurzparkzonen, die Tiefgarage am Stadtplatz ist zwei Minuten entfernt.",chips:[["Termin buchen","termin"],["Öffnungszeiten","zeiten"]]},
-        gutschein:{text:"Gutscheine gibt es in jeder Höhe, entweder im Salon oder wir schicken sie per Post. Beliebt ist der Wert einer Behandlung, etwa Schnitt und Föhnen zu 55 €.",chips:[["Gutschein vormerken","gutschein_c"],["Preise ansehen","preise"]]},
-        gutschein_c:{confirm:"✅ <b>Gutschein vorgemerkt.</b><br>Das Team meldet sich zur Abwicklung bei Ihnen.",next:"fazit"},
-        zeiten:{text:"Wir haben <b>Di–Fr 09–18 Uhr</b> und <b>Sa 09–14 Uhr</b> geöffnet, Montag ist Ruhetag. Möchten Sie einen Termin buchen?",chips:[["Termin buchen","termin"],["Wie komme ich hin?","anfahrt"],["Preise ansehen","preise"]]},
-        termin:{text:"Sehr gerne! Für welchen Tag darf ich nachsehen?",chips:[["Donnerstag","do"],["Samstag","sa"]]},
-        do:{text:"Am Donnerstag sind noch <b>10:30</b> und <b>16:00 Uhr</b> frei. Welche Zeit passt Ihnen?",chips:[["10:30 Uhr","buch"],["16:00 Uhr","buch"]]},
-        sa:{text:"Am Samstag sind noch <b>09:30</b> und <b>11:00 Uhr</b> frei. Welche Zeit passt Ihnen?",chips:[["09:30 Uhr","buch"],["11:00 Uhr","buch"]]},
-        buch:{confirm:"✅ <b>Termin bestätigt.</b><br>Sie erhalten am Vortag automatisch eine Erinnerung.",next:"fazit"},
-        fazit:{text:"Genau so einfach wäre das für Ihre Kunden – rund um die Uhr, ohne dass jemand ans Telefon muss.<br><br>"+CTA,chips:[["Neu starten","restart"]]},
-        english:{text:"Of course! I automatically reply in the customer's language. Would you like to book an appointment?",chips:[["Book appointment","en_book"],["Weiter auf Deutsch","start"]]},
-        en_book:{text:"Great! We still have <b>Thursday 10:30</b> or <b>Saturday 11:00</b>. Which works for you?",chips:[["Thursday 10:30","en_c"],["Saturday 11:00","en_c"]]},
-        en_c:{confirm:"✅ <b>Appointment confirmed.</b><br>You'll receive a reminder the day before.",next:"fazit"},
-        fallback:{text:"Das weiß ich nicht. Als Beispiel-Bot kenne ich nur den fiktiven Salon Aurora, und ich erfinde nichts dazu. Diese Themen kann ich:",chips:[["Termin buchen","termin"],["Preise","preise"],["Öffnungszeiten","zeiten"]]}
-      }},
-
-    gastro:{biz:"Gasthaus Sonnhof",av:"GS",
-      route:[[/absag|storn|verschieb|umbuch/,"aendern"],[/park|anfahrt|adresse|wo seid|wie komm/,"anfahrt"],[/hund|dog|haustier/,"hund"],[/kind|kinderstuhl|familie|baby/,"kind"],[/gruppe|feier|geburtstag|firmen|hochzeit|20 person|große/,"gruppe"],[/terrasse|drinnen|draußen|garten/,"terrasse"],[/karte|speise|gericht|essen|menü|tagesteller/,"karte"],[/reservier|tisch|buch|table|book/,"termin"],[/öffnung|offen|geöffnet|zeiten|wann|ruhetag/,"zeiten"],[/vegetar|vegan|allergie|glutenfrei|nuss|laktose/,"veggie"],[/hallo|hi |servus|grüß|hey|guten/,"start"]],
-      flows:{
-        start:{text:"Guten Abend! 👋 Ich bin der Beispiel-Bot vom <b>Gasthaus Sonnhof</b> (fiktiv). Wie kann ich helfen?",chips:[["Tisch reservieren","termin"],["Öffnungszeiten","zeiten"],["Habt ihr vegetarisch?","veggie"]]},
-        termin:{text:"Sehr gerne! Für wie viele Personen und welchen Tag darf ich reservieren?",chips:[["4 Personen, morgen","do"],["2 Personen, Samstag","sa"]]},
-        do:{text:"Morgen um <b>19:00</b> oder <b>20:30 Uhr</b> hätte ich einen Tisch frei. Was passt?",chips:[["19:00 Uhr","buch"],["20:30 Uhr","buch"]]},
-        sa:{text:"Samstag ist noch <b>18:00</b> und <b>21:15 Uhr</b> frei. Was möchten Sie?",chips:[["18:00 Uhr","buch"],["21:15 Uhr","buch"]]},
-        buch:{confirm:"✅ <b>Tisch reserviert.</b><br>Sie bekommen eine Bestätigung per SMS. Bei Änderungen einfach hier schreiben.",next:"fazit"},
-        veggie:{text:"Ja, wir haben täglich <b>zwei vegetarische und eine vegane Hauptspeise</b>. Allergien gebe ich direkt an die Küche weiter. Worauf müssen wir achten?",chips:[["Nussallergie","allergie_c"],["Glutenfrei","allergie_c"],["Nur vegetarisch","termin"]]},
-        allergie_c:{text:"Notiert. Die Küche bekommt den Vermerk zusammen mit der Reservierung und meldet sich, falls ein Gericht doch heikel ist.",chips:[["Jetzt reservieren","termin"],["Karte ansehen","karte"]]},
-        karte:{text:"Heute stehen <b>Rindsgulasch mit Semmelknödel</b>, <b>Forelle Müllerin</b> und als vegetarische Hauptspeise <b>Kürbisrisotto</b> auf der Tageskarte. Mittagsteller gibt es bis 14 Uhr um 12,90 €.",chips:[["Tisch reservieren","termin"],["Vegetarisch & Allergien","veggie"]]},
-        gruppe:{text:"Ab <b>10 Personen</b> buche ich nicht mehr selbst, das stimmt der Chef lieber persönlich ab. Um wie viele Personen geht es, und wann soll es sein?",chips:[["Etwa 15, Samstagabend","gruppe_c"],["Doch kleiner, unter 10","termin"]]},
-        gruppe_c:{confirm:"✅ <b>Anfrage weitergeleitet.</b><br>Personenzahl, Wunschtermin und Ihre Kontaktdaten liegen beim Chef. Er meldet sich für Menü und Ablauf.",next:"fazit"},
-        terrasse:{text:"Die Terrasse hat <b>bis 21 Uhr</b> offen und ist überdacht. Bei Regen setzen wir Sie automatisch nach drinnen um, den Tisch verlieren Sie nicht.",chips:[["Terrasse reservieren","termin"],["Lieber drinnen","termin"]]},
-        hund:{text:"Hunde sind bei uns willkommen, im Gastraum und auf der Terrasse. Wasserschüssel stellen wir hin.",chips:[["Tisch reservieren","termin"],["Terrasse frei?","terrasse"]]},
-        kind:{text:"Kinderstühle haben wir da, ich vermerke gern welche mit. Für Kinder gibt es kleine Portionen zum halben Preis.",chips:[["Reservieren mit Kinderstuhl","termin"],["Karte ansehen","karte"]]},
-        aendern:{text:"Kein Problem. Auf welchen Namen läuft die Reservierung?",chips:[["Berger, morgen 19 Uhr","aendern_r"]]},
-        aendern_r:{text:"Gefunden: <b>morgen, 19:00 Uhr, 4 Personen</b>. Verschieben oder absagen?",chips:[["Auf 20:30 verschieben","aendern_v"],["Absagen","aendern_c"]]},
-        aendern_v:{confirm:"✅ <b>Verschoben auf 20:30 Uhr.</b><br>Der Vermerk für die Küche bleibt erhalten.",next:"fazit"},
-        aendern_c:{confirm:"✅ <b>Reservierung storniert.</b><br>Der Tisch ist wieder frei. Danke für die Absage, das hilft uns wirklich.",next:"fazit"},
-        anfahrt:{text:"Wir sind am <b>Dorfplatz 3</b>. Direkt vor dem Haus gibt es acht Parkplätze, dahinter der Gemeindeparkplatz. Der Bus 340 hält gegenüber.",chips:[["Tisch reservieren","termin"],["Öffnungszeiten","zeiten"]]},
-        zeiten:{text:"Wir haben <b>Di–So 11:30–22:00 Uhr</b> geöffnet, Montag Ruhetag. Warme Küche bis 21:00 Uhr. Reservieren?",chips:[["Tisch reservieren","termin"],["Wie komme ich hin?","anfahrt"],["Was gibt es heute?","karte"]]},
-        fazit:{text:"Genau so nimmt Ihr Lokal Reservierungen an – auch wenn im Service niemand ans Telefon kann.<br><br>"+CTA,chips:[["Neu starten","restart"]]},
-        fallback:{text:"Das steht nicht in meinen Unterlagen, und ich erfinde nichts. Als Beispiel-Bot vom fiktiven Sonnhof kann ich:",chips:[["Tisch reservieren","termin"],["Öffnungszeiten","zeiten"],["Vegetarisch?","veggie"]]}
-      }},
-
-    praxis:{biz:"Ordination Dr. Frank",av:"DF",
-      route:[[/dringend|akut|notfall|schmerz|blut|atem/,"akut"],[/nüchtern|vorbereit|blutabnahme|untersuchung|labor/,"vorbereitung"],[/überweis|befund|attest|bestätigung/,"befund"],[/kasse|privat|e-card|versicher|kosten/,"kasse"],[/vertretung|urlaub|geschlossen|feiertag/,"vertretung"],[/rezept|medikament|verschreib/,"rezept"],[/absag|storn|verschieb|umbuch/,"aendern"],[/termin|buch/,"termin"],[/öffnung|zeiten|wann|sprechzeit/,"zeiten"],[/hallo|hi |servus|grüß|hey|guten/,"start"]],
-      flows:{
-        start:{text:"Guten Tag! 👋 Ich bin der Beispiel-Bot der <b>Ordination Dr. Frank</b> (fiktiv). Womit kann ich helfen?",chips:[["Termin vereinbaren","termin"],["Rezept anfragen","rezept"],["Ordinationszeiten","zeiten"],["Es ist dringend","akut"]]},
-        termin:{text:"Gerne. Ich hätte <b>Do 09:15</b>, <b>Do 14:30</b> oder <b>Fr 11:00</b> frei. Was passt Ihnen?",chips:[["Do 09:15","buch"],["Do 14:30","buch"],["Fr 11:00","buch"]]},
-        buch:{confirm:"✅ <b>Termin eingetragen.</b><br>Sie erhalten am Vortag eine Erinnerung. Bitte e-card mitbringen.",next:"fazit"},
-        rezept:{text:"Gerne nehme ich Ihre Rezeptanfrage auf. Handelt es sich um eine Dauermedikation?",chips:[["Ja, Dauermedikation","rez_c"],["Neues Medikament","rez_neu"]]},
-        rez_c:{confirm:"✅ <b>Rezeptanfrage aufgenommen.</b><br>Das Team prüft sie heute; bei Freigabe liegt es ab morgen bereit.",next:"fazit"},
-        rez_neu:{text:"Bei einem neuen Medikament ist meist eine kurze Rücksprache nötig. Soll ich einen Termin suchen?",chips:[["Termin suchen","termin"],["Nur vormerken","rez_c"]]},
-        zeiten:{text:"Ordinationszeiten: <b>Mo, Di, Do 08–12 &amp; 15–18 Uhr</b>, <b>Mi &amp; Fr 08–12 Uhr</b>. Möchten Sie einen Termin?",chips:[["Termin vereinbaren","termin"],["Wer vertritt im Urlaub?","vertretung"],["Rezept anfragen","rezept"]]},
-        aendern:{text:"Gerne. Auf welchen Namen und wann war der Termin?",chips:[["Huber, Do 09:15","aendern_r"]]},
-        aendern_r:{text:"Gefunden: <b>Donnerstag, 09:15 Uhr</b>. Soll ich verschieben oder ganz absagen?",chips:[["Auf Fr 11:00 verschieben","aendern_v"],["Absagen","aendern_c"]]},
-        aendern_v:{confirm:"✅ <b>Verschoben auf Freitag, 11:00 Uhr.</b><br>Der alte Termin ist storniert und wieder frei.",next:"fazit"},
-        aendern_c:{confirm:"✅ <b>Termin abgesagt.</b><br>Danke fürs Bescheidgeben, so kann jemand anderer nachrücken.",next:"fazit"},
-        vorbereitung:{text:"Für welche Untersuchung? Bei einer <b>Blutabnahme</b> kommen Sie bitte nüchtern, also mindestens 8 Stunden nichts essen. Wasser dürfen Sie trinken.",chips:[["Blutabnahme","vorb_c"],["Normale Kontrolle","vorb_n"]]},
-        vorb_c:{text:"Alles klar. Blutabnahmen machen wir <b>Mo bis Fr von 08:00 bis 09:30 Uhr</b>. Soll ich Ihnen einen Termin dafür geben?",chips:[["Ja, Termin","termin"],["Danke, das reicht","fazit"]]},
-        vorb_n:{text:"Für eine normale Kontrolle brauchen Sie nichts Besonderes. Bringen Sie die e-card mit und, falls vorhanden, Vorbefunde.",chips:[["Termin vereinbaren","termin"],["Danke","fazit"]]},
-        befund:{text:"Befunde und Überweisungen gebe ich nicht selbst heraus, das macht das Team nach Rücksprache mit Dr. Frank. Ich nehme die Anfrage aber gerne auf.",chips:[["Anfrage aufnehmen","befund_c"],["Lieber Termin","termin"]]},
-        befund_c:{confirm:"✅ <b>Anfrage notiert.</b><br>Das Team meldet sich, sobald Dr. Frank den Befund freigegeben hat.",next:"fazit"},
-        kasse:{text:"Wir sind <b>Kassenordination</b> für ÖGK, BVAEB und SVS. Bringen Sie einfach die e-card mit. Wahlarztleistungen rechnen wir gesondert ab, das sagen wir vorher an.",chips:[["Termin vereinbaren","termin"],["Ordinationszeiten","zeiten"]]},
-        vertretung:{text:"Im Urlaub übernimmt <b>Dr. Steiner in der Bahnstraße 7</b>. Die aktuellen Vertretungszeiten hängen an der Ordinationstür und stehen auf der Website.",chips:[["Termin nach dem Urlaub","termin"],["Danke","fazit"]]},
-        akut:{text:"Bei akuten Beschwerden sollten Sie nicht warten. Ich stelle Ihre Anfrage <b>sofort ans Team durch</b> – bei einem Notfall bitte <b>144</b> wählen.",chips:[["Ans Team durchstellen","akut_c"],["Doch nur ein Termin","termin"]]},
-        akut_c:{confirm:"✅ <b>Als dringend markiert und weitergeleitet.</b><br>Jemand meldet sich schnellstmöglich zurück.",next:"fazit"},
-        fazit:{text:"Genau so entlastet der Bot Ihre Anmeldung: Routine übernimmt er, Akutfälle gibt er sofort weiter.<br><br>"+CTA,chips:[["Neu starten","restart"]]},
-        fallback:{text:"Dazu habe ich keine Information, und raten möchte ich nicht. Medizinische Fragen beantwortet ohnehin nur das Team. Ich kann:",chips:[["Termin vereinbaren","termin"],["Rezept","rezept"],["Ordinationszeiten","zeiten"]]}
-      }},
-
-    handwerk:{biz:"Installateur Reiter",av:"IR",
-      route:[[/notfall|dringend|rohrbruch|läuft stark|gas|überschwemm/,"notfall"],[/kost|preis|stundensatz|anfahrtspausch|teuer|was zahl/,"preise"],[/foto|bild|schick/,"foto"],[/garantie|gewährleist|nachbesser/,"garantie"],[/wie lang|dauer|wann fertig|termin frei/,"dauer"],[/gebiet|kommt ihr|anfahrt|umkreis/,"gebiet"],[/termin|besichtig|kommen/,"termin"],[/tropf|undicht|heizung|kaputt|defekt|problem|schaden|boiler|therme/,"problem"],[/hallo|hi |servus|grüß|hey|guten/,"start"]],
-      flows:{
-        start:{text:"Guten Tag! 👋 Ich bin der Beispiel-Bot von <b>Installateur Reiter</b> (fiktiv). Worum geht es?",chips:[["Etwas ist kaputt","problem"],["Besichtigung anfragen","termin"],["Kommt ihr zu mir?","gebiet"],["Notfall!","notfall"]]},
-        problem:{text:"Verstanden. Wo genau sind Sie, und tropft/läuft es stark oder nur langsam?",chips:[["Wr. Neustadt, langsam","termin"],["Es läuft stark","notfall"]]},
-        termin:{text:"Passt. Herr Reiter hätte <b>Do vormittags</b> oder <b>Fr nachmittags</b> Zeit. Wann passt es Ihnen? (Ein Foto vorab spart Zeit.)",chips:[["Do vormittags","buch"],["Fr nachmittags","buch"]]},
-        buch:{confirm:"✅ <b>Besichtigung eingetragen.</b><br>Anliegen und Ort liegen bei. Herr Reiter meldet sich, falls sich etwas verschiebt.",next:"fazit"},
-        gebiet:{text:"Wir arbeiten im Umkreis von <b>ca. 40 km um Wiener Neustadt</b>. Wo genau sind Sie?",chips:[["In dem Gebiet","problem"],["Weiter weg","gebiet_w"],["Besichtigung anfragen","termin"]]},
-        gebiet_w:{text:"Weiter draußen fahren wir nur bei größeren Aufträgen. Ich nehme Ihre Anfrage trotzdem auf, dann sagt Herr Reiter Ihnen ehrlich, ob sich die Anfahrt ausgeht.",chips:[["Anfrage aufnehmen","termin"],["Danke, passt","fazit"]]},
-        preise:{text:"Die <b>Anfahrtspauschale beträgt 45 €</b>, der Stundensatz liegt bei <b>78 € netto</b>. Was die Reparatur genau kostet, sieht Herr Reiter erst vor Ort. Eine Hausnummer ins Blaue nenne ich Ihnen lieber nicht.",chips:[["Passt, Besichtigung","termin"],["Wie lange dauert das?","dauer"]]},
-        dauer:{text:"Kleinere Sachen wie ein tropfender Hahn sind meist in einer Stunde erledigt. Bei Thermen und größeren Leitungen hängt es davon ab, was zum Vorschein kommt. Ein Foto vorab hilft bei der Einschätzung.",chips:[["Foto schicken","foto"],["Besichtigung buchen","termin"]]},
-        foto:{text:"Sehr gut. Im echten Betrieb hängen Sie das Bild einfach an den Chat. Herr Reiter sieht dann vor der Anfahrt, worum es geht, und hat gleich das richtige Werkzeug und die passenden Teile dabei.",chips:[["Besichtigung buchen","termin"],["Was kostet das?","preise"]]},
-        garantie:{text:"Auf unsere Arbeit gibt es <b>2 Jahre Gewährleistung</b>, auf verbaute Teile die Herstellergarantie. Wenn nach der Reparatur etwas nicht passt, kommen wir nach.",chips:[["Besichtigung buchen","termin"],["Danke","fazit"]]},
-        notfall:{text:"Das klingt dringend. Ich stelle Sie <b>sofort als Notfall durch</b> – bei Wasseraustritt bitte zuerst den Haupthahn schließen. Herr Reiter ruft umgehend zurück.",chips:[["Verstanden","fazit"]]},
-        fazit:{text:"Genau so geht kein Auftrag mehr verloren: Standardanfragen nimmt der Bot auf, Notfälle stellt er sofort durch.<br><br>"+CTA,chips:[["Neu starten","restart"]]},
-        fallback:{text:"Das weiß ich nicht, und ich rate nicht herum. Als Beispiel-Bot vom fiktiven Betrieb Reiter kann ich:",chips:[["Problem melden","problem"],["Besichtigung","termin"],["Einsatzgebiet","gebiet"]]}
-      }}
-  };
-
-  var current="friseur";
-  var FLOWS=BRANCHES[current].flows;
-  var ROUTE=BRANCHES[current].route;
-
-  function scroll(){body.scrollTop=body.scrollHeight;}
-  function addMsg(html,who,confirm){
-    var d=document.createElement("div");
-    d.className="bot-msg from-"+who+(confirm?" confirm":"");
-    d.innerHTML=html;
-    body.appendChild(d);scroll();
-  }
-  function clearChips(){var c=body.querySelector(".bot-chips");if(c)c.remove();}
-  function addChips(chips){
-    var wrap=document.createElement("div");wrap.className="bot-chips";
-    chips.forEach(function(ch){
-      var b=document.createElement("button");
-      b.type="button";b.className="bot-chip";b.textContent=ch[0];
-      b.addEventListener("click",function(){clearChips();addMsg(esc(ch[0]),"user");go(ch[1]);});
-      wrap.appendChild(b);
-    });
-    body.appendChild(wrap);scroll();
-  }
-  function typing(cb){
-    if(reduced){cb();return;}
-    var t=document.createElement("div");t.className="bot-typing";t.innerHTML="<i></i><i></i><i></i>";
-    body.appendChild(t);scroll();
-    setTimeout(function(){t.remove();cb();},700+Math.random()*400);
-  }
-  function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML;}
-  function go(id){
-    if(id==="restart"){restart();return;}
-    var f=FLOWS[id]||FLOWS.fallback;
-    busy=true;
-    typing(function(){
-      if(f.confirm){
-        addMsg(f.confirm,"bot",true);
-        typing(function(){var n=FLOWS[f.next];addMsg(n.text,"bot");addChips(n.chips);busy=false;});
-      }else{
-        addMsg(f.text,"bot");
-        if(f.chips)addChips(f.chips);
-        busy=false;
-      }
-    });
-  }
-  /* Freitext: Stichwort-Erkennung je nach aktiver Branche */
-  function route(text){
-    var t=text.toLowerCase();
-    for(var i=0;i<ROUTE.length;i++){if(ROUTE[i][0].test(t))return ROUTE[i][1];}
-    return "fallback";
-  }
-  function submit(){
-    if(busy)return;
-    var v=input.value.trim();
-    if(!v)return;
-    clearChips();
-    addMsg(esc(v),"user");
-    input.value="";
-    go(route(v));
-  }
-  send.addEventListener("click",submit);
-  input.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();submit();}});
-  function restart(){body.innerHTML="";go("start");}
-  reset.addEventListener("click",restart);
-
-  /* Branche wechseln */
-  var avEl=document.getElementById("botAv"),bizEl=document.getElementById("botBiz");
-  function setBranch(key){
-    if(!BRANCHES[key])return;
-    current=key;FLOWS=BRANCHES[key].flows;ROUTE=BRANCHES[key].route;
-    if(avEl)avEl.textContent=BRANCHES[key].av;
-    if(bizEl)bizEl.textContent=BRANCHES[key].biz;
-    restart();
-  }
-  var pick=document.getElementById("bizPick");
-  if(pick){
-    pick.querySelectorAll(".bizpick-btn").forEach(function(btn){
-      btn.addEventListener("click",function(){
-        if(btn.classList.contains("is-on"))return;
-        pick.querySelectorAll(".bizpick-btn").forEach(function(o){o.classList.remove("is-on");o.setAttribute("aria-selected","false");});
-        btn.classList.add("is-on");btn.setAttribute("aria-selected","true");
-        setBranch(btn.getAttribute("data-biz"));
-      });
-    });
-  }
-
-  /* Start, sobald sichtbar */
-  if("IntersectionObserver" in window){
-    var started=false;
-    var io=new IntersectionObserver(function(en){
-      if(en[0].isIntersecting&&!started){started=true;go("start");io.disconnect();}
-    },{threshold:.25});
-    io.observe(body);
-  }else{go("start");}
-})();
-
 /* ---------- Scroll-Progress-Balken ---------- */
 (function(){
   var bar=document.getElementById("scrollbar");
@@ -2500,18 +2253,6 @@ document.documentElement.classList.add("js");
     });
   },{threshold:.6});
   els.forEach(function(e){io.observe(e);});
-})();
-
-/* ---------- #live-demo-Links aktivieren den Live-Tab ---------- */
-(function(){
-  function openLive(){
-    var t=document.getElementById("tab-live");
-    if(t)t.click();
-  }
-  document.querySelectorAll('a[href$="#live-demo"]').forEach(function(a){
-    a.addEventListener("click",openLive);
-  });
-  if(location.hash==="#live-demo"){setTimeout(openLive,150);}
 })();
 
 /* ---------- Ablauf: Linie füllt sich beim Scrollen ---------- */
