@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){var h=document.documentElement;try{if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){h.classList.add("rm-on");}}catch(e){}})();</script>
+<title>Kalio – KI-Chatbots & Voice-Agents mit Terminbuchung | WhatsApp, Instagram & Website</title>
+<meta name="description" content="KI-Chatbots & Voice-Agents, die Anfragen sofort beantworten und Termine direkt in Ihren Kalender buchen – WhatsApp, Instagram & Website. DSGVO-konform. Kostenlose Demo.">
+
+<link rel="canonical" href="https://[HIER-DOMAIN-EINTRAGEN].at/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_AT">
+<meta property="og:site_name" content="Kalio">
+<meta property="og:title" content="Kalio – KI-Chatbots & Voice-Agents mit Terminbuchung">
+<meta property="og:description" content="KI-Chatbots & Voice-Agents, die Anfragen sofort beantworten und Termine direkt in Ihren Kalender buchen. DSGVO-konform. Kostenlose Demo für Ihren Betrieb.">
+<meta property="og:url" content="https://[HIER-DOMAIN-EINTRAGEN].at/">
+<meta property="og:image" content="https://[HIER-DOMAIN-EINTRAGEN].at/og-image.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kalio – KI-Chatbots & Voice-Agents mit Terminbuchung">
+<meta name="twitter:description" content="Anfragen sofort beantworten, Termine automatisch buchen – WhatsApp, Instagram & Website. DSGVO-konform.">
+<meta name="twitter:image" content="https://[HIER-DOMAIN-EINTRAGEN].at/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   KALIO – „Der 21:02-Termin“
+   Scroll-Film-Redesign: Nacht → verpasster Anruf → WhatsApp-
+   Buchung → Kalender → Morgenlicht → Content.
+   ============================================================ */
+:root{
+  --navy:#0A0F1E;
+  --night:#070B16;
+  --navy-2:#111A30;
+  --ink:#0E1424;
+  --muted:#3E465A;
+  --muted-2:#59617A;
+  --paper:#ECEEF4;
+  --paper-2:#E4E7F0;
+  --card:#FFFFFF;
+  --line:#DEE1EC;
+  --line-strong:#C4CAD8;
+  --line-dark:rgba(255,255,255,.12);
+  --accent:#4C48C4;
+  --accent-deep:#3D39A8;
+  --accent-soft:#9E9BF0;
+  --accent-2:#6A63E0;
+  --accent-grad:linear-gradient(135deg,#635CE0 0%,#4C48C4 55%,#413CB0 100%);
+  --wa:#1FAF54;
+  --wa-deep:#128C4B;
+  --ig-a:#E1306C;
+  --ig-b:#833AB4;
+  --display:"Inter Tight",sans-serif;
+  --body:"Instrument Sans",sans-serif;
+  --mono:"IBM Plex Mono",monospace;
+  --r:9px;
+  --r-md:14px;
+  --r-lg:20px;
+  --ring:rgba(76,72,196,.4);
+  --sh-1:0 1px 2px rgba(14,20,36,.05);
+  --sh-2:0 2px 4px rgba(14,20,36,.04),0 8px 20px rgba(14,20,36,.06);
+  --sh-3:0 2px 6px rgba(14,20,36,.05),0 24px 50px rgba(14,20,36,.11);
+  --sh-accent:0 12px 28px rgba(14,20,36,.26);
+  --container:1160px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.65}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+img,svg{display:block}
+a{color:inherit}
+.container{max-width:var(--container);margin:0 auto;padding:0 32px}
+
+h1,h2,h3{font-family:var(--display);letter-spacing:-.03em;line-height:1.05;color:var(--ink);font-weight:700;text-wrap:balance}
+h1{font-size:clamp(40px,5vw,64px);letter-spacing:-.038em}
+h2{font-size:clamp(29px,3.6vw,44px);letter-spacing:-.032em}
+h3{font-size:19px;letter-spacing:-.015em;line-height:1.3}
+.lead{font-size:18px;color:var(--muted);max-width:60ch;line-height:1.6;text-wrap:pretty}
+
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);font-weight:500;display:inline-flex;align-items:center;gap:11px;margin-bottom:22px}
+.kicker::before{content:"";height:7px;width:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.kicker::after{content:"";height:1px;width:34px;background:linear-gradient(90deg,var(--line-strong),transparent)}
+.dark .kicker{color:var(--accent-soft)}
+.dark .kicker::before{background:var(--accent-soft)}
+.dark .kicker::after{background:linear-gradient(90deg,var(--line-dark),transparent)}
+
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:64px}
+.sec-head .lead{padding-bottom:6px}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:18px;margin-bottom:44px}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:600;font-size:15.5px;padding:15px 26px;border-radius:var(--r);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s cubic-bezier(.22,.7,.3,1),box-shadow .22s ease}
+.btn-primary{background:var(--accent-grad);color:#fff;box-shadow:var(--sh-1)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--sh-accent)}
+.btn-outline{border-color:var(--line-strong);color:var(--ink);background:rgba(255,255,255,.6)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.dark .btn-outline{background:rgba(255,255,255,.04);border-color:var(--line-dark);color:#fff}
+.dark .btn-outline:hover{border-color:rgba(255,255,255,.45)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--accent);color:#fff;padding:12px 22px;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
+
+/* ============================================================
+   NAV – adaptiv: hell über dem Film (dunkel), dunkel danach
+   ============================================================ */
+#scrollbar{position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:left;background:var(--accent);z-index:60;will-change:transform}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s ease,box-shadow .35s ease,border-color .35s ease}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.logo{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.02em;text-decoration:none;color:#fff;flex-shrink:0;transition:color .35s ease}
+.logo span{color:var(--accent-soft);transition:color .35s ease}
+.nav-links{display:flex;gap:26px;align-items:center;min-width:0}
+.nav-links>a{color:#C9CEDE;text-decoration:none;font-size:15px;font-weight:600;transition:color .2s;white-space:nowrap}
+.nav-links>a:hover{color:#fff}
+.nav-tel{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:#C9CEDE;white-space:nowrap;text-decoration:none;font-size:14.5px;border:1px solid var(--line-dark);border-radius:99px;padding:9px 16px;flex-shrink:0;transition:border-color .2s ease,color .2s ease}
+.nav-tel:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.nav-cta{background:var(--accent);color:#fff;padding:11px 20px;border-radius:99px;font-weight:600;text-decoration:none;font-size:14.5px;white-space:nowrap;flex-shrink:0;transition:background .15s ease,transform .15s ease,box-shadow .15s ease}
+.nav-cta:hover{background:var(--accent-deep);color:#fff;transform:translateY(-1px);box-shadow:0 8px 20px rgba(14,20,36,.22)}
+/* Nach dem Film: helle Leiste */
+body.past-film nav{background:rgba(237,238,243,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);box-shadow:0 6px 24px rgba(11,18,32,.08)}
+body.past-film .logo{color:var(--ink)}
+body.past-film .logo span{color:var(--accent)}
+body.past-film .nav-links>a{color:var(--ink)}
+body.past-film .nav-links>a:hover{color:var(--accent)}
+body.past-film .nav-tel{color:var(--ink);border-color:var(--line-strong)}
+body.past-film .nav-tel:hover{color:var(--accent);border-color:var(--accent)}
+@media(max-width:1200px){.nav-tel .tel-num{display:none}.nav-tel{padding:10px 12px}}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:10px;margin-right:-10px}
+.nav-burger span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:transform .25s ease,opacity .25s ease,background .35s ease}
+body.past-film .nav-burger span{background:var(--ink)}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;inset:72px 0 auto 0;z-index:49;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 32px 28px;flex-direction:column;max-height:calc(100vh - 72px);overflow:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--ink);text-decoration:none;font-size:16.5px;font-weight:500;padding:13px 2px;border-bottom:1px solid var(--line)}
+.mobile-menu .nav-cta{border-bottom:none;text-align:center;margin-top:16px;padding:14px 22px;color:#fff;border-radius:var(--r)}
+@media(max-width:1020px){.nav-links{display:none}.nav-burger{display:block}}
+
+/* ============================================================
+   DER FILM – gepinnte Bühne, 5 Kapitel
+   ============================================================ */
+#film{position:relative;padding:0}
+.film-stage{position:relative;height:100vh;height:100svh;overflow:hidden;background:var(--night)}
+/* Hintergrund-Ebenen: Nacht → Dämmerung → Morgen (Crossfade) */
+.sky{position:absolute;inset:0;pointer-events:none;will-change:opacity;transform:translateZ(0)}
+.scene{will-change:transform,opacity}
+.sky-night{background:
+  radial-gradient(1100px 700px at 50% 110%,rgba(76,72,196,.20),transparent 60%),
+  radial-gradient(900px 500px at 80% -10%,rgba(30,40,80,.55),transparent 65%),
+  linear-gradient(180deg,#05080F 0%,#070B16 45%,#0B1224 100%)}
+.sky-dusk{opacity:0;background:
+  radial-gradient(1200px 800px at 50% 115%,rgba(158,155,240,.38),transparent 62%),
+  radial-gradient(900px 600px at 20% -10%,rgba(24,32,64,.5),transparent 60%),
+  linear-gradient(180deg,#0B1124 0%,#1B2148 55%,#4B4590 100%)}
+.sky-dawn{opacity:0;background:
+  radial-gradient(1300px 900px at 50% 120%,rgba(255,255,255,.85),transparent 66%),
+  radial-gradient(1000px 700px at 70% 90%,rgba(158,155,240,.35),transparent 60%),
+  linear-gradient(180deg,#AEB2E8 0%,#D9DCF4 45%,#ECEEF4 100%)}
+.sun{position:absolute;left:50%;bottom:-30vh;width:60vh;height:60vh;transform:translateX(-50%);border-radius:50%;opacity:0;pointer-events:none;background:radial-gradient(circle,rgba(255,244,214,.9) 0%,rgba(255,236,190,.35) 35%,transparent 70%);filter:blur(6px)}
+#stars{position:absolute;inset:-8% 0 0 0;pointer-events:none}
+#stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.7}
+#stars i.s2{width:3px;height:3px;opacity:.5}
+#stars i.s3{width:1.5px;height:1.5px;opacity:.9}
+
+/* Kapitel-Anzeige (Altimeter) */
+.film-hud{position:absolute;left:0;right:0;bottom:26px;display:flex;justify-content:space-between;align-items:center;padding:0 34px;z-index:6;pointer-events:none}
+.film-hud .hud-chapter{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .4s ease}
+.film-stage.is-light .film-hud .hud-chapter{color:var(--muted-2)}
+.hud-scroll{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .4s ease}
+.film-stage.is-light .hud-scroll{color:var(--muted-2)}
+.hud-scroll .mouse{width:18px;height:28px;border:1.5px solid currentColor;border-radius:10px;position:relative}
+.hud-scroll .mouse::after{content:"";position:absolute;left:50%;top:5px;width:3px;height:6px;margin-left:-1.5px;border-radius:2px;background:currentColor;animation:wheel 1.6s ease-in-out infinite}
+@keyframes wheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(9px);opacity:0}100%{transform:translateY(0);opacity:0}}
+html.rm-on .hud-scroll .mouse::after{animation:none}
+
+/* Szenen liegen übereinander auf der Bühne */
+.scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:96px 24px 80px;z-index:3}
+.scene .container{width:100%}
+
+/* Kapitel 1: die Nacht */
+.k1-clock{font-family:var(--mono);font-weight:500;font-size:clamp(64px,11vw,150px);letter-spacing:.02em;color:#fff;line-height:1;display:inline-flex;align-items:baseline}
+.k1-clock .clk-min{display:inline-block;position:relative;overflow:hidden;height:1em;vertical-align:baseline}
+.k1-clock .clk-min span{display:block;height:1em;line-height:1}
+.k1-phone{margin:34px auto 0;width:74px;height:74px;border-radius:50%;border:1px solid var(--line-dark);background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;position:relative}
+.k1-phone svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.k1-ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(158,155,240,.7);opacity:0;transform:scale(1)}
+.k1-missed{margin:22px auto 0;display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#F5847C;border:1px solid rgba(245,101,91,.4);background:rgba(245,101,91,.08);border-radius:99px;padding:9px 18px;opacity:0}
+.k1-missed i{width:7px;height:7px;border-radius:50%;background:#F5655B}
+.k1-head{margin-top:44px;color:#fff;font-family:var(--display);font-weight:700;letter-spacing:-.035em;line-height:1.06;font-size:clamp(30px,4.6vw,58px);text-wrap:balance}
+.k1-head .ch{display:inline-block;white-space:pre}
+.k1-sub{margin:20px auto 0;max-width:46ch;color:#A6ADC0;font-size:clamp(15.5px,1.6vw,18px);line-height:1.6;opacity:0}
+
+/* Kapitel 2: der Chat */
+.k2-wrap{max-width:430px;margin:0 auto;width:100%}
+.k2-chat{border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 40px 90px rgba(0,0,0,.55);background:#E7DFD4;text-align:left}
+.k2-head{display:flex;align-items:center;gap:12px;background:#0E5C4A;color:#fff;padding:13px 16px}
+.k2-av{width:38px;height:38px;border-radius:50%;background:#fff;color:#0E5C4A;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:15px;flex-shrink:0}
+.k2-head b{display:block;font-size:15px;font-weight:600;line-height:1.2}
+.k2-head small{display:block;font-size:12px;color:#B9E4D6}
+.k2-time{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:#B9E4D6;letter-spacing:.05em}
+.k2-body{padding:18px 14px 18px;display:flex;flex-direction:column;gap:9px;min-height:300px;background:
+  linear-gradient(rgba(231,223,212,.94),rgba(231,223,212,.94)),
+  repeating-linear-gradient(45deg,#DDD3C4 0 2px,transparent 2px 14px)}
+.k2-msg{max-width:86%;padding:9px 12px 7px;border-radius:9px;font-size:14.5px;line-height:1.5;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.08);position:relative}
+.k2-msg.out{background:#D9FDD3;align-self:flex-end;border-top-right-radius:2px}
+.k2-msg.in{background:#fff;align-self:flex-start;border-top-left-radius:2px}
+.k2-meta{display:flex;justify-content:flex-end;align-items:center;gap:4px;font-size:10.5px;color:#7B8072;margin-top:3px}
+.k2-ticks{color:#4FB6EC;font-size:12px;letter-spacing:-2px}
+.k2-typing{align-self:flex-start;background:#fff;border-radius:9px;border-top-left-radius:2px;padding:12px 16px;box-shadow:0 1px 1px rgba(0,0,0,.08);display:flex;gap:5px;opacity:0}
+.k2-typing i{width:7px;height:7px;border-radius:50%;background:#9AA0A6;animation:waDot 1.2s infinite}
+.k2-typing i:nth-child(2){animation-delay:.18s}
+.k2-typing i:nth-child(3){animation-delay:.36s}
+@keyframes waDot{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+html.rm-on .k2-typing i{animation:none}
+.k2-caption{margin-top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:#8A92A6;text-transform:uppercase;text-align:center}
+
+/* Kapitel 3: die Buchungskarte + Kalender */
+.k3-book{background:#fff;border-radius:12px;overflow:hidden;max-width:340px;margin:0 auto;box-shadow:0 30px 80px rgba(0,0,0,.5);text-align:left}
+.k3-book header{display:flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-size:12.5px;font-weight:600;padding:9px 13px}
+.k3-book header svg{width:14px;height:14px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.k3-book>div{padding:12px 14px}
+.k3-book b{display:block;font-size:15.5px;color:var(--ink)}
+.k3-book span{display:block;font-size:12.5px;color:var(--muted-2);margin-top:2px}
+.k3-cal{margin:30px auto 0;max-width:430px;background:rgba(255,255,255,.06);border:1px solid var(--line-dark);border-radius:14px;padding:18px;opacity:0}
+.k3-cal-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#A6ADC0;margin-bottom:12px}
+.k3-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.k3-slot{font-family:var(--mono);font-size:12.5px;color:#C9CEDE;border:1px solid var(--line-dark);border-radius:8px;padding:9px 4px;text-align:center;background:rgba(255,255,255,.03)}
+.k3-slot.busy{color:#59617A;text-decoration:line-through;text-decoration-color:rgba(255,255,255,.25)}
+.k3-slot.pick{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:500}
+.k3-line{margin:26px auto 0;color:#DDE1EC;font-size:clamp(17px,2vw,21px);max-width:46ch;line-height:1.55;opacity:0}
+.k3-line b{color:#fff}
+
+/* Kapitel 4: der Morgen */
+.k4-head{color:var(--ink);font-family:var(--display);font-weight:700;letter-spacing:-.034em;line-height:1.07;font-size:clamp(28px,4.2vw,52px);max-width:20ch;margin:0 auto;text-wrap:balance}
+.k4-sub{margin:20px auto 0;max-width:52ch;color:var(--muted);font-size:clamp(15.5px,1.6vw,18px);line-height:1.6}
+.k4-facts{margin:44px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:820px}
+.k4-fact{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:14px;padding:22px 20px;text-align:left;box-shadow:var(--sh-1)}
+.k4-fact b{display:block;font-family:var(--display);font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-.03em;color:var(--ink);margin-bottom:4px}
+.k4-fact b span{font:inherit;color:inherit;display:inline}
+.k4-fact>span{font-size:13.5px;color:var(--muted);line-height:1.5;display:block}
+@media(max-width:760px){.k4-facts{grid-template-columns:1fr;gap:10px;max-width:420px}.k4-fact{padding:16px 18px}}
+
+/* Kapitel 5: die Übergabe */
+.k5-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:20px;display:block}
+.k5-head{font-size:clamp(30px,4.4vw,52px);line-height:1.06;letter-spacing:-.038em;max-width:22ch;margin:0 auto}
+.k5-head em{font-style:normal;color:var(--accent)}
+.k5-lead{margin:24px auto 0;max-width:60ch;color:var(--muted);font-size:18px;line-height:1.6}
+.k5-ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:32px}
+.live-dot{width:9px;height:9px;border-radius:50%;background:#2FBF71;position:relative;flex-shrink:0}
+.live-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1.5px solid rgba(47,191,113,.6);animation:livePulse 1.8s ease-out infinite}
+@keyframes livePulse{0%{transform:scale(.6);opacity:1}80%,100%{transform:scale(1.5);opacity:0}}
+html.rm-on .live-dot::after{animation:none;opacity:0}
+.k5-chan{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:26px}
+.k5-lead{margin-top:18px!important}
+.k5-chan a{display:flex;flex-direction:column;align-items:center;gap:8px;width:92px;padding:14px 6px;border-radius:12px;text-decoration:none;color:var(--muted-2);transition:background .15s ease,color .15s ease,transform .15s ease}
+.k5-chan a:hover{background:#fff;color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 18px rgba(20,27,44,.08)}
+.k5-chan i{display:flex;width:44px;height:44px;align-items:center;justify-content:center;border-radius:12px;background:#fff;border:1px solid var(--line);color:var(--accent)}
+.k5-chan svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.k5-chan span{font-size:12.5px;font-weight:600;letter-spacing:.01em}
+
+/* Statischer Fallback (reduced motion / ohne JS) */
+.film-static{display:none;background:var(--navy);color:#fff;padding:140px 0 90px;text-align:center}
+.film-static h1{color:#fff;font-size:clamp(34px,5vw,58px);max-width:20ch;margin:0 auto}
+.film-static h1 em{font-style:normal;color:var(--accent-soft)}
+.film-static .lead{color:#A6ADC0;margin:24px auto 30px;max-width:60ch}
+.film-static .k5-ctas{margin-top:0}
+html.rm-on #film .film-scroll,html:not(.sfx) #film .film-scroll{display:none}
+html.rm-on #film .film-static,html:not(.sfx) #film .film-static{display:block}
+
+/* ============================================================
+   CONTENT-SEKTIONEN (nach dem Film)
+   ============================================================ */
+section{padding:112px 0;position:relative}
+.bg-white{background:#FBFBFD;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bg-grey{background:var(--paper-2);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+.dark{background:var(--navy);color:#fff}
+.dark h1,.dark h2,.dark h3{color:#fff}
+.dark .lead{color:#A6ADC0}
+@media(max-width:860px){section{padding:80px 0}}
+.sec-deco{position:relative;overflow:hidden}
+.sec-bignum{position:absolute;top:24px;right:-20px;max-width:100%;font-family:var(--display);font-weight:700;font-size:clamp(180px,26vw,340px);line-height:1;letter-spacing:-.04em;color:rgba(76,72,196,.055);pointer-events:none;user-select:none;z-index:0}
+.sec-deco>.container{position:relative;z-index:1}
+
+/* Reveals (JS setzt .in) */
+html.sfx .rv{opacity:0;transform:translateY(34px);transition:opacity .6s ease-out,transform .7s cubic-bezier(.22,.7,.3,1)}
+html.sfx .rv-l{opacity:0;transform:translateX(-64px);transition:opacity .6s ease-out,transform .7s cubic-bezier(.22,.7,.3,1)}
+html.sfx .rv-r{opacity:0;transform:translateX(64px);transition:opacity .6s ease-out,transform .7s cubic-bezier(.22,.7,.3,1)}
+html.sfx .rv.in,html.sfx .rv-l.in,html.sfx .rv-r.in{opacity:1;transform:none}
+html.sfx .stagger>*{opacity:0;transform:translateY(22px);transition:opacity .55s ease-out,transform .55s cubic-bezier(.22,.7,.3,1)}
+html.sfx .stagger.in>*{opacity:1;transform:none}
+html.sfx .stagger.in>*:nth-child(1){transition-delay:0s}
+html.sfx .stagger.in>*:nth-child(2){transition-delay:.08s}
+html.sfx .stagger.in>*:nth-child(3){transition-delay:.16s}
+html.sfx .stagger.in>*:nth-child(4){transition-delay:.24s}
+html.sfx .stagger.in>*:nth-child(5){transition-delay:.32s}
+html.sfx .stagger.in>*:nth-child(6){transition-delay:.4s}
+@media(max-width:860px){html.sfx .rv-l,html.sfx .rv-r{transform:translateY(26px)}}
+
+/* Problem-Karten */
+.ledger{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ledger-row{display:flex;flex-direction:column;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 26px 24px;box-shadow:var(--sh-1);transition:transform .3s cubic-bezier(.22,.7,.3,1),box-shadow .3s ease,border-color .3s ease;position:relative}
+.ledger-row:hover{transform:translateY(-4px);border-color:rgba(76,72,196,.4);box-shadow:var(--sh-3)}
+.ledger-num{position:absolute;top:20px;right:22px;font-family:var(--mono);font-size:11.5px;color:#9A97C0;font-weight:500;letter-spacing:.06em}
+.ledger-row h3{margin-bottom:10px}
+.pic{width:46px;height:46px;border-radius:13px;border:1px solid rgba(76,72,196,.2);background:linear-gradient(180deg,rgba(76,72,196,.11),rgba(76,72,196,.045));display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-bottom:18px;box-shadow:var(--sh-1)}
+.pic svg{width:19px;height:19px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ledger-row p{color:var(--ink);font-size:15px}
+@media(max-width:1020px){.ledger{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.ledger{grid-template-columns:1fr}}
+
+/* Mit Bot / ohne Bot */
+.vs{margin-top:56px;border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:0 1px 2px rgba(20,27,44,.05),0 14px 34px rgba(20,27,44,.08)}
+.vs-head{display:grid;grid-template-columns:1fr 1fr}
+.vs-head div{padding:16px 24px;font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:-.01em}
+.vs-head .no{background:var(--paper-2);color:var(--muted)}
+.vs-head .yes{background:var(--accent);color:#fff}
+.vs-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.vs-row div{padding:16px 24px;font-size:14.5px;color:var(--ink);display:flex;gap:11px;align-items:flex-start;line-height:1.5}
+.vs-row .no{color:var(--muted);border-right:1px solid var(--line)}
+.vs-row i{font-style:normal;flex-shrink:0;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px}
+.vs-row .no i{background:#E4E0EE;color:#8A87A8}
+.vs-row .yes i{background:rgba(76,72,196,.12);color:var(--accent-deep)}
+@media(max-width:700px){.vs-head{grid-template-columns:1fr}.vs-head .no{display:none}.vs-row{grid-template-columns:1fr}.vs-row .no{border-right:none;background:var(--paper-2)}}
+
+/* Feature-Grid */
+.matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.cell{border:1px solid var(--line);border-radius:16px;padding:34px 30px 36px;background:var(--card);box-shadow:var(--sh-1);transition:border-color .22s ease,box-shadow .3s ease,transform .3s cubic-bezier(.22,.7,.3,1)}
+.cell:hover{border-color:rgba(76,72,196,.45);box-shadow:var(--sh-2);transform:translateY(-3px)}
+.cell .ic{width:46px;height:46px;border-radius:13px;border:1px solid rgba(76,72,196,.2);background:linear-gradient(180deg,rgba(76,72,196,.11),rgba(76,72,196,.045));display:flex;align-items:center;justify-content:center;margin-bottom:22px;box-shadow:var(--sh-1)}
+.cell .ic svg{stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;width:19px;height:19px}
+.cell h3{margin-bottom:10px}
+.cell p{color:var(--ink);font-size:15px}
+.cell strong{color:var(--ink);font-weight:600}
+@media(max-width:960px){.matrix{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.matrix{grid-template-columns:1fr}}
+
+/* Tabs: Lösungen im Detail */
+.detail-lead{max-width:760px;margin-bottom:34px;color:var(--muted)}
+.tabbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.tab{display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-size:14.5px;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line-strong);border-radius:99px;padding:10px 18px 10px 12px;cursor:pointer;transition:border-color .16s ease,background .16s ease,transform .16s ease}
+.tab:hover{border-color:var(--accent);transform:translateY(-1px)}
+.tab[aria-selected="true"]{border-color:var(--accent);background:rgba(76,72,196,.07);color:var(--accent-deep)}
+.tab .ti{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tab .ti svg{width:13px;height:13px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mi-indigo{background:var(--accent)}
+.mi-wa{background:var(--wa)}
+.mi-ig{background:linear-gradient(135deg,var(--ig-b),var(--ig-a))}
+.mi-navy{background:var(--navy)}
+.panel{display:none;border:1px solid var(--line);border-radius:18px;background:var(--card);padding:44px;box-shadow:var(--sh-2)}
+.panel.active{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.panel.p-enter{animation:pEnter .25s ease-out}
+@keyframes pEnter{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:none}}
+html.rm-on .panel.p-enter{animation:none}
+.panel h3{font-size:24px;margin-bottom:12px}
+.panel p{color:var(--ink);font-size:15.5px;margin-bottom:20px}
+.panel ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.panel ul li{position:relative;padding-left:26px;font-size:15px;color:var(--ink)}
+.panel ul li::before{content:"";position:absolute;left:2px;top:8px;width:8px;height:8px;background:var(--accent)}
+.panel .btn{padding:12px 22px;font-size:14.5px}
+@media(max-width:920px){.panel.active{grid-template-columns:1fr;gap:36px}.panel{padding:30px 24px}}
+@media(max-width:760px){.tabbar{flex-wrap:nowrap;overflow-x:auto;padding-bottom:10px;margin-bottom:26px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.tabbar::-webkit-scrollbar{display:none}.tab{flex-shrink:0}}
+
+/* Mini-Mockups in den Panels */
+.mock{border-radius:12px;overflow:hidden;border:1px solid var(--line-strong);box-shadow:0 14px 36px rgba(20,27,44,.12);background:#fff;max-width:400px;color:#111}
+.mock-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:12.5px;font-weight:600;color:#fff}
+.mock-bar.web{background:var(--accent)}
+.mock-bar.wa2{background:#0E5C4A}
+.mock-bar.ig{background:linear-gradient(135deg,var(--ig-b),var(--ig-a))}
+.mock-bar.voice{background:var(--navy)}
+.mock-bar.cal{background:var(--accent-deep)}
+.mock-body{padding:16px 14px;display:flex;flex-direction:column;gap:8px;background:#F4F5F8;min-height:190px}
+.mbubble{max-width:86%;padding:9px 12px;border-radius:9px;font-size:13.5px;line-height:1.5;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.mbubble.bot{background:#fff;align-self:flex-start;border-top-left-radius:2px}
+.mbubble.user{background:var(--accent);color:#fff;align-self:flex-end;border-top-right-radius:2px}
+.mbubble.user.green{background:#D9FDD3;color:#111}
+.mbubble.user.pink{background:linear-gradient(135deg,var(--ig-b),var(--ig-a));color:#fff}
+.mquick{display:flex;gap:8px;flex-wrap:wrap;align-self:flex-start}
+.mquick span{font-size:12.5px;font-weight:600;color:var(--accent-deep);border:1px solid rgba(76,72,196,.4);border-radius:99px;padding:6px 12px;background:#fff}
+.wave{display:flex;align-items:center;gap:3px;height:44px;margin:4px 0 8px}
+.wave i{width:4px;border-radius:3px;background:var(--accent-soft);height:30%;animation:wv 1.1s ease-in-out infinite}
+.wave i:nth-child(2n){height:70%;animation-delay:.12s}
+.wave i:nth-child(3n){height:50%;animation-delay:.24s}
+.wave i:nth-child(5n){height:90%;animation-delay:.36s}
+@keyframes wv{0%,100%{transform:scaleY(.6)}50%{transform:scaleY(1.15)}}
+html.rm-on .wave i{animation:none}
+.voice-line{font-size:13.5px;line-height:1.55;color:#111;background:#fff;border-radius:9px;padding:9px 12px;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.voice-line b{color:var(--accent-deep)}
+.cal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.cal-slot{font-family:var(--mono);font-size:12.5px;color:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:9px 4px;text-align:center;background:#fff}
+.cal-slot.busy{color:#A9AFC2;text-decoration:line-through}
+.cal-slot.pick{background:var(--accent);border-color:var(--accent);color:#fff}
+.cal-confirm{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid rgba(76,72,196,.3);border-radius:9px;padding:10px 12px;font-size:13px}
+.cal-note{font-size:12px;color:var(--muted-2);margin-top:10px}
+
+/* Live-Demo-Bot */
+.bizpick-wrap{max-width:520px;margin:0 auto 18px;padding:14px 16px 16px;background:var(--paper-2);border:1px solid var(--line);border-radius:12px}
+.bizpick-label{display:block;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;margin-bottom:11px}
+.bizpick{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0}
+.bizpick-btn{font-family:var(--body);font-size:13.5px;font-weight:600;color:var(--muted);background:#fff;border:1px solid var(--line-strong);border-radius:99px;padding:8px 16px;cursor:pointer;transition:all .15s ease;white-space:nowrap}
+.bizpick-btn:hover{border-color:var(--accent);color:var(--accent)}
+.bizpick-btn.is-on{background:var(--accent);border-color:var(--accent);color:#fff}
+.bot{border:1px solid var(--line-strong);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 2px 6px rgba(20,27,44,.06),0 28px 60px rgba(20,27,44,.14);max-width:440px;margin:0 auto}
+.bot-head{display:flex;align-items:center;gap:12px;background:var(--accent);color:#fff;padding:14px 18px}
+.bot-head .ba{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:14px;flex-shrink:0}
+.bot-head b{display:block;font-size:15px;font-weight:600;line-height:1.2}
+.bot-head small{display:block;font-size:12px;color:#D9D8F6}
+.bot-reset{margin-left:auto;background:rgba(255,255,255,.14);border:none;color:#fff;font-family:var(--body);font-size:12.5px;font-weight:600;border-radius:99px;padding:7px 13px;cursor:pointer;transition:background .15s ease}
+.bot-reset:hover{background:rgba(255,255,255,.26)}
+.bot-body{height:380px;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:9px;background:#F4F5F8;scroll-behavior:smooth}
+.bot-msg{max-width:86%;padding:10px 13px;border-radius:11px;font-size:14px;line-height:1.55;color:#111;box-shadow:0 1px 1px rgba(0,0,0,.06);animation:botIn .3s ease}
+.bot-msg.from-bot{background:#fff;align-self:flex-start;border-top-left-radius:3px}
+.bot-msg.from-user{background:var(--accent);color:#fff;align-self:flex-end;border-top-right-radius:3px}
+.bot-msg.confirm{border:1px solid rgba(76,72,196,.3)}
+@keyframes botIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+html.rm-on .bot-msg{animation:none}
+.bot-chips{display:flex;gap:8px;flex-wrap:wrap;align-self:flex-start;animation:botIn .3s ease}
+.bot-chip{font-family:var(--body);font-size:13px;font-weight:600;color:var(--accent-deep);border:1px solid rgba(76,72,196,.45);border-radius:99px;padding:8px 14px;background:#fff;cursor:pointer;transition:background .15s ease,border-color .15s ease,transform .15s ease}
+.bot-chip:hover{background:rgba(76,72,196,.08);border-color:var(--accent);transform:translateY(-1px)}
+.bot-typing{align-self:flex-start;background:#fff;border-radius:11px;border-top-left-radius:3px;padding:12px 16px;box-shadow:0 1px 1px rgba(0,0,0,.06);display:flex;gap:5px}
+.bot-typing i{width:7px;height:7px;border-radius:50%;background:#9AA0A6;animation:waDot 1.2s infinite}
+.bot-typing i:nth-child(2){animation-delay:.18s}
+.bot-typing i:nth-child(3){animation-delay:.36s}
+.bot-input{display:flex;gap:10px;border-top:1px solid var(--line);padding:12px;background:#fff}
+.bot-input input{flex:1;min-width:0;font-family:var(--body);font-size:14.5px;color:var(--ink);border:1px solid var(--line-strong);border-radius:99px;padding:11px 16px;background:#FDFDFE}
+.bot-input input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--ring)}
+.bot-input button{background:var(--accent);border:none;color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s ease}
+.bot-input button:hover{background:var(--accent-deep)}
+.bot-input button svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.bot-note{margin-top:14px;font-size:13px;color:var(--muted);text-align:center;max-width:440px;margin-left:auto;margin-right:auto}
+
+/* Demo-Anfrage */
+.demo-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:start}
+@media(max-width:960px){.demo-grid{grid-template-columns:1fr;gap:44px}}
+.req-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:26px 0 20px}
+.req-list li{position:relative;padding-left:28px;font-size:15.5px;color:var(--ink)}
+.req-list li::before{content:"";position:absolute;left:2px;top:8px;width:8px;height:8px;background:var(--accent)}
+.req-note{font-size:14px;color:var(--muted);margin-top:12px;line-height:1.6}
+.contact-form{background:var(--card);border:1px solid var(--line-strong);border-radius:18px;padding:36px 32px;box-shadow:var(--sh-3)}
+.contact-form h3{font-size:22px;margin-bottom:8px}
+.form-intro{font-size:14.5px;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.form-intro a{color:var(--accent);font-weight:600;text-decoration:none}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-field{display:flex;flex-direction:column;gap:7px}
+.form-field.full{grid-column:1/-1}
+.form-field label{font-size:13.5px;font-weight:600;color:var(--ink)}
+.form-field label span{color:var(--accent)}
+.form-field input[type=text],.form-field input[type=email],.form-field input[type=tel],.form-field select,.form-field textarea{font-family:var(--body);font-size:15px;color:var(--ink);border:1px solid var(--line-strong);border-radius:9px;padding:12px 14px;background:#FDFDFE;width:100%}
+.form-field textarea{min-height:96px;resize:vertical}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--ring)}
+.check-group{display:flex;gap:10px;flex-wrap:wrap}
+.check-group label{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink);border:1px solid var(--line-strong);border-radius:99px;padding:9px 15px;cursor:pointer;background:#fff;transition:border-color .15s ease,background .15s ease}
+.check-group label:has(:checked){border-color:var(--accent);background:rgba(76,72,196,.07)}
+.form-more{grid-column:1/-1;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.form-more>summary{list-style:none;cursor:pointer;padding:14px 18px;font-size:14.5px;font-weight:600;color:var(--ink)}
+.form-more>summary::-webkit-details-marker{display:none}
+.form-more>summary span{font-weight:400;color:var(--muted-2);font-size:13px}
+.form-more-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:6px 18px 20px}
+@media(max-width:640px){.form-grid,.form-more-grid{grid-template-columns:1fr}}
+.consent-label{display:flex;gap:11px;align-items:flex-start;font-size:13px;color:var(--muted);line-height:1.55;font-weight:400!important}
+.consent-label input{margin-top:3px}
+.consent-label a{color:var(--accent)}
+.form-msg{grid-column:1/-1;font-size:14.5px;font-weight:600;color:var(--accent-deep);min-height:0}
+.form-submit{grid-column:1/-1;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.form-after{font-size:13.5px;color:var(--muted-2)}
+@media(max-width:560px){.contact-form{padding:26px 20px}}
+
+/* Ablauf */
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.steps-fill{position:absolute;top:23px;left:5%;width:90%;height:2px;background:var(--line-strong);z-index:0}
+.steps-fill::after{content:"";position:absolute;inset:0;background:var(--accent);transform:scaleX(var(--fill,0));transform-origin:left}
+.step{position:relative;z-index:1;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:var(--sh-1)}
+.step-num{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--display);font-weight:700;font-size:18px;margin-bottom:18px;box-shadow:0 6px 16px rgba(76,72,196,.35)}
+.step b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:8px;font-weight:600}
+.step h3{margin-bottom:10px}
+.step p{font-size:14.5px;color:var(--ink)}
+@media(max-width:860px){.steps{grid-template-columns:1fr}.steps-fill{display:none}}
+.steps-note{display:flex;gap:14px;align-items:flex-start;margin-top:34px;background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.steps-note svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.steps-note p{font-size:14.5px;color:var(--ink);line-height:1.6}
+
+/* Vertrauen (dunkles Band) */
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:920px){.trust-grid{grid-template-columns:1fr;gap:40px}}
+.trust-items{display:flex;flex-direction:column;gap:16px}
+.trust-item{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.045);border:1px solid var(--line-dark);border-radius:14px;padding:18px 20px}
+.trust-item i{width:40px;height:40px;border-radius:11px;background:rgba(158,155,240,.14);border:1px solid rgba(158,155,240,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item i svg{width:18px;height:18px;stroke:var(--accent-soft);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.trust-item b{display:block;font-size:15.5px;color:#fff;margin-bottom:3px}
+.trust-item span{font-size:13.5px;color:#A6ADC0;line-height:1.55}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:820px}
+.faq-item{border:1px solid var(--line);border-radius:12px;background:var(--card);box-shadow:var(--sh-1)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 22px;font-family:var(--display);font-weight:600;font-size:16.5px;letter-spacing:-.01em;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary i{font-style:normal;color:var(--accent);font-size:20px;font-weight:400;transition:transform .25s ease;flex-shrink:0}
+.faq-item[open] summary i{transform:rotate(45deg)}
+.faq-item p{padding:0 22px 20px;font-size:15px;color:var(--muted);line-height:1.65;max-width:70ch}
+.faq-item p b{color:var(--ink)}
+
+/* Über */
+.about-grid{display:grid;grid-template-columns:220px 1fr;gap:44px;align-items:center;max-width:820px}
+.about-photo{border-radius:16px;overflow:hidden;box-shadow:var(--sh-3)}
+.about-photo svg{width:100%;height:auto}
+.about-grid h3{font-size:24px;margin-bottom:4px}
+.about-role{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:16px}
+.about-grid p{font-size:15.5px;color:var(--ink);line-height:1.7}
+@media(max-width:640px){.about-grid{grid-template-columns:1fr;gap:28px}.about-photo{max-width:220px}}
+
+/* Footer */
+footer{background:var(--navy);color:#C9CEDE;padding:72px 0 36px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid var(--line-dark)}
+.footer-logo{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:-.02em;color:#fff;display:inline-block;margin-bottom:14px}
+.footer-logo span{color:var(--accent-soft)}
+.footer-brand p{font-size:14px;line-height:1.65;color:#8A92A6;max-width:34ch}
+.footer-col b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8A92A6;margin-bottom:16px;font-weight:500}
+.footer-col a,.footer-col span{display:block;font-size:14.5px;color:#C9CEDE;text-decoration:none;padding:5px 0}
+.footer-col a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:28px;font-size:13px;color:#8A92A6}
+@media(max-width:860px){.footer-top{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<div id="scrollbar" aria-hidden="true"></div>
+
+<nav aria-label="Hauptnavigation">
+  <div class="container nav-inner">
+    <a class="logo" href="#top">kalio<span>.</span></a>
+    <div class="nav-links">
+      <a href="#probleme">Warum Kalio</a>
+      <a href="#loesung">Lösungen</a>
+      <a href="#live-demo">Bot live testen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-tel" href="tel:+436767515586"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.11 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.26a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="tel-num">+43 676 751 55 86</span></a>
+      <a class="nav-cta" href="#demo-anfrage">Kostenlose Demo</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" aria-label="Mobiles Menü">
+  <a href="#probleme">Warum Kalio</a>
+  <a href="#loesung">Lösungen</a>
+  <a href="#live-demo">Bot live testen</a>
+  <a href="#ablauf">Ablauf</a>
+  <a href="#faq">FAQ</a>
+  <a href="tel:+436767515586">+43 676 751 55 86</a>
+  <a class="nav-cta" href="#demo-anfrage">Kostenlose Demo anfragen</a>
+</div>
+
+<main id="main">
+<span id="top" aria-hidden="true"></span>
+
+<!-- ============ DER FILM: „Der 21:02-Termin“ ============ -->
+<section id="film" aria-label="Kalio in einer Geschichte: aus einem verpassten Anruf wird ein gebuchter Termin">
+
+  <!-- Statischer Fallback: reduced motion / ohne JavaScript -->
+  <div class="film-static">
+    <div class="container">
+      <span class="kicker" style="justify-content:center">KI-Agentur · Österreich &amp; Deutschland</span>
+      <h1>Kalio nimmt Anfragen an und bucht Termine für <em>Ihren Betrieb</em></h1>
+      <p class="lead">Auf WhatsApp, auf Instagram, auf Ihrer Website und am Telefon. Auch dann, wenn bei Ihnen gerade keiner rangehen kann. Fragen sind in Sekunden beantwortet und der Termin steht im Kalender, noch bevor Sie davon erfahren.</p>
+      <div class="k5-ctas">
+        <a class="btn btn-primary" href="#demo-anfrage">Kostenlose Demo anfragen</a>
+        <a class="btn btn-outline" href="#live-demo"><span class="live-dot" aria-hidden="true"></span>Bot jetzt live ausprobieren</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Der gescrollte Film -->
+  <div class="film-scroll">
+    <div class="film-stage" id="filmStage">
+      <div class="sky sky-night" id="skyNight"></div>
+      <div class="sky sky-dusk" id="skyDusk"></div>
+      <div class="sky sky-dawn" id="skyDawn"></div>
+      <div class="sun" id="sun"></div>
+      <div id="stars" aria-hidden="true"></div>
+
+      <!-- Kapitel 1: Die Nacht -->
+      <div class="scene" id="scene1">
+        <div class="container">
+          <div class="k1-clock" id="k1Clock" aria-hidden="true">21:<span class="clk-min"><span id="clkMin">00</span></span></div>
+          <div class="k1-phone" id="k1Phone">
+            <span class="k1-ring" id="ring1"></span>
+            <span class="k1-ring" id="ring2"></span>
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.11 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.26a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="k1-missed" id="k1Missed"><i></i>Anruf verpasst</div>
+          <div class="k1-head" id="k1Head">Um 21 Uhr ruft ein Kunde an.<br>Bei Ihnen geht niemand ran.</div>
+          <p class="k1-sub" id="k1Sub">So verlieren Betriebe jeden Abend Aufträge – nicht wegen des Preises, sondern weil niemand erreichbar ist. Scrollen Sie weiter und sehen Sie, was stattdessen passieren kann.</p>
+        </div>
+      </div>
+
+      <!-- Kapitel 2: Die Nachricht -->
+      <div class="scene" id="scene2" style="visibility:hidden">
+        <div class="k2-wrap">
+          <div class="k2-chat" id="k2Chat">
+            <div class="k2-head">
+              <span class="k2-av">ZP</span>
+              <div><b>Zahnarztpraxis</b><small>WhatsApp · Kalio-Bot · antwortet sofort</small></div>
+              <span class="k2-time" id="k2Time">21:00</span>
+            </div>
+            <div class="k2-body">
+              <div class="k2-msg out" id="m1">Guten Abend! Ich bräuchte einen Termin für eine Kontrolle. Geht auch Donnerstag?<span class="k2-meta">21:00 <span class="k2-ticks">✓✓</span></span></div>
+              <div class="k2-typing" id="typ1"><i></i><i></i><i></i></div>
+              <div class="k2-msg in" id="m2">Guten Abend! Gerne. 😊 Am Donnerstag sind noch zwei Termine frei: <b>09:30</b> oder <b>15:00 Uhr</b>. Passt einer davon?<span class="k2-meta">21:01</span></div>
+              <div class="k2-msg out" id="m3">15:00 Uhr, bitte.<span class="k2-meta">21:01 <span class="k2-ticks">✓✓</span></span></div>
+            </div>
+          </div>
+          <p class="k2-caption" id="k2Caption">Derselbe Kunde · 60 Sekunden später</p>
+        </div>
+      </div>
+
+      <!-- Kapitel 3: Der Termin -->
+      <div class="scene" id="scene3" style="visibility:hidden">
+        <div class="container">
+          <div class="k3-book" id="k3Book">
+            <header><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Termin bestätigt</header>
+            <div><b>Do, 09.07. · 15:00 Uhr</b><span>Kontrolle · Erinnerung folgt einen Tag vorher</span></div>
+          </div>
+          <div class="k3-cal" id="k3Cal">
+            <div class="k3-cal-head"><span>Donnerstag, 09.07.</span><span id="k3Sync">✓ Google Kalender</span></div>
+            <div class="k3-grid">
+              <span class="k3-slot busy">08:30</span>
+              <span class="k3-slot">09:30</span>
+              <span class="k3-slot busy">11:00</span>
+              <span class="k3-slot">13:30</span>
+              <span class="k3-slot pick" id="k3Pick">15:00</span>
+              <span class="k3-slot busy">16:00</span>
+              <span class="k3-slot">17:00</span>
+              <span class="k3-slot busy">18:00</span>
+            </div>
+          </div>
+          <p class="k3-line" id="k3Line">Um <b>21:02</b> steht der Termin im Kalender – <b>noch bevor Sie davon erfahren.</b> Bestätigung und Erinnerung gehen automatisch raus.</p>
+        </div>
+      </div>
+
+      <!-- Kapitel 4: Der Morgen -->
+      <div class="scene" id="scene4" style="visibility:hidden">
+        <div class="container">
+          <div class="k4-head" id="k4Head">Am Morgen ist Ihr Kalender voller als gestern Abend.</div>
+          <p class="k4-sub" id="k4Sub">Kein Rückruf, keine Mailbox, kein verlorener Auftrag. Der Bot hat die Routine übernommen – Sie machen Ihre Arbeit.</p>
+          <div class="k4-facts" id="k4Facts">
+            <div class="k4-fact"><b><span data-cu="80">0</span>&nbsp;%</b><span>der Kundenanfragen sind Routine: Öffnungszeiten, Preise, Terminvergabe*</span></div>
+            <div class="k4-fact"><b><span data-cu="24">0</span>/7</b><span>erreichbar. Kunden erwarten heute eine Antwort, nicht erst am nächsten Werktag</span></div>
+            <div class="k4-fact"><b><span data-cu="2">0</span>&nbsp;Tage</b><span>vom Startschuss bis zum Go-live, nach Übergabe Ihrer Inhalte</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kapitel 5: Die Übergabe -->
+      <div class="scene" id="scene5" style="visibility:hidden">
+        <div class="container">
+          <span class="k5-kicker" id="k5Kicker">KI-Agentur · Österreich &amp; Deutschland</span>
+          <h1 class="k5-head" id="k5Head">Kalio nimmt Anfragen an und bucht Termine für <em>Ihren Betrieb</em></h1>
+          <p class="k5-lead" id="k5Lead">Auf WhatsApp, auf Instagram, auf Ihrer Website und am Telefon. Auch dann, wenn bei Ihnen gerade keiner rangehen kann.</p>
+          <div class="k5-ctas" id="k5Ctas">
+            <a class="btn btn-primary" href="#demo-anfrage">Kostenlose Demo anfragen</a>
+            <a class="btn btn-outline" href="#live-demo" style="background:#fff;border-color:var(--line-strong);color:var(--ink)"><span class="live-dot" aria-hidden="true"></span>Bot jetzt live ausprobieren</a>
+          </div>
+          <div class="k5-chan" id="k5Chan" aria-label="Kanäle &amp; Funktionen">
+            <a href="#loesungen-detail" data-tab="whatsapp"><i><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1-5.5a8.5 8.5 0 0 1-1-4A8.38 8.38 0 0 1 11.5 2a8.5 8.5 0 0 1 8.5 8.5z"/></svg></i><span>WhatsApp</span></a>
+            <a href="#loesungen-detail" data-tab="instagram"><i><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></i><span>Instagram</span></a>
+            <a href="#loesungen-detail" data-tab="website"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></i><span>Website</span></a>
+            <a href="#loesungen-detail" data-tab="voice"><i><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.11 4.18 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.26a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></i><span>Voice-Agent</span></a>
+            <a href="#loesungen-detail" data-tab="termin"><i><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg></i><span>Terminbuchung</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="film-hud" aria-hidden="true">
+        <span class="hud-chapter" id="hudChapter">Kapitel 01 · 21:00 — Die Nacht</span>
+        <span class="hud-scroll"><span class="mouse"></span>Scrollen</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section id="probleme" class="sec-deco">
+  <span class="sec-bignum" aria-hidden="true">01</span>
+  <div class="container">
+    <div class="sec-head rv">
+      <div>
+        <span class="kicker">01 — Das Problem</span>
+        <h2>Wo Ihnen täglich Aufträge durchrutschen</h2>
+      </div>
+      <p class="lead">Kaum ein Kunde springt wegen des Preises ab. Er springt ab, weil niemand rangeht. Drei Muster begegnen uns in fast jedem Betrieb.</p>
+    </div>
+    <div class="ledger stagger rv">
+      <div class="ledger-row">
+        <span class="ledger-num">/01</span>
+        <div>
+          <div class="pic"><svg viewBox="0 0 24 24"><path d="M15 16.5c-4.5-1.8-7.7-5-9.5-9.5L8 4.5 5.5 2C3.6 3 2.5 4.6 2.9 6.6 4 12.4 8.6 17 14.4 18.1c2 .4 3.6-.7 4.6-2.6L16.5 13z"/><path d="M20.8 8.5a4.3 4.3 0 0 1-5.3-5.3 4.3 4.3 0 1 0 5.3 5.3z"/></svg></div>
+          <h3>Anrufe außerhalb der Öffnungszeiten</h3>
+          <p>Ein Großteil der Terminanfragen kommt am Abend oder am Wochenende. Wer da niemanden erreicht, wählt die nächste Nummer. Die steht meist schon daneben.</p>
+        </div>
+      </div>
+      <div class="ledger-row">
+        <span class="ledger-num">/02</span>
+        <div>
+          <div class="pic"><svg viewBox="0 0 24 24"><path d="M15 16.5c-4.5-1.8-7.7-5-9.5-9.5L8 4.5 5.5 2C3.6 3 2.5 4.6 2.9 6.6 4 12.4 8.6 17 14.4 18.1c2 .4 3.6-.7 4.6-2.6L16.5 13z"/><line x1="20.5" y1="3.5" x2="14.5" y2="9.5"/><line x1="14.5" y1="3.5" x2="20.5" y2="9.5"/></svg></div>
+          <h3>Besetzt, während Sie arbeiten</h3>
+          <p>Sie stehen am Patienten, am Kunden, auf dem Gerüst. Das Handy läutet in der Jackentasche. Die Mailbox füllt sich, und abends fehlt die Zeit, alles zurückzurufen.</p>
+        </div>
+      </div>
+      <div class="ledger-row">
+        <span class="ledger-num">/03</span>
+        <div>
+          <div class="pic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><polyline points="12 7.5 12 12 15.2 13.8"/><path d="M4.5 2.5 2 5M19.5 2.5 22 5"/></svg></div>
+          <h3>Ihr Team hängt am Telefon</h3>
+          <p>Wann habt ihr offen, was kostet das, kommt ihr bis zu uns raus. 80&nbsp;% der Anfragen sind dieselben drei Fragen. Jeden Tag, Stunde um Stunde.</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--muted-2)">* Erfahrungswert aus Kundenservice-Auswertungen kleiner und mittlerer Betriebe; der Anteil wiederkehrender Standardanfragen (Öffnungszeiten, Preise, Terminwünsche) liegt branchenabhängig meist bei 70–80 %.</p>
+    <h3 class="rv" style="margin-top:56px;font-size:22px">Im Alltag sieht das dann so aus:</h3>
+    <div class="vs rv" style="margin-top:20px" aria-label="Vergleich: ohne Bot und mit Kalio-Bot">
+      <div class="vs-head">
+        <div class="no">Ohne Bot</div>
+        <div class="yes">Mit Kalio-Bot</div>
+      </div>
+      <div class="vs-row">
+        <div class="no"><i>✕</i>Anruf um 21 Uhr → Mailbox. Rückruf irgendwann morgen. Vielleicht.</div>
+        <div class="yes"><i>✓</i>Anfrage um 21 Uhr → Termin gebucht. Um 21:02 steht er im Kalender.</div>
+      </div>
+      <div class="vs-row">
+        <div class="no"><i>✕</i>Preisfrage per DM → Antwort erst am Abend. Da hat die Kundin längst woanders gebucht.</div>
+        <div class="yes"><i>✓</i>Preisfrage per DM → Antwort in 10 Sekunden, mit Termin-Vorschlag dazu.</div>
+      </div>
+      <div class="vs-row">
+        <div class="no"><i>✕</i>„Wann habt ihr offen?“ → bindet Ihr Team am Telefon. Jeden Tag aufs Neue.</div>
+        <div class="yes"><i>✓</i>„Wann habt ihr offen?“ → beantwortet sich von selbst. Ihr Team arbeitet weiter.</div>
+      </div>
+      <div class="vs-row">
+        <div class="no"><i>✕</i>Vergessener Termin → leerer Slot. Miete und Personal laufen trotzdem.</div>
+        <div class="yes"><i>✓</i>Erinnerung am Vortag, Verschieben per Chat. Der Platz bleibt besetzt.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LÖSUNG ============ -->
+<section id="loesung" class="bg-white">
+  <div class="container">
+    <div class="sec-head rv">
+      <div>
+        <span class="kicker">02 — Die Lösung</span>
+        <h2>Den Teil übernimmt Kalio</h2>
+      </div>
+      <p class="lead">Er sitzt Tag und Nacht am Telefon und im Chat, wird nie ungeduldig und ruft nie krank an. Sie machen in der Zwischenzeit Ihre Arbeit.</p>
+    </div>
+    <div class="matrix stagger rv">
+      <div class="cell">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M20.5 11a8 8 0 0 1-8.3 8 8.6 8.6 0 0 1-3.4-.7L3.5 20l1.7-4.9A8 8 0 1 1 20.5 11z"/><path d="m12.8 6.8-2.6 4h3.4l-2.6 4"/></svg></div>
+        <h3>Beantwortet Standardfragen sofort</h3>
+        <p>Öffnungszeiten, Leistungen, Preise. Beantwortet aus Ihren echten Firmendaten, nicht aus dem Internet. <strong>Ihr Telefon bleibt ruhig.</strong></p>
+      </div>
+      <div class="cell">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M10.5 3.5H5A2.5 2.5 0 0 0 2.5 6v5A2.5 2.5 0 0 0 5 13.5h.5V16l3-2.5h2A2.5 2.5 0 0 0 13 11V6a2.5 2.5 0 0 0-2.5-2.5z"/><path d="M14 9h5A2.5 2.5 0 0 1 21.5 11.5v4.5A2.5 2.5 0 0 1 19 18.5h-.5V21l-3-2.5"/><path d="M5.6 10.5 7.75 6l2.15 4.5M6.3 9.2h2.9"/><path d="M15.8 12.5h3.4M17.5 12.5c-.2 1.9-1.2 3.2-2.4 3.9M16.3 14.2c.6 1.2 1.7 2 2.9 2.2"/></svg></div>
+        <h3>Deutsch und Englisch</h3>
+        <p>Schreibt jemand auf Englisch, antwortet der Bot auf Englisch. Deutsch und Englisch beherrscht er, weitere Sprachen derzeit nicht. <strong>Für den DACH-Raum und internationale Gäste reicht das in aller Regel.</strong></p>
+      </div>
+      <div class="cell">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="14.5" cy="8" r="3.5"/><path d="M8.5 21v-1.5a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5V21"/><path d="M2.5 8.5h6M6 5.5l3 3-3 3"/></svg></div>
+        <h3>Übergabe an einen Menschen</h3>
+        <p>Wird es kompliziert, merkt der Bot das und reicht Ihnen das Gespräch weiter. Mit allem, was bisher geschrieben wurde. <strong>Kein Kunde landet in der Sackgasse.</strong></p>
+      </div>
+      <div class="cell">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21.5c4.8-2.3 7.5-5.8 7.5-10.3V5.6L12 2.8 4.5 5.6v5.6c0 4.5 2.7 8 7.5 10.3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Antwortet nur mit Ihren Inhalten</h3>
+        <p>Der Bot erfindet nichts. Er kennt Ihre Leistungen, Ihre Preise, Ihre Zeiten, und dabei bleibt er. <strong>Was nicht hinterlegt ist, behauptet er auch nicht.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LÖSUNGEN IM DETAIL ============ -->
+<section id="loesungen-detail" class="bg-grey">
+  <span id="live-demo" style="position:absolute;top:-80px" aria-hidden="true"></span>
+  <div class="container">
+    <p class="lead detail-lead rv">Ein System, viele Einsatzorte. Suchen Sie sich einen Kanal aus. Und unter „Live testen“ schreiben Sie direkt mit einem echten Beispiel-Bot.</p>
+
+    <div class="tabbar rv" role="tablist" aria-label="Lösungen">
+      <button class="tab" role="tab" id="tab-whatsapp" aria-selected="true" aria-controls="panel-whatsapp" data-tab="whatsapp">
+        <span class="ti mi-wa"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>WhatsApp-Bot
+      </button>
+      <button class="tab" role="tab" id="tab-instagram" aria-selected="false" aria-controls="panel-instagram" data-tab="instagram">
+        <span class="ti mi-ig"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/></svg></span>Instagram-Bot
+      </button>
+      <button class="tab" role="tab" id="tab-website" aria-selected="false" aria-controls="panel-website" data-tab="website">
+        <span class="ti mi-indigo"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg></span>Website-Chat
+      </button>
+      <button class="tab" role="tab" id="tab-voice" aria-selected="false" aria-controls="panel-voice" data-tab="voice">
+        <span class="ti mi-navy"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg></span>Voice-Agent
+      </button>
+      <button class="tab" role="tab" id="tab-termin" aria-selected="false" aria-controls="panel-termin" data-tab="termin">
+        <span class="ti mi-indigo"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Terminbuchung
+      </button>
+      <button class="tab tab-live" role="tab" id="tab-live" aria-selected="false" aria-controls="panel-live" data-tab="live">
+        <span class="ti mi-indigo"><svg viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg></span>Live testen
+      </button>
+    </div>
+
+    <div class="panel active" role="tabpanel" id="panel-whatsapp" aria-labelledby="tab-whatsapp">
+      <div class="mock">
+        <div class="mock-bar wa2"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Friseursalon · WhatsApp</div>
+        <div class="mock-body">
+          <div class="mbubble bot">Hi Lena! 👋 Kurze Erinnerung: Morgen um <b>14:00 Uhr</b> ist dein Termin (Schnitt &amp; Föhnen). Passt das noch?</div>
+          <div class="mquick"><span>Ja, passt!</span><span>Verschieben</span></div>
+          <div class="mbubble user green">Verschieben bitte 🙈</div>
+          <div class="mbubble bot">Kein Problem! Freitag hätte ich <b>10:00</b> oder <b>15:30 Uhr</b> frei – was passt dir besser?</div>
+        </div>
+      </div>
+      <div>
+        <h3>Erinnern, verschieben, nachbuchen. Alles im selben Chat</h3>
+        <p>WhatsApp hat hierzulande fast jeder am Handy. Der Bot bucht dort Termine, wie oben im Beispiel. Er schickt am Vortag die Erinnerung, nimmt Verschiebungen entgegen und füllt Lücken wieder auf.</p>
+        <ul>
+          <li>Automatische Erinnerung am Vortag, gegen No-Shows</li>
+          <li>Verschieben und Stornieren direkt im Chat, ohne Anruf</li>
+          <li>Frei gewordene Slots sofort wieder anbieten</li>
+        </ul>
+        <a class="btn btn-primary" href="#demo-anfrage">Diesen Bot für mich einrichten lassen</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-instagram" aria-labelledby="tab-instagram" hidden>
+      <div class="mock">
+        <div class="mock-bar ig"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/></svg>Kosmetikstudio · Instagram-DM</div>
+        <div class="mock-body">
+          <div class="mbubble user pink">Hi! Was kostet bei euch eine Gesichtsbehandlung?</div>
+          <div class="mbubble bot">Hallo! 💆‍♀️ Unsere Klassik-Behandlung kostet 79&nbsp;€ (60 Min). Magst du direkt einen Termin?</div>
+          <div class="mquick"><span>Termin buchen</span><span>Mehr Infos</span><span>Preise ansehen</span></div>
+          <div class="mbubble user pink">Termin buchen 🙌</div>
+        </div>
+      </div>
+      <div>
+        <h3>Aus DMs werden gebuchte Termine</h3>
+        <p>Auf Instagram kommen die Anfragen als Kommentar oder DM herein. Der Bot macht daraus fixe Termine. Sie müssen dafür das Handy nicht einmal anfassen.</p>
+        <ul>
+          <li>Antwortet auf DMs in Sekunden, auch nachts</li>
+          <li>Quick-Reply-Buttons führen direkt zur Buchung</li>
+          <li>Preis- und Leistungsfragen automatisch beantwortet</li>
+        </ul>
+        <a class="btn btn-primary" href="#demo-anfrage">Kostenlose Demo anfragen</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-website" aria-labelledby="tab-website" hidden>
+      <div class="mock">
+        <div class="mock-bar web"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>ihre-firma.at · Website-Chat</div>
+        <div class="mock-body">
+          <div class="mbubble bot">Hallo! 👋 Wie kann ich helfen?</div>
+          <div class="mbubble user">Habt ihr Donnerstag Vormittag noch einen Termin frei?</div>
+          <div class="mbubble bot">Ja – Donnerstag um <b>09:30</b> oder <b>11:00 Uhr</b>. Welcher passt Ihnen?</div>
+          <div class="mquick"><span>09:30 Uhr</span><span>11:00 Uhr</span><span>Anderer Tag</span></div>
+        </div>
+      </div>
+      <div>
+        <h3>Sofortige Hilfe für jeden Website-Besucher</h3>
+        <p>Auf Ihrer Website steht das Chatfenster Tag und Nacht bereit. Es beantwortet Fragen zu Leistungen, Preisen und Zeiten und legt freie Termine gleich mit auf den Tisch.</p>
+        <ul>
+          <li>Kein Formular, kein Warten. Antwort in Sekunden</li>
+          <li>Freie Slots direkt im Chat wählbar</li>
+          <li>Passt sich optisch an Ihre Website an</li>
+        </ul>
+        <a class="btn btn-primary" href="#demo-anfrage">Website-Chat kostenlos testen lassen</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-voice" aria-labelledby="tab-voice" hidden>
+      <div class="mock">
+        <div class="mock-bar voice"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>Eingehender Anruf · Voice-Agent</div>
+        <div class="mock-body">
+          <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="voice-line"><b>Agent:</b> „Praxis am Stadtpark, guten Tag! Wie kann ich Ihnen helfen?“</div>
+          <div class="voice-line"><b>Anrufer:</b> „Ich hätte gern einen Termin nächste Woche.“</div>
+          <div class="voice-line"><b>Agent:</b> „Gerne – Dienstag 10:15 oder Mittwoch 14:00 Uhr?“</div>
+        </div>
+      </div>
+      <div>
+        <h3>Nimmt Anrufe an, auch wenn niemand Zeit hat</h3>
+        <p>Der Voice-Agent hebt ab, wenn bei Ihnen keiner kann oder längst zugesperrt ist. Er beantwortet Fragen am Telefon und vergibt Termine im Gespräch. Auf Deutsch, und es klingt nicht nach Ansagemaschine.</p>
+        <p>Am meisten bringt er dort, wo viel telefoniert wird und die Kundschaft lieber anruft als schreibt. Bei allem, was länger hin und her geht, kommen wir an eine Grenze: verschachtelte Anliegen, Beschwerden oder Fälle, die Fingerspitzengefühl brauchen, gibt er an Sie weiter. Das ist so gewollt.</p>
+        <ul>
+          <li>Kein Besetztzeichen, keine volle Mailbox mehr</li>
+          <li>Terminvergabe direkt im Telefonat</li>
+          <li>Wichtige Anrufe werden an Sie durchgestellt</li>
+          <li>Nimmt mehrere Anrufe gleichzeitig entgegen</li>
+          <li>Sagt von sich aus, dass er ein Assistent ist</li>
+          <li>Jedes Gespräch später als Notiz nachlesbar</li>
+        </ul>
+        <a class="btn btn-primary" href="#demo-anfrage">Kostenlose Demo anfragen</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-termin" aria-labelledby="tab-termin" hidden>
+      <div class="mock">
+        <div class="mock-bar cal"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Donnerstag, 09.07. · Freie Termine</div>
+        <div class="mock-body">
+          <div class="cal-grid">
+            <span class="cal-slot busy">08:30</span>
+            <span class="cal-slot">09:30</span>
+            <span class="cal-slot busy">11:00</span>
+            <span class="cal-slot">13:30</span>
+            <span class="cal-slot pick">15:00</span>
+            <span class="cal-slot busy">16:00</span>
+            <span class="cal-slot">17:00</span>
+            <span class="cal-slot busy">18:00</span>
+          </div>
+          <div class="cal-confirm">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4C48C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg>
+            <div><b>15:00 Uhr gebucht</b> · Bestätigung und Erinnerung gesendet</div>
+          </div>
+          <p class="cal-note">Synchronisiert mit Google Kalender, Outlook &amp; weiteren Kalendern auf Anfrage.</p>
+        </div>
+      </div>
+      <div>
+        <h3>Termine landen direkt in Ihrem Kalender</h3>
+        <p>Der Bot sieht in Echtzeit, wann bei Ihnen noch etwas frei ist. Der Kunde sucht sich eine Zeit aus, der Termin wird eingetragen, Bestätigung und Erinnerung gehen automatisch raus. Doppelt vergeben kann er nichts.</p>
+        <ul>
+          <li>Anbindung an <strong>Google Kalender, Outlook</strong>, weitere Kalender auf Anfrage</li>
+          <li>Automatische Bestätigung und Erinnerung gegen No-Shows</li>
+          <li>Verschieben und Stornieren ohne Anruf</li>
+        </ul>
+        <a class="btn btn-primary" href="#demo-anfrage">Terminbuchung live vorführen lassen</a>
+      </div>
+    </div>
+
+    <div class="panel" role="tabpanel" id="panel-live" aria-labelledby="tab-live" hidden>
+      <div>
+        <div class="bizpick-wrap">
+          <span class="bizpick-label">Branche wählen und ausprobieren</span>
+          <div class="bizpick" id="bizPick" role="tablist" aria-label="Branche für den Test wählen">
+            <button type="button" class="bizpick-btn is-on" data-biz="friseur" role="tab" aria-selected="true">Friseur</button>
+            <button type="button" class="bizpick-btn" data-biz="gastro" role="tab" aria-selected="false">Restaurant</button>
+            <button type="button" class="bizpick-btn" data-biz="praxis" role="tab" aria-selected="false">Arztpraxis</button>
+            <button type="button" class="bizpick-btn" data-biz="handwerk" role="tab" aria-selected="false">Handwerk</button>
+          </div>
+        </div>
+        <div class="bot" id="demoBot">
+          <div class="bot-head">
+            <span class="ba" id="botAv">SA</span>
+            <div><b id="botBiz">Salon Aurora</b><small>Beispiel-Bot · antwortet sofort</small></div>
+            <button type="button" class="bot-reset" id="botReset">Neu starten</button>
+          </div>
+          <div class="bot-body" id="botBody" aria-live="polite"></div>
+          <div class="bot-input">
+            <input type="text" id="botInput" placeholder="Nachricht schreiben …" aria-label="Nachricht an den Beispiel-Bot" maxlength="200">
+            <button type="button" id="botSend" aria-label="Senden"><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+          </div>
+        </div>
+        <p class="bot-note">Fiktiver Beispiel-Betrieb zu Demonstrationszwecken. Ihr Bot wird mit Ihren echten Leistungen, Preisen und Zeiten eingerichtet.</p>
+      </div>
+      <div>
+        <h3>Reden Sie nicht über den Bot. Reden Sie mit ihm.</h3>
+        <p>Das ist kein Screenshot. Diese Beispiel-Bots antworten wirklich. <b>Wählen Sie oben eine Branche</b> und probieren Sie es aus. Tippen Sie ruhig frei, Sie müssen nicht auf die Vorschläge klicken. Jeder dieser Bots kennt nur die Preise und Zeiten seines erfundenen Betriebs. Genau so arbeitet später auch Ihrer, nur eben mit Ihren Daten.</p>
+        <ul>
+          <li>Fragen Sie nach Preisen oder Öffnungszeiten. Antwort in Sekunden</li>
+          <li>Buchen Sie einen Testtermin bis zur Bestätigung durch</li>
+          <li>Schreiben Sie auf Englisch, der Bot wechselt automatisch die Sprache</li>
+        </ul>
+        <a class="btn btn-primary" href="#demo-anfrage">Jetzt meine eigene Demo anfragen</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ DEMO-ANFRAGE ============ -->
+<section id="demo-anfrage">
+  <div class="container demo-grid">
+    <div class="rv-l">
+      <span class="kicker">03 — Ihre Demo</span>
+      <h2>Erst schauen, dann entscheiden</h2>
+      <p class="lead" style="margin-top:16px">Wie ein Probetag. Wir bauen Ihnen eine Demo mit Ihren echten Leistungen, Ihren Zeiten und Ihrem Ton. Sie sehen den Bot arbeiten und entscheiden danach.</p>
+      <ul class="req-list stagger rv">
+        <li><strong>Individuelle Demo</strong> mit Ihren echten Inhalten, kein Standardbeispiel</li>
+        <li><strong>Persönliche Vorstellung</strong> im kostenlosen Erstgespräch, live am Bildschirm</li>
+        <li><strong>Ehrliche Einschätzung,</strong> welche Anfragen sich bei Ihnen automatisieren lassen und welche besser bei Ihnen bleiben</li>
+        <li><strong>Fertig in 2 Tagen,</strong> und Sie entscheiden erst, wenn Sie Ihren Bot gesehen haben</li>
+      </ul>
+      <p class="req-note"><strong style="color:var(--ink);font-weight:600">Ihre Branche ist nicht dabei?</strong> Kein Problem. Wir bauen die Demo trotzdem mit Ihren echten Inhalten. Schreiben Sie uns einfach, was bei Ihnen anfällt.</p>
+      <p class="req-note">Je mehr Sie uns mitgeben, etwa Ihre Website, desto näher kommt die Demo an Ihren Betrieb heran.</p>
+    </div>
+
+    <!-- Formspree: Form-ID nach Registrierung eintragen. -->
+    <form class="contact-form ajax-form rv-r" action="https://formspree.io/f/DEINE_FORM_ID" method="POST" novalidate>
+      <h3>Jetzt anfragen</h3>
+      <p class="form-intro">Innerhalb von 24 Stunden melden wir uns persönlich mit einem konkreten Vorschlag. Wenn Ihnen das zu lang dauert, rufen Sie einfach an: <a href="tel:+436767515586">+43 676 751 55 86</a></p>
+      <div class="form-grid">
+        <div class="form-field full">
+          <label>Ich möchte <span>*</span></label>
+          <div class="check-group">
+            <label for="a-demo"><input type="radio" id="a-demo" name="anliegen" value="Kostenlose Demo" checked>Kostenlose Demo</label>
+            <label for="a-gespraech"><input type="radio" id="a-gespraech" name="anliegen" value="Erstgespräch">Erstgespräch</label>
+            <label for="a-beides"><input type="radio" id="a-beides" name="anliegen" value="Beides">Beides</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="d-name">Name <span>*</span></label>
+          <input id="d-name" name="name" type="text" autocomplete="name" required placeholder="Max Mustermann">
+        </div>
+        <div class="form-field">
+          <label for="d-email">E-Mail <span>*</span></label>
+          <input id="d-email" name="email" type="email" autocomplete="email" required placeholder="max@firma.at">
+        </div>
+
+        <details class="form-more full">
+          <summary>Weitere Angaben ergänzen <span>(optional, macht die Demo besser)</span></summary>
+          <div class="form-more-grid">
+            <div class="form-field">
+              <label for="d-firma">Firma</label>
+              <input id="d-firma" name="firma" type="text" autocomplete="organization" placeholder="Mustermann GmbH">
+            </div>
+            <div class="form-field">
+              <label for="d-tel">Telefon</label>
+              <input id="d-tel" name="telefon" type="tel" autocomplete="tel" placeholder="+43 660 1234567">
+            </div>
+            <div class="form-field full">
+              <label for="d-web">Ihre Website (falls vorhanden, hilft uns bei der Demo)</label>
+              <input id="d-web" name="website" type="text" inputmode="url" placeholder="www.ihre-firma.at">
+            </div>
+            <div class="form-field">
+              <label for="d-branche">Branche</label>
+              <select id="d-branche" name="branche">
+                <option value="" selected>Bitte wählen …</option>
+                <option>Arzt- / Zahnarztpraxis</option>
+                <option>Friseur / Kosmetik / Beauty</option>
+                <option>Physiotherapie / Massage</option>
+                <option>KFZ-Werkstatt / Autohaus</option>
+                <option>Fitnessstudio / Personal Training</option>
+                <option>Kanzlei / Steuerberatung / Versicherung</option>
+                <option>Handwerksbetrieb</option>
+                <option>Gastronomie / Hotel</option>
+                <option>Coaching / Beratung</option>
+                <option>Sonstige</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="d-zeit">Wunsch-Zeitraum für Rückruf (optional)</label>
+              <select id="d-zeit" name="wunsch_zeitraum">
+                <option value="" selected>Egal, einfach vorschlagen</option>
+                <option>Vormittag (08–12 Uhr)</option>
+                <option>Nachmittag (12–17 Uhr)</option>
+                <option>Abend (17–20 Uhr)</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label>Wo soll der Bot laufen?</label>
+              <div class="check-group">
+                <label for="k-web"><input type="checkbox" id="k-web" name="kanal" value="Website">Website</label>
+                <label for="k-wa"><input type="checkbox" id="k-wa" name="kanal" value="WhatsApp">WhatsApp</label>
+                <label for="k-ig"><input type="checkbox" id="k-ig" name="kanal" value="Instagram">Instagram</label>
+                <label for="k-voice"><input type="checkbox" id="k-voice" name="kanal" value="Telefon (Voice-Agent)">Telefon (Voice)</label>
+                <label for="k-unklar"><input type="checkbox" id="k-unklar" name="kanal" value="Noch unklar">Noch unklar</label>
+              </div>
+            </div>
+            <div class="form-field full">
+              <label>Was soll der Bot übernehmen?</label>
+              <div class="check-group">
+                <label for="t-termine"><input type="checkbox" id="t-termine" name="aufgabe" value="Termine buchen">Termine buchen</label>
+                <label for="t-fragen"><input type="checkbox" id="t-fragen" name="aufgabe" value="Fragen beantworten">Fragen beantworten</label>
+                <label for="t-anfragen"><input type="checkbox" id="t-anfragen" name="aufgabe" value="Anfragen erfassen">Anfragen erfassen</label>
+                <label for="t-erinnerung"><input type="checkbox" id="t-erinnerung" name="aufgabe" value="Erinnerungen senden">Erinnerungen senden</label>
+              </div>
+            </div>
+            <div class="form-field full">
+              <label for="d-msg">Wichtige Infos für die Demo (optional)</label>
+              <textarea id="d-msg" name="nachricht" placeholder="Z. B. Ihre wichtigsten Leistungen, Öffnungszeiten, wie Termine aktuell vergeben werden, Besonderheiten …"></textarea>
+            </div>
+          </div>
+        </details>
+
+        <div class="form-field full">
+          <label class="consent-label" for="d-consent">
+            <input type="checkbox" id="d-consent" name="datenschutz" value="zugestimmt" required>
+            <!-- TODO: href auf die Datenschutz-URL setzen, sobald online (z. B. /datenschutz) -->
+            <span>Ich willige ein, dass meine Angaben zur Bearbeitung und Beantwortung meiner Anfrage gespeichert und verarbeitet werden. Die Einwilligung kann ich jederzeit per E-Mail mit Wirkung für die Zukunft widerrufen. Weitere Informationen in der <a href="#datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>. <b>*</b></span>
+          </label>
+        </div>
+        <div class="form-msg" role="status" aria-live="polite"></div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+          <p class="form-after">Persönliche Rückmeldung innerhalb von 24&nbsp;h.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ ABLAUF ============ -->
+<section id="ablauf" class="bg-white">
+  <div class="container">
+    <div class="sec-head rv">
+      <div>
+        <span class="kicker">04 — Der Ablauf</span>
+        <h2>In 2 Tagen live, und Sie haben kaum Arbeit damit</h2>
+      </div>
+      <p class="lead">Drei Schritte von der Anfrage bis zum laufenden Bot. An jedem Punkt entscheiden Sie, ob es weitergeht.</p>
+    </div>
+    <div class="steps" id="stepsTrack">
+      <span class="steps-fill" id="stepsFill" aria-hidden="true"></span>
+      <div class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <b>Schritt 1</b>
+        <h3>Kostenlose Demo</h3>
+        <p>Sie schicken uns die wichtigsten Eckdaten zu Ihrem Betrieb. Daraus bauen wir eine Demo mit Ihren echten Leistungen, Preisen und Zeiten.</p>
+      </div>
+      <div class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <b>Schritt 2</b>
+        <h3>Erstgespräch, wenn die Demo überzeugt</h3>
+        <p>Sie testen den Bot in Ruhe. Passt es, zeigen wir Ihnen in 30 Minuten alles live und beantworten Ihre Fragen. Danach bekommen Sie Ihr Fixangebot.</p>
+      </div>
+      <div class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <b>Schritt 3</b>
+        <h3>Go-live &amp; Betreuung</h3>
+        <p>Sobald Sie grünes Licht geben, hängen wir den Bot an Ihren Kalender. Nach 2 Tagen läuft er. Wir schauen uns die Antworten an, bessern nach, wo es hakt, und bleiben Ihr Ansprechpartner.</p>
+      </div>
+    </div>
+    <div class="steps-note rv">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+      <p><b>Kalender-Anbindung:</b> Wir verbinden den Bot mit <b>Google Kalender, Outlook</b> oder auf Anfrage mit anderen Kalendersystemen. Termine landen automatisch dort, wo Sie ohnehin planen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DATENSCHUTZ ============ -->
+<section id="datenschutz-vertrauen" class="dark">
+  <div class="container trust-grid">
+    <div class="rv-l">
+      <span class="kicker">05 — Datenschutz</span>
+      <h2>Beim Datenschutz gibt es nichts zu tricksen</h2>
+      <p class="lead" style="margin-top:16px">Ihre Kunden geben dem Bot ihren Namen, ihre Telefonnummer und ihre Termine. Dafür gelten bei Kalio klare Regeln. Kleingedrucktes gibt es keines.</p>
+    </div>
+    <div class="trust-items stagger rv-r">
+      <div class="trust-item"><i><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></i><div><b>Hosting in der EU</b><span>Alle Daten werden auf europäischen Servern verarbeitet.</span></div></div>
+      <div class="trust-item"><i><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/><path d="M9 11h3"/></svg></i><div><b>DSGVO-konform mit AVV</b><span>Sie erhalten einen Auftragsverarbeitungsvertrag, prüfbar für Ihren Datenschutzbeauftragten.</span></div></div>
+      <div class="trust-item"><i><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></i><div><b>Kein KI-Training mit Ihren Daten</b><span>Kundendaten werden nicht zum Trainieren von KI-Modellen verwendet.</span></div></div>
+      <div class="trust-item"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg></i><div><b>Datensparsamkeit</b><span>Der Bot fragt nur das ab, was er für den Termin wirklich braucht.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="bg-white">
+  <div class="container">
+    <div class="sec-head rv">
+      <div>
+        <span class="kicker">06 — Häufige Fragen</span>
+        <h2>Kurz und ehrlich beantwortet</h2>
+      </div>
+      <p class="lead">Das sind die Fragen, die im Erstgespräch fast immer kommen.</p>
+    </div>
+    <div class="faq-list stagger rv">
+      <details class="faq-item">
+        <summary>Ist Kalio das Richtige für meinen Betrieb?<i>+</i></summary>
+        <p>Kalio zahlt sich dort aus, wo Termine vergeben werden und immer wieder dieselben Fragen hereinkommen. Praxen, Salons, Werkstätten, Lokale, Studios, Kanzleien. Fragen Ihre Kunden kaum digital an, oder ist jede Anfrage ein Sonderfall, dann lohnt sich ein Bot bei Ihnen noch nicht. Auch das sagen wir Ihnen im Erstgespräch.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Woher weiß der Bot, was er antworten soll?<i>+</i></summary>
+        <p>Aus Ihren eigenen Unterlagen. Leistungen, Preise, Öffnungszeiten, Ihre Regeln. Das holen wir von Ihrer Website oder aus Dokumenten, die Sie uns schicken. Was dort nicht drinsteht, behauptet der Bot auch nicht.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Wie viel Pflegeaufwand habe ich laufend?<i>+</i></summary>
+        <p>Praktisch keinen. Ändern sich Preise oder Öffnungszeiten, geben Sie kurz Bescheid, wir aktualisieren den Bot. Die laufende Kontrolle und Verbesserung der Antworten gehört zur Betreuung dazu.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Brauche ich technisches Wissen?<i>+</i></summary>
+        <p>Nein. Einrichtung, Kalender und Wartung machen wir. Sie bekommen eine kurze Einschulung und eine Nummer, unter der immer derselbe Mensch abhebt.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Was kostet ein Chatbot?<i>+</i></summary>
+        <p>Einen Pauschalpreis gibt es nicht, dafür sind die Betriebe zu verschieden. Ein ehrlicher Preis hängt an drei Dingen: <b>auf wie vielen Kanälen</b> der Bot laufen soll (Website, WhatsApp, Instagram, Telefon), <b>welchen Funktionsumfang</b> Sie brauchen (nur Fragen beantworten oder auch Termine buchen, Erinnerungen, Englisch zusätzlich) und <b>welche Anbindung</b> nötig ist (Kalender, bestehende Software). Wir werfen deshalb keine Hausnummer in den Raum, sondern rechnen Ihren Fall durch. Nach der kostenlosen Demo bekommen Sie ein Fixangebot. Keine versteckten Kosten, und Sie binden sich nicht auf Jahre.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Ersetzt der Bot meine Mitarbeiter?<i>+</i></summary>
+        <p>Nein, er nimmt ihnen die Lauferei ab. Die immer gleichen Fragen und die Terminvergabe macht der Bot. Ihr Team hat wieder Zeit für die Arbeit, wegen der die Kunden überhaupt zu Ihnen kommen.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÜBER ============ -->
+<section id="ueber">
+  <div class="container">
+    <div class="sec-head rv">
+      <div>
+        <span class="kicker">07 — Wer dahinter steht</span>
+        <h2>Kein Callcenter. Einer, der abhebt.</h2>
+      </div>
+    </div>
+    <div class="about-grid rv">
+      <div class="about-photo" role="img" aria-label="Illustration: Alexander Thums, Gründer von Kalio">
+        <svg viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="avBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#101A30"/><stop offset="1" stop-color="#1A2246"/>
+            </linearGradient>
+            <linearGradient id="avAcc" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#8B88E8"/><stop offset="1" stop-color="#4C48C4"/>
+            </linearGradient>
+          </defs>
+          <rect width="220" height="260" fill="url(#avBg)"/>
+          <circle cx="178" cy="34" r="60" fill="#4C48C4" opacity=".14"/>
+          <circle cx="26" cy="230" r="48" fill="#8B88E8" opacity=".10"/>
+          <circle cx="110" cy="96" r="42" fill="url(#avAcc)" opacity=".92"/>
+          <path d="M38 260c6-46 36-72 72-72s66 26 72 72z" fill="url(#avAcc)" opacity=".92"/>
+          <circle cx="110" cy="96" r="42" fill="none" stroke="#EDEEF3" stroke-opacity=".25" stroke-width="1.5"/>
+          <g stroke="#EDEEF3" stroke-width="1.5" fill="none" opacity=".8">
+            <path d="M158 148h26a8 8 0 0 1 8 8v14a8 8 0 0 1-8 8h-4v9l-10-9h-12a8 8 0 0 1-8-8v-14a8 8 0 0 1 8-8z"/>
+            <circle cx="166" cy="163" r="1.6" fill="#EDEEF3"/>
+            <circle cx="174" cy="163" r="1.6" fill="#EDEEF3"/>
+            <circle cx="182" cy="163" r="1.6" fill="#EDEEF3"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <h3>Alexander Thums</h3>
+        <span class="about-role">Gründer von Kalio</span>
+        <p>Ich baue Chatbots für Betriebe, die keine Zeit für Technik-Spielereien haben. Ehrlich statt Hype. Bei Kalio landen Sie in keiner Vertriebsschleife, sondern reden mit dem, der Ihren Bot einrichtet und danach betreut. Vom ersten Telefonat bis zum laufenden Betrieb bleibe ich Ihr Ansprechpartner.</p>
+      </div>
+    </div>
+    <!-- TESTIMONIALS: einfügen, sobald echte Kundenstimmen da sind. -->
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">kalio<span>.</span></span>
+        <p>KI-Chatbots und Voice-Agents mit Terminbuchung für Betriebe in Österreich und Deutschland. Persönlich eingerichtet, DSGVO-konform betrieben.</p>
+      </div>
+      <div class="footer-col">
+        <b>Kontakt</b>
+        <a href="tel:+436767515586">+43 676 751 55 86</a>
+        <a href="mailto:kontakt@kalio.at">kontakt@kalio.at</a>
+        <span>Mo–Fr, 08–18 Uhr</span>
+      </div>
+      <div class="footer-col">
+        <b>Navigation</b>
+        <a href="#loesungen-detail">Lösungen</a>
+        <a href="#live-demo">Bot live testen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#faq">FAQ</a>
+        <a href="#demo-anfrage">Demo anfragen</a>
+      </div>
+      <div class="footer-col">
+        <b>Rechtliches</b>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Kalio · Alexander Thums · Österreich</div>
+      <div>DSGVO-konform · Hosting in der EU</div>
+    </div>
+  </div>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script>
+(function(){
+"use strict";
+var REDUCED=document.documentElement.classList.contains("rm-on")||!window.gsap;
+if(!REDUCED)document.documentElement.classList.add("sfx");
+
+/* ---------- Scroll-Progress-Balken ---------- */
+var bar=document.getElementById("scrollbar");
+function updateBar(){
+  var max=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.transform="scaleX("+(max>0?window.scrollY/max:0)+")";
+}
+window.addEventListener("scroll",updateBar,{passive:true});
+
+/* ---------- Mobile-Menü ---------- */
+(function(){
+  var burger=document.getElementById("navBurger"),menu=document.getElementById("mobileMenu");
+  burger.addEventListener("click",function(){
+    var open=menu.classList.toggle("open");
+    burger.setAttribute("aria-expanded",open?"true":"false");
+    document.body.classList.toggle("menu-open",open);
+    if(open)document.body.classList.add("past-film");
+  });
+  menu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click",function(){menu.classList.remove("open");burger.setAttribute("aria-expanded","false");document.body.classList.remove("menu-open");});
+  });
+})();
+
+/* ============================================================
+   DER FILM (nur ohne reduced motion)
+   ============================================================ */
+var lenis=null;
+if(!REDUCED){
+  gsap.registerPlugin(ScrollTrigger);
+  lenis=new Lenis({lerp:.12});
+  lenis.on("scroll",ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000);});
+  gsap.ticker.lagSmoothing(0);
+
+  /* Sterne generieren */
+  (function(){
+    var wrap=document.getElementById("stars"),html="";
+    for(var i=0;i<110;i++){
+      var cls=i%5===0?"s2":(i%3===0?"s3":"");
+      html+='<i class="'+cls+'" style="left:'+(Math.random()*100).toFixed(2)+'%;top:'+(Math.random()*88).toFixed(2)+'%"></i>';
+    }
+    wrap.innerHTML=html;
+  })();
+
+  /* Headline in Zeichen zerlegen */
+  (function(){
+    var el=document.getElementById("k1Head"),out=[];
+    el.childNodes.forEach(function(n){
+      if(n.nodeType===3){
+        n.textContent.split("").forEach(function(c){out.push('<span class="ch">'+(c===" "?"&nbsp;":c)+"</span>");});
+      }else if(n.nodeName==="BR"){out.push("<br>");}
+      else{out.push('<span class="ch">'+n.outerHTML+"</span>");}
+    });
+    el.innerHTML=out.join("");
+  })();
+
+  var stage=document.getElementById("filmStage");
+  var chars=document.querySelectorAll("#k1Head .ch");
+  var counters=[].slice.call(document.querySelectorAll("#k4Facts [data-cu]"));
+  var cuState={v:0};
+
+  /* Intro beim Laden: Kapitel 1 erscheint */
+  gsap.set(chars,{yPercent:70,autoAlpha:0});
+  var intro=gsap.timeline({defaults:{ease:"power3.out"}});
+  intro.from("#k1Clock",{y:26,autoAlpha:0,duration:.8},.1)
+       .from("#k1Phone",{scale:.6,autoAlpha:0,duration:.6},.35)
+       .to(chars,{yPercent:0,autoAlpha:1,duration:.7,stagger:.016},.5);
+
+  /* Master-Timeline: der gescrubbte Film.
+     WICHTIG: dieser Pin wird VOR allen anderen ScrollTriggern angelegt. */
+  var tl=gsap.timeline({
+    defaults:{ease:"none"},
+    scrollTrigger:{
+      trigger:"#film",start:"top top",end:"+=5400",scrub:.6,
+      pin:".film-stage",pinSpacing:true,anticipatePin:1,
+      onUpdate:function(st){hud(st.progress);}
+    }
+  });
+
+  /* Kapitel 1: Nacht – Klingeln ohne Antwort */
+  tl.addLabel("k1");
+  [0,.5,1].forEach(function(off){
+    tl.fromTo("#ring1",{scale:1,autoAlpha:.9},{scale:2.2,autoAlpha:0,duration:.45},"k1+="+off);
+    tl.fromTo("#ring2",{scale:1,autoAlpha:.7},{scale:3,autoAlpha:0,duration:.45},"k1+="+(off+.12));
+    tl.to("#k1Phone",{rotation:6,duration:.06,repeat:5,yoyo:true,ease:"power1.inOut"},"k1+="+off);
+  });
+  tl.to("#k1Phone",{rotation:0,duration:.1},"k1+=1.6");
+  tl.to("#k1Missed",{autoAlpha:1,y:0,duration:.35},"k1+=1.7");
+  tl.to("#k1Sub",{autoAlpha:1,duration:.4},"k1+=1.9");
+  tl.to({},{duration:.5});
+
+  /* Übergang zu Kapitel 2 */
+  tl.addLabel("k2out");
+  tl.to("#scene1",{autoAlpha:0,y:-90,duration:.7},"k2out");
+  tl.fromTo("#scene2",{autoAlpha:0},{autoAlpha:1,duration:.4},"k2out+=.45");
+  tl.fromTo("#k2Chat",{y:110,scale:.92},{y:0,scale:1,duration:.8,ease:"power2.out"},"k2out+=.45");
+
+  /* Kapitel 2: die Konversation schreibt sich */
+  tl.addLabel("k2");
+  tl.fromTo("#m1",{y:22,autoAlpha:0},{y:0,autoAlpha:1,duration:.45,ease:"back.out(1.4)"},"k2+=.2");
+  tl.fromTo("#typ1",{autoAlpha:0},{autoAlpha:1,duration:.2},"k2+=.7");
+  tl.to("#typ1",{autoAlpha:0,duration:.15,display:"none"},"k2+=1.15");
+  tl.fromTo("#m2",{y:22,autoAlpha:0},{y:0,autoAlpha:1,duration:.45,ease:"back.out(1.4)"},"k2+=1.3");
+  tl.fromTo("#m3",{y:22,autoAlpha:0},{y:0,autoAlpha:1,duration:.45,ease:"back.out(1.4)"},"k2+=1.95");
+  tl.fromTo("#k2Caption",{autoAlpha:0},{autoAlpha:1,duration:.3},"k2+=.4");
+  tl.to({},{duration:.4});
+
+  /* Übergang zu Kapitel 3 + Dämmerung beginnt */
+  tl.addLabel("k3out");
+  tl.to("#scene2",{autoAlpha:0,scale:.94,y:-60,duration:.6},"k3out");
+  tl.to("#skyDusk",{opacity:1,duration:2.2},"k3out");
+  tl.fromTo("#scene3",{autoAlpha:0},{autoAlpha:1,duration:.3},"k3out+=.4");
+  tl.fromTo("#k3Book",{scale:.55,autoAlpha:0,y:40},{scale:1,autoAlpha:1,y:0,duration:.7,ease:"back.out(1.8)"},"k3out+=.45");
+  tl.addLabel("k3");
+  tl.fromTo("#k3Cal",{autoAlpha:0,y:34},{autoAlpha:1,y:0,duration:.6},"k3+=.3");
+  tl.fromTo("#k3Pick",{scale:1},{scale:1.14,duration:.18,yoyo:true,repeat:1,ease:"power1.inOut"},"k3+=.85");
+  tl.to("#k3Line",{autoAlpha:1,duration:.5},"k3+=1.05");
+  tl.to({},{duration:.5});
+
+  /* Übergang zu Kapitel 4: der Morgen */
+  tl.addLabel("k4out");
+  tl.to("#scene3",{autoAlpha:0,y:-70,duration:.6},"k4out");
+  tl.to("#skyDawn",{opacity:1,duration:2.4},"k4out");
+  tl.to("#stars",{autoAlpha:0,duration:1.4},"k4out");
+  tl.to("#sun",{autoAlpha:1,bottom:"-12vh",duration:2,ease:"power1.out"},"k4out+=.3");
+  tl.fromTo("#scene4",{autoAlpha:0},{autoAlpha:1,duration:.35},"k4out+=.7");
+  tl.fromTo("#k4Head",{y:40,autoAlpha:0},{y:0,autoAlpha:1,duration:.6,ease:"power2.out"},"k4out+=.75");
+  tl.fromTo("#k4Sub",{y:24,autoAlpha:0},{y:0,autoAlpha:1,duration:.5},"k4out+=1");
+  tl.fromTo("#k4Facts .k4-fact",{y:36,autoAlpha:0},{y:0,autoAlpha:1,duration:.5,stagger:.14},"k4out+=1.2");
+  tl.to(cuState,{v:1,duration:.9,onUpdate:function(){
+    counters.forEach(function(c){c.textContent=Math.round(parseFloat(c.getAttribute("data-cu"))*cuState.v);});
+  }},"k4out+=1.25");
+  tl.to({},{duration:.5});
+
+  /* Übergang zu Kapitel 5: die Übergabe an die Seite */
+  tl.addLabel("k5out");
+  tl.to("#scene4",{autoAlpha:0,y:-60,duration:.6},"k5out");
+  tl.to("#sun",{autoAlpha:.5,duration:1},"k5out");
+  tl.fromTo("#scene5",{autoAlpha:0},{autoAlpha:1,duration:.35},"k5out+=.5");
+  tl.fromTo("#k5Kicker",{autoAlpha:0},{autoAlpha:1,duration:.35},"k5out+=.55");
+  tl.fromTo("#k5Head",{y:46,autoAlpha:0},{y:0,autoAlpha:1,duration:.7,ease:"power2.out"},"k5out+=.6");
+  tl.fromTo("#k5Lead",{y:26,autoAlpha:0},{y:0,autoAlpha:1,duration:.5},"k5out+=.9");
+  tl.fromTo("#k5Ctas",{y:22,autoAlpha:0},{y:0,autoAlpha:1,duration:.5},"k5out+=1.05");
+  tl.fromTo("#k5Chan a",{y:26,autoAlpha:0},{y:0,autoAlpha:1,duration:.45,stagger:.09},"k5out+=1.2");
+  tl.to({},{duration:.6});
+
+  /* HUD + Nav-Theme je nach Fortschritt */
+  var hudEl=document.getElementById("hudChapter");
+  var CHAPTERS=[
+    [0,  "Kapitel 01 · 21:00 — Die Nacht"],
+    [.21,"Kapitel 02 · 21:01 — Die Nachricht"],
+    [.41,"Kapitel 03 · 21:02 — Der Termin"],
+    [.66,"Kapitel 04 — Der Morgen"],
+    [.84,"Kapitel 05 — Kalio"]
+  ];
+  function hud(p){
+    var label=CHAPTERS[0][1];
+    for(var i=0;i<CHAPTERS.length;i++){if(p>=CHAPTERS[i][0])label=CHAPTERS[i][1];}
+    if(hudEl.textContent!==label)hudEl.textContent=label;
+    stage.classList.toggle("is-light",p>=.66);
+    document.body.classList.toggle("past-film",p>=.68||document.body.classList.contains("menu-open"));
+  }
+
+  /* Anker-Links sanft über Lenis (Offset für die fixe Nav) */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener("click",function(e){
+      var id=a.getAttribute("href");
+      if(id.length<2)return;
+      var t=document.querySelector(id);
+      if(!t)return;
+      e.preventDefault();
+      lenis.scrollTo(t,{offset:-80});
+      if(a.hasAttribute("data-tab"))activateTab(a.getAttribute("data-tab"));
+    });
+  });
+}else{
+  /* Reduced motion / kein GSAP: alles sofort sichtbar, Nav-Umschaltung simpel */
+  document.querySelectorAll(".rv,.rv-l,.rv-r,.stagger").forEach(function(e){e.classList.add("in");});
+  var filmEl=document.getElementById("film");
+  function rmNav(){document.body.classList.toggle("past-film",window.scrollY>filmEl.offsetHeight-90);}
+  window.addEventListener("scroll",rmNav,{passive:true});
+  rmNav();
+}
+
+/* ============================================================
+   CONTENT: Reveals, Ablauf-Linie, Tabs, FAQ, Formular, Bot
+   (IntersectionObserver – unabhängig vom Film-Pin)
+   ============================================================ */
+if(!REDUCED){
+  var rvEls=[].slice.call(document.querySelectorAll(".rv,.rv-l,.rv-r,.stagger"));
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting||en.intersectionRatio>0){en.target.classList.add("in");io.unobserve(en.target);}
+    });
+  },{threshold:[0,.15],rootMargin:"0px 0px -14% 0px"});
+  rvEls.forEach(function(e){io.observe(e);});
+  var sweep;
+  window.addEventListener("scroll",function(){
+    clearTimeout(sweep);
+    sweep=setTimeout(function(){
+      rvEls.forEach(function(e){
+        if(e.classList.contains("in"))return;
+        var r=e.getBoundingClientRect();
+        if(r.top<window.innerHeight&&r.bottom>0)e.classList.add("in");
+      });
+    },160);
+  },{passive:true});
+}
+
+/* Ablauf: Linie füllt sich beim Scrollen */
+(function(){
+  var track=document.getElementById("stepsTrack"),fill=document.getElementById("stepsFill");
+  if(!track||!fill)return;
+  function upd(){
+    var r=track.getBoundingClientRect();
+    var p=(window.innerHeight*.75-r.top)/r.height;
+    fill.style.setProperty("--fill",Math.max(0,Math.min(1,p)).toFixed(3));
+  }
+  window.addEventListener("scroll",upd,{passive:true});
+  upd();
+})();
+
+/* Tabs */
+var activateTab;
+(function(){
+  var tabs=document.querySelectorAll(".tab"),panels=document.querySelectorAll(".panel");
+  activateTab=function(name){
+    var next=document.getElementById("panel-"+name);
+    if(!next)return;
+    tabs.forEach(function(t){t.setAttribute("aria-selected",t.dataset.tab===name?"true":"false");});
+    panels.forEach(function(p){p.classList.remove("active","p-enter");p.hidden=true;});
+    next.hidden=false;next.classList.add("active","p-enter");
+  };
+  tabs.forEach(function(t){t.addEventListener("click",function(){activateTab(t.dataset.tab);});});
+})();
+
+/* Links auf #live-demo aktivieren den Live-Tab */
+document.querySelectorAll('a[href="#live-demo"]').forEach(function(a){
+  a.addEventListener("click",function(){activateTab("live");});
+});
+
+/* AJAX-Formular (Formspree) */
+(function(){
+  var form=document.querySelector(".ajax-form");
+  if(!form)return;
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var msg=form.querySelector(".form-msg"),btn=form.querySelector('button[type="submit"]');
+    if(!form.reportValidity())return;
+    btn.disabled=true;btn.textContent="Wird gesendet …";
+    fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}})
+      .then(function(r){
+        if(r.ok){form.reset();msg.textContent="Danke! Ihre Anfrage ist da – wir melden uns innerhalb von 24 Stunden.";}
+        else{msg.textContent="Das hat leider nicht geklappt. Rufen Sie uns gern an: +43 676 751 55 86";}
+      })
+      .catch(function(){msg.textContent="Keine Verbindung. Rufen Sie uns gern an: +43 676 751 55 86";})
+      .finally(function(){btn.disabled=false;btn.textContent="Anfrage senden";});
+  });
+})();
+})();
+</script>
+<script>
+/* ---------- Live-Demo-Bot (geskriptet, ohne Server) – portiert aus v25 ---------- */
+(function(){
+  var body=document.getElementById("botBody");
+  if(!body)return;
+  var input=document.getElementById("botInput");
+  var send=document.getElementById("botSend");
+  var reset=document.getElementById("botReset");
+  var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var busy=false;
+
+  var CTA='<a href="#demo-anfrage" style="color:#4C48C4;font-weight:600;text-decoration:underline">Kostenlose Demo für Ihren Betrieb anfragen</a>';
+
+  var BRANCHES={
+    friseur:{biz:"Salon Aurora",av:"SA",
+      route:[[/absag|storn|verschieb|umbuch|anders/,"aendern"],[/park|anfahrt|adresse|wo seid|wo sind|wie komm/,"anfahrt"],[/mitarbeiter|kollegin|bei wem|wer macht|stylist/,"team"],[/balayage|färb|farbe|strähn|ansatz|blond/,"farbe"],[/gutschein|geschenk|voucher/,"gutschein"],[/termin|buch|reservier|appoint|book/,"termin"],[/preis|kost|€|euro|price|teuer/,"preise"],[/öffnung|offen|geöffnet|zeiten|wann|open|hour/,"zeiten"],[/english|englisch|speak/,"english"],[/hallo|hi |hi$|servus|grüß|hey|guten/,"start"]],
+      flows:{
+        start:{text:"Hallo! 👋 Ich bin der Beispiel-Bot von <b>Salon Aurora</b>, einem fiktiven Friseursalon. Fragen Sie mich etwas – oder tippen Sie auf einen Vorschlag:",chips:[["Termin buchen","termin"],["Was kostet ein Haarschnitt?","preise"],["Öffnungszeiten","zeiten"],["Do you speak English?","english"]]},
+        preise:{text:"Gerne! Herrenhaarschnitt <b>32 €</b>, Damen Schnitt &amp; Föhnen <b>ab 55 €</b>, Färben je nach Aufwand <b>ab 70 €</b>. Soll ich gleich einen Termin reservieren?",chips:[["Ja, Termin buchen","termin"],["Was kostet Balayage?","farbe"],["Öffnungszeiten","zeiten"]]},
+        farbe:{text:"Balayage kostet bei uns <b>ab 145 €</b> und dauert etwa <b>3 Stunden</b>. Ein reiner Ansatz ist <b>ab 58 €</b> und in einer Stunde erledigt. Beim ersten Mal empfehle ich ein kurzes Beratungsgespräch, damit die Farbe wirklich passt.",chips:[["Beratung buchen","beratung"],["Direkt Balayage buchen","termin"],["Wer macht das?","team"]]},
+        beratung:{text:"Sehr gerne. Die Beratung dauert 15 Minuten und ist kostenlos. Sie können sie direkt an einen Färbetermin hängen.",chips:[["Beratung + Termin","termin"],["Nur Beratung","termin"]]},
+        team:{text:"Bei uns arbeiten <b>Nina</b> (Farbe und Balayage), <b>Marek</b> (Herrenschnitte) und <b>Sofia</b> (Schnitt und Hochsteckfrisuren). Haben Sie jemanden im Kopf?",chips:[["Bei Nina","termin"],["Egal, Hauptsache bald","termin"]]},
+        aendern:{text:"Kein Problem. Nennen Sie mir Ihren Namen und den bestehenden Termin, dann suche ich ihn heraus.",chips:[["Berger, Do 10:30","aendern_r"]]},
+        aendern_r:{text:"Gefunden: <b>Donnerstag, 10:30 Uhr bei Sofia</b>. Möchten Sie verschieben oder absagen?",chips:[["Verschieben","termin"],["Absagen","aendern_c"]]},
+        aendern_c:{confirm:"✅ <b>Termin storniert.</b><br>Der Platz ist wieder frei und wird automatisch anderen Kundinnen angeboten.",next:"fazit"},
+        anfahrt:{text:"Wir sind in der <b>Hauptstraße 14</b>, direkt neben der Apotheke. Vor dem Haus gibt es Kurzparkzonen, die Tiefgarage am Stadtplatz ist zwei Minuten entfernt.",chips:[["Termin buchen","termin"],["Öffnungszeiten","zeiten"]]},
+        gutschein:{text:"Gutscheine gibt es in jeder Höhe, entweder im Salon oder wir schicken sie per Post. Beliebt ist der Wert einer Behandlung, etwa Schnitt und Föhnen zu 55 €.",chips:[["Gutschein vormerken","gutschein_c"],["Preise ansehen","preise"]]},
+        gutschein_c:{confirm:"✅ <b>Gutschein vorgemerkt.</b><br>Das Team meldet sich zur Abwicklung bei Ihnen.",next:"fazit"},
+        zeiten:{text:"Wir haben <b>Di–Fr 09–18 Uhr</b> und <b>Sa 09–14 Uhr</b> geöffnet, Montag ist Ruhetag. Möchten Sie einen Termin buchen?",chips:[["Termin buchen","termin"],["Wie komme ich hin?","anfahrt"],["Preise ansehen","preise"]]},
+        termin:{text:"Sehr gerne! Für welchen Tag darf ich nachsehen?",chips:[["Donnerstag","do"],["Samstag","sa"]]},
+        do:{text:"Am Donnerstag sind noch <b>10:30</b> und <b>16:00 Uhr</b> frei. Welche Zeit passt Ihnen?",chips:[["10:30 Uhr","buch"],["16:00 Uhr","buch"]]},
+        sa:{text:"Am Samstag sind noch <b>09:30</b> und <b>11:00 Uhr</b> frei. Welche Zeit passt Ihnen?",chips:[["09:30 Uhr","buch"],["11:00 Uhr","buch"]]},
+        buch:{confirm:"✅ <b>Termin bestätigt.</b><br>Sie erhalten am Vortag automatisch eine Erinnerung.",next:"fazit"},
+        fazit:{text:"Genau so einfach wäre das für Ihre Kunden – rund um die Uhr, ohne dass jemand ans Telefon muss.<br><br>"+CTA,chips:[["Neu starten","restart"]]},
+        english:{text:"Of course! I automatically reply in the customer's language. Would you like to book an appointment?",chips:[["Book appointment","en_book"],["Weiter auf Deutsch","start"]]},
+        en_book:{text:"Great! We still have <b>Thursday 10:30</b> or <b>Saturday 11:00</b>. Which works for you?",chips:[["Thursday 10:30","en_c"],["Saturday 11:00","en_c"]]},
+        en_c:{confirm:"✅ <b>Appointment confirmed.</b><br>You'll receive a reminder the day before.",next:"fazit"},
+        fallback:{text:"Das weiß ich nicht. Als Beispiel-Bot kenne ich nur den fiktiven Salon Aurora, und ich erfinde nichts dazu. Diese Themen kann ich:",chips:[["Termin buchen","termin"],["Preise","preise"],["Öffnungszeiten","zeiten"]]}
+      }},
+    gastro:{biz:"Gasthaus Sonnhof",av:"GS",
+      route:[[/absag|storn|verschieb|umbuch/,"aendern"],[/park|anfahrt|adresse|wo seid|wie komm/,"anfahrt"],[/hund|dog|haustier/,"hund"],[/kind|kinderstuhl|familie|baby/,"kind"],[/gruppe|feier|geburtstag|firmen|hochzeit|20 person|große/,"gruppe"],[/terrasse|drinnen|draußen|garten/,"terrasse"],[/karte|speise|gericht|essen|menü|tagesteller/,"karte"],[/reservier|tisch|buch|table|book/,"termin"],[/öffnung|offen|geöffnet|zeiten|wann|ruhetag/,"zeiten"],[/vegetar|vegan|allergie|glutenfrei|nuss|laktose/,"veggie"],[/hallo|hi |servus|grüß|hey|guten/,"start"]],
+      flows:{
+        start:{text:"Guten Abend! 👋 Ich bin der Beispiel-Bot vom <b>Gasthaus Sonnhof</b> (fiktiv). Wie kann ich helfen?",chips:[["Tisch reservieren","termin"],["Öffnungszeiten","zeiten"],["Habt ihr vegetarisch?","veggie"]]},
+        termin:{text:"Sehr gerne! Für wie viele Personen und welchen Tag darf ich reservieren?",chips:[["4 Personen, morgen","do"],["2 Personen, Samstag","sa"]]},
+        do:{text:"Morgen um <b>19:00</b> oder <b>20:30 Uhr</b> hätte ich einen Tisch frei. Was passt?",chips:[["19:00 Uhr","buch"],["20:30 Uhr","buch"]]},
+        sa:{text:"Samstag ist noch <b>18:00</b> und <b>21:15 Uhr</b> frei. Was möchten Sie?",chips:[["18:00 Uhr","buch"],["21:15 Uhr","buch"]]},
+        buch:{confirm:"✅ <b>Tisch reserviert.</b><br>Sie bekommen eine Bestätigung per SMS. Bei Änderungen einfach hier schreiben.",next:"fazit"},
+        veggie:{text:"Ja, wir haben täglich <b>zwei vegetarische und eine vegane Hauptspeise</b>. Allergien gebe ich direkt an die Küche weiter. Worauf müssen wir achten?",chips:[["Nussallergie","allergie_c"],["Glutenfrei","allergie_c"],["Nur vegetarisch","termin"]]},
+        allergie_c:{text:"Notiert. Die Küche bekommt den Vermerk zusammen mit der Reservierung und meldet sich, falls ein Gericht doch heikel ist.",chips:[["Jetzt reservieren","termin"],["Karte ansehen","karte"]]},
+        karte:{text:"Heute stehen <b>Rindsgulasch mit Semmelknödel</b>, <b>Forelle Müllerin</b> und als vegetarische Hauptspeise <b>Kürbisrisotto</b> auf der Tageskarte. Mittagsteller gibt es bis 14 Uhr um 12,90 €.",chips:[["Tisch reservieren","termin"],["Vegetarisch &amp; Allergien","veggie"]]},
+        gruppe:{text:"Ab <b>10 Personen</b> buche ich nicht mehr selbst, das stimmt der Chef lieber persönlich ab. Um wie viele Personen geht es, und wann soll es sein?",chips:[["Etwa 15, Samstagabend","gruppe_c"],["Doch kleiner, unter 10","termin"]]},
+        gruppe_c:{confirm:"✅ <b>Anfrage weitergeleitet.</b><br>Personenzahl, Wunschtermin und Ihre Kontaktdaten liegen beim Chef. Er meldet sich für Menü und Ablauf.",next:"fazit"},
+        terrasse:{text:"Die Terrasse hat <b>bis 21 Uhr</b> offen und ist überdacht. Bei Regen setzen wir Sie automatisch nach drinnen um, den Tisch verlieren Sie nicht.",chips:[["Terrasse reservieren","termin"],["Lieber drinnen","termin"]]},
+        hund:{text:"Hunde sind bei uns willkommen, im Gastraum und auf der Terrasse. Wasserschüssel stellen wir hin.",chips:[["Tisch reservieren","termin"],["Terrasse frei?","terrasse"]]},
+        kind:{text:"Kinderstühle haben wir da, ich vermerke gern welche mit. Für Kinder gibt es kleine Portionen zum halben Preis.",chips:[["Reservieren mit Kinderstuhl","termin"],["Karte ansehen","karte"]]},
+        aendern:{text:"Kein Problem. Auf welchen Namen läuft die Reservierung?",chips:[["Berger, morgen 19 Uhr","aendern_r"]]},
+        aendern_r:{text:"Gefunden: <b>morgen, 19:00 Uhr, 4 Personen</b>. Verschieben oder absagen?",chips:[["Auf 20:30 verschieben","aendern_v"],["Absagen","aendern_c"]]},
+        aendern_v:{confirm:"✅ <b>Verschoben auf 20:30 Uhr.</b><br>Der Vermerk für die Küche bleibt erhalten.",next:"fazit"},
+        aendern_c:{confirm:"✅ <b>Reservierung storniert.</b><br>Der Tisch ist wieder frei. Danke für die Absage, das hilft uns wirklich.",next:"fazit"},
+        anfahrt:{text:"Wir sind am <b>Dorfplatz 3</b>. Direkt vor dem Haus gibt es acht Parkplätze, dahinter der Gemeindeparkplatz. Der Bus 340 hält gegenüber.",chips:[["Tisch reservieren","termin"],["Öffnungszeiten","zeiten"]]},
+        zeiten:{text:"Wir haben <b>Di–So 11:30–22:00 Uhr</b> geöffnet, Montag Ruhetag. Warme Küche bis 21:00 Uhr. Reservieren?",chips:[["Tisch reservieren","termin"],["Wie komme ich hin?","anfahrt"],["Was gibt es heute?","karte"]]},
+        fazit:{text:"Genau so nimmt Ihr Lokal Reservierungen an – auch wenn im Service niemand ans Telefon kann.<br><br>"+CTA,chips:[["Neu starten","restart"]]},
+        fallback:{text:"Das steht nicht in meinen Unterlagen, und ich erfinde nichts. Als Beispiel-Bot vom fiktiven Sonnhof kann ich:",chips:[["Tisch reservieren","termin"],["Öffnungszeiten","zeiten"],["Vegetarisch?","veggie"]]}
+      }},
+    praxis:{biz:"Ordination Dr. Frank",av:"DF",
+      route:[[/dringend|akut|notfall|schmerz|blut|atem/,"akut"],[/nüchtern|vorbereit|blutabnahme|untersuchung|labor/,"vorbereitung"],[/überweis|befund|attest|bestätigung/,"befund"],[/kasse|privat|e-card|versicher|kosten/,"kasse"],[/vertretung|urlaub|geschlossen|feiertag/,"vertretung"],[/rezept|medikament|verschreib/,"rezept"],[/absag|storn|verschieb|umbuch/,"aendern"],[/termin|buch/,"termin"],[/öffnung|zeiten|wann|sprechzeit/,"zeiten"],[/hallo|hi |servus|grüß|hey|guten/,"start"]],
+      flows:{
+        start:{text:"Guten Tag! 👋 Ich bin der Beispiel-Bot der <b>Ordination Dr. Frank</b> (fiktiv). Womit kann ich helfen?",chips:[["Termin vereinbaren","termin"],["Rezept anfragen","rezept"],["Ordinationszeiten","zeiten"],["Es ist dringend","akut"]]},
+        termin:{text:"Gerne. Ich hätte <b>Do 09:15</b>, <b>Do 14:30</b> oder <b>Fr 11:00</b> frei. Was passt Ihnen?",chips:[["Do 09:15","buch"],["Do 14:30","buch"],["Fr 11:00","buch"]]},
+        buch:{confirm:"✅ <b>Termin eingetragen.</b><br>Sie erhalten am Vortag eine Erinnerung. Bitte e-card mitbringen.",next:"fazit"},
+        rezept:{text:"Gerne nehme ich Ihre Rezeptanfrage auf. Handelt es sich um eine Dauermedikation?",chips:[["Ja, Dauermedikation","rez_c"],["Neues Medikament","rez_neu"]]},
+        rez_c:{confirm:"✅ <b>Rezeptanfrage aufgenommen.</b><br>Das Team prüft sie heute; bei Freigabe liegt es ab morgen bereit.",next:"fazit"},
+        rez_neu:{text:"Bei einem neuen Medikament ist meist eine kurze Rücksprache nötig. Soll ich einen Termin suchen?",chips:[["Termin suchen","termin"],["Nur vormerken","rez_c"]]},
+        zeiten:{text:"Ordinationszeiten: <b>Mo, Di, Do 08–12 &amp; 15–18 Uhr</b>, <b>Mi &amp; Fr 08–12 Uhr</b>. Möchten Sie einen Termin?",chips:[["Termin vereinbaren","termin"],["Wer vertritt im Urlaub?","vertretung"],["Rezept anfragen","rezept"]]},
+        aendern:{text:"Gerne. Auf welchen Namen und wann war der Termin?",chips:[["Huber, Do 09:15","aendern_r"]]},
+        aendern_r:{text:"Gefunden: <b>Donnerstag, 09:15 Uhr</b>. Soll ich verschieben oder ganz absagen?",chips:[["Auf Fr 11:00 verschieben","aendern_v"],["Absagen","aendern_c"]]},
+        aendern_v:{confirm:"✅ <b>Verschoben auf Freitag, 11:00 Uhr.</b><br>Der alte Termin ist storniert und wieder frei.",next:"fazit"},
+        aendern_c:{confirm:"✅ <b>Termin abgesagt.</b><br>Danke fürs Bescheidgeben, so kann jemand anderer nachrücken.",next:"fazit"},
+        vorbereitung:{text:"Für welche Untersuchung? Bei einer <b>Blutabnahme</b> kommen Sie bitte nüchtern, also mindestens 8 Stunden nichts essen. Wasser dürfen Sie trinken.",chips:[["Blutabnahme","vorb_c"],["Normale Kontrolle","vorb_n"]]},
+        vorb_c:{text:"Alles klar. Blutabnahmen machen wir <b>Mo bis Fr von 08:00 bis 09:30 Uhr</b>. Soll ich Ihnen einen Termin dafür geben?",chips:[["Ja, Termin","termin"],["Danke, das reicht","fazit"]]},
+        vorb_n:{text:"Für eine normale Kontrolle brauchen Sie nichts Besonderes. Bringen Sie die e-card mit und, falls vorhanden, Vorbefunde.",chips:[["Termin vereinbaren","termin"],["Danke","fazit"]]},
+        befund:{text:"Befunde und Überweisungen gebe ich nicht selbst heraus, das macht das Team nach Rücksprache mit Dr. Frank. Ich nehme die Anfrage aber gerne auf.",chips:[["Anfrage aufnehmen","befund_c"],["Lieber Termin","termin"]]},
+        befund_c:{confirm:"✅ <b>Anfrage notiert.</b><br>Das Team meldet sich, sobald Dr. Frank den Befund freigegeben hat.",next:"fazit"},
+        kasse:{text:"Wir sind <b>Kassenordination</b> für ÖGK, BVAEB und SVS. Bringen Sie einfach die e-card mit. Wahlarztleistungen rechnen wir gesondert ab, das sagen wir vorher an.",chips:[["Termin vereinbaren","termin"],["Ordinationszeiten","zeiten"]]},
+        vertretung:{text:"Im Urlaub übernimmt <b>Dr. Steiner in der Bahnstraße 7</b>. Die aktuellen Vertretungszeiten hängen an der Ordinationstür und stehen auf der Website.",chips:[["Termin nach dem Urlaub","termin"],["Danke","fazit"]]},
+        akut:{text:"Bei akuten Beschwerden sollten Sie nicht warten. Ich stelle Ihre Anfrage <b>sofort ans Team durch</b> – bei einem Notfall bitte <b>144</b> wählen.",chips:[["Ans Team durchstellen","akut_c"],["Doch nur ein Termin","termin"]]},
+        akut_c:{confirm:"✅ <b>Als dringend markiert und weitergeleitet.</b><br>Jemand meldet sich schnellstmöglich zurück.",next:"fazit"},
+        fazit:{text:"Genau so entlastet der Bot Ihre Anmeldung: Routine übernimmt er, Akutfälle gibt er sofort weiter.<br><br>"+CTA,chips:[["Neu starten","restart"]]},
+        fallback:{text:"Dazu habe ich keine Information, und raten möchte ich nicht. Medizinische Fragen beantwortet ohnehin nur das Team. Ich kann:",chips:[["Termin vereinbaren","termin"],["Rezept","rezept"],["Ordinationszeiten","zeiten"]]}
+      }},
+    handwerk:{biz:"Installateur Reiter",av:"IR",
+      route:[[/notfall|dringend|rohrbruch|läuft stark|gas|überschwemm/,"notfall"],[/kost|preis|stundensatz|anfahrtspausch|teuer|was zahl/,"preise"],[/foto|bild|schick/,"foto"],[/garantie|gewährleist|nachbesser/,"garantie"],[/wie lang|dauer|wann fertig|termin frei/,"dauer"],[/gebiet|kommt ihr|anfahrt|umkreis/,"gebiet"],[/termin|besichtig|kommen/,"termin"],[/tropf|undicht|heizung|kaputt|defekt|problem|schaden|boiler|therme/,"problem"],[/hallo|hi |servus|grüß|hey|guten/,"start"]],
+      flows:{
+        start:{text:"Guten Tag! 👋 Ich bin der Beispiel-Bot von <b>Installateur Reiter</b> (fiktiv). Worum geht es?",chips:[["Etwas ist kaputt","problem"],["Besichtigung anfragen","termin"],["Kommt ihr zu mir?","gebiet"],["Notfall!","notfall"]]},
+        problem:{text:"Verstanden. Wo genau sind Sie, und tropft/läuft es stark oder nur langsam?",chips:[["Wr. Neustadt, langsam","termin"],["Es läuft stark","notfall"]]},
+        termin:{text:"Passt. Herr Reiter hätte <b>Do vormittags</b> oder <b>Fr nachmittags</b> Zeit. Wann passt es Ihnen? (Ein Foto vorab spart Zeit.)",chips:[["Do vormittags","buch"],["Fr nachmittags","buch"]]},
+        buch:{confirm:"✅ <b>Besichtigung eingetragen.</b><br>Anliegen und Ort liegen bei. Herr Reiter meldet sich, falls sich etwas verschiebt.",next:"fazit"},
+        gebiet:{text:"Wir arbeiten im Umkreis von <b>ca. 40 km um Wiener Neustadt</b>. Wo genau sind Sie?",chips:[["In dem Gebiet","problem"],["Weiter weg","gebiet_w"],["Besichtigung anfragen","termin"]]},
+        gebiet_w:{text:"Weiter draußen fahren wir nur bei größeren Aufträgen. Ich nehme Ihre Anfrage trotzdem auf, dann sagt Herr Reiter Ihnen ehrlich, ob sich die Anfahrt ausgeht.",chips:[["Anfrage aufnehmen","termin"],["Danke, passt","fazit"]]},
+        preise:{text:"Die <b>Anfahrtspauschale beträgt 45 €</b>, der Stundensatz liegt bei <b>78 € netto</b>. Was die Reparatur genau kostet, sieht Herr Reiter erst vor Ort. Eine Hausnummer ins Blaue nenne ich Ihnen lieber nicht.",chips:[["Passt, Besichtigung","termin"],["Wie lange dauert das?","dauer"]]},
+        dauer:{text:"Kleinere Sachen wie ein tropfender Hahn sind meist in einer Stunde erledigt. Bei Thermen und größeren Leitungen hängt es davon ab, was zum Vorschein kommt. Ein Foto vorab hilft bei der Einschätzung.",chips:[["Foto schicken","foto"],["Besichtigung buchen","termin"]]},
+        foto:{text:"Sehr gut. Im echten Betrieb hängen Sie das Bild einfach an den Chat. Herr Reiter sieht dann vor der Anfahrt, worum es geht, und hat gleich das richtige Werkzeug und die passenden Teile dabei.",chips:[["Besichtigung buchen","termin"],["Was kostet das?","preise"]]},
+        garantie:{text:"Auf unsere Arbeit gibt es <b>2 Jahre Gewährleistung</b>, auf verbaute Teile die Herstellergarantie. Wenn nach der Reparatur etwas nicht passt, kommen wir nach.",chips:[["Besichtigung buchen","termin"],["Danke","fazit"]]},
+        notfall:{text:"Das klingt dringend. Ich stelle Sie <b>sofort als Notfall durch</b> – bei Wasseraustritt bitte zuerst den Haupthahn schließen. Herr Reiter ruft umgehend zurück.",chips:[["Verstanden","fazit"]]},
+        fazit:{text:"Genau so geht kein Auftrag mehr verloren: Standardanfragen nimmt der Bot auf, Notfälle stellt er sofort durch.<br><br>"+CTA,chips:[["Neu starten","restart"]]},
+        fallback:{text:"Das weiß ich nicht, und ich rate nicht herum. Als Beispiel-Bot vom fiktiven Betrieb Reiter kann ich:",chips:[["Problem melden","problem"],["Besichtigung","termin"],["Einsatzgebiet","gebiet"]]}
+      }}
+  };
+
+  var current="friseur";
+  var FLOWS=BRANCHES[current].flows;
+  var ROUTE=BRANCHES[current].route;
+
+  function scroll(){body.scrollTop=body.scrollHeight;}
+  function addMsg(html,who,confirm){
+    var d=document.createElement("div");
+    d.className="bot-msg from-"+who+(confirm?" confirm":"");
+    d.innerHTML=html;
+    body.appendChild(d);scroll();
+  }
+  function clearChips(){var c=body.querySelector(".bot-chips");if(c)c.remove();}
+  function addChips(chips){
+    var wrap=document.createElement("div");wrap.className="bot-chips";
+    chips.forEach(function(ch){
+      var b=document.createElement("button");
+      b.type="button";b.className="bot-chip";b.textContent=ch[0];
+      b.addEventListener("click",function(){clearChips();addMsg(esc(ch[0]),"user");go(ch[1]);});
+      wrap.appendChild(b);
+    });
+    body.appendChild(wrap);scroll();
+  }
+  function typing(cb){
+    if(reduced){cb();return;}
+    var t=document.createElement("div");t.className="bot-typing";t.innerHTML="<i></i><i></i><i></i>";
+    body.appendChild(t);scroll();
+    setTimeout(function(){t.remove();cb();},700+Math.random()*400);
+  }
+  function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML;}
+  function go(id){
+    if(id==="restart"){restart();return;}
+    var f=FLOWS[id]||FLOWS.fallback;
+    busy=true;
+    typing(function(){
+      if(f.confirm){
+        addMsg(f.confirm,"bot",true);
+        typing(function(){var n=FLOWS[f.next];addMsg(n.text,"bot");addChips(n.chips);busy=false;});
+      }else{
+        addMsg(f.text,"bot");
+        if(f.chips)addChips(f.chips);
+        busy=false;
+      }
+    });
+  }
+  function route(text){
+    var t=text.toLowerCase();
+    for(var i=0;i<ROUTE.length;i++){if(ROUTE[i][0].test(t))return ROUTE[i][1];}
+    return "fallback";
+  }
+  function submit(){
+    if(busy)return;
+    var v=input.value.trim();
+    if(!v)return;
+    clearChips();
+    addMsg(esc(v),"user");
+    input.value="";
+    go(route(v));
+  }
+  send.addEventListener("click",submit);
+  input.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();submit();}});
+  function restart(){body.innerHTML="";go("start");}
+  reset.addEventListener("click",restart);
+
+  var avEl=document.getElementById("botAv"),bizEl=document.getElementById("botBiz");
+  function setBranch(key){
+    if(!BRANCHES[key])return;
+    current=key;FLOWS=BRANCHES[key].flows;ROUTE=BRANCHES[key].route;
+    if(avEl)avEl.textContent=BRANCHES[key].av;
+    if(bizEl)bizEl.textContent=BRANCHES[key].biz;
+    restart();
+  }
+  var pick=document.getElementById("bizPick");
+  if(pick){
+    pick.querySelectorAll(".bizpick-btn").forEach(function(btn){
+      btn.addEventListener("click",function(){
+        if(btn.classList.contains("is-on"))return;
+        pick.querySelectorAll(".bizpick-btn").forEach(function(o){o.classList.remove("is-on");o.setAttribute("aria-selected","false");});
+        btn.classList.add("is-on");btn.setAttribute("aria-selected","true");
+        setBranch(btn.getAttribute("data-biz"));
+      });
+    });
+  }
+  if("IntersectionObserver" in window){
+    var started=false;
+    var io=new IntersectionObserver(function(en){
+      if(en[0].isIntersecting&&!started){started=true;go("start");io.disconnect();}
+    },{threshold:.25});
+    io.observe(body);
+  }else{go("start");}
+})();
+</script>
+<script>
+/* ---------- Dev-Contract: ?jump=<scrollY> + window.__ready ---------- */
+(function(){
+  function settle(){
+    var q=new URLSearchParams(location.search);
+    var jump=parseInt(q.get("jump")||"",10);
+    if(!isNaN(jump)){
+      if(window.ScrollTrigger)ScrollTrigger.refresh();
+      window.scrollTo(0,jump);
+      if(window.ScrollTrigger)ScrollTrigger.update();
+    }
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      if(!isNaN(jump)){window.scrollTo(0,jump);if(window.ScrollTrigger)ScrollTrigger.update();}
+      window.__ready=true;
+    });});
+  }
+  if(document.readyState==="complete"){settle();}
+  else{window.addEventListener("load",function(){setTimeout(settle,120);});}
+})();
+</script>
+</body>
+</html>
