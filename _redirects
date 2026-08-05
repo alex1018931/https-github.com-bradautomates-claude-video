@@ -1,0 +1,27 @@
+# WICHTIG: Erst aktivieren, wenn kalio.at in Netlify verbunden ist und auflöst!
+# Dazu die beiden # vor der nächsten Zeile entfernen:
+# https://stalwart-croissant-2d547c.netlify.app/* https://kalio.at/:splat 301!
+
+# .html-Varianten auf saubere URLs
+/index.html / 301
+/bot-testen.html /bot-testen 301
+/branche-beauty.html /branche-beauty 301
+/branche-coaches.html /branche-coaches 301
+/branche-fahrschule.html /branche-fahrschule 301
+/branche-fitnessstudio.html /branche-fitnessstudio 301
+/branche-gastronomie.html /branche-gastronomie 301
+/branche-handwerk.html /branche-handwerk 301
+/branche-immobilien.html /branche-immobilien 301
+/branche-kanzlei.html /branche-kanzlei 301
+/branche-kfz.html /branche-kfz 301
+/branche-physiotherapie.html /branche-physiotherapie 301
+/branche-praxen.html /branche-praxen 301
+/branche-tierarzt.html /branche-tierarzt 301
+/instagram-bot.html /instagram-bot 301
+/terminbuchung.html /terminbuchung 301
+/voice-agent.html /voice-agent 301
+/website-chat.html /website-chat 301
+/whatsapp-bot.html /whatsapp-bot 301
+/datenschutz.html /datenschutz 301
+/impressum.html /impressum 301
+/agb.html /agb 301

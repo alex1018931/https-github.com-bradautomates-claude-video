@@ -1,0 +1,11 @@
+{
+  "name": "Kalio – KI-Chatbots & Voice-Agents",
+  "short_name": "Kalio",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0D3768",
+  "background_color": "#FFFFFF",
+  "display": "browser"
+}
